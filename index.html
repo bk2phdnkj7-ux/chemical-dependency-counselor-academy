@@ -61,8 +61,7 @@
       font-weight: bold;
     }
 
-    button,
-    input {
+    button {
       font: inherit;
     }
 
@@ -567,10 +566,33 @@
       font-size: 0.94rem;
     }
 
+    .trail-status.open {
+      background-color: var(--sage-light);
+      border-color: var(--forest);
+    }
+
+    .trail-enter-button {
+      display: inline-block;
+      position: relative;
+      z-index: 3;
+      margin-top: 14px;
+      padding: 12px 18px;
+      background-color: var(--forest);
+      color: var(--white);
+      border: 3px solid var(--forest-dark);
+      border-radius: 9px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .trail-enter-button:hover {
+      background-color: var(--forest-dark);
+    }
+
     .academy-features {
       margin-top: 48px;
       padding: 28px;
-      background-color: var(--river-light);
+      background-color: #e4f1f4;
       border: 3px solid var(--river);
       border-left-width: 9px;
       border-radius: var(--radius);
@@ -838,7 +860,6 @@
 
         </div>
 
-
         <div class="orientation">
 
           <article class="orientation-card">
@@ -854,7 +875,6 @@
 
           </article>
 
-
           <article class="orientation-card">
 
             <h3>
@@ -868,7 +888,6 @@
             </p>
 
           </article>
-
 
           <article class="orientation-card">
 
@@ -936,11 +955,18 @@
                   families, and foundational helping concepts.
                 </p>
 
+                <p class="trail-status open">
+                  Trail Now Open
+                </p>
+
               </div>
 
-              <p class="trail-status">
-                Trail Opening Soon
-              </p>
+              <a
+                class="trail-enter-button"
+                href="courses/intro/index.html">
+
+                Enter Foundations Trail
+              </a>
 
             </article>
 
@@ -1127,10 +1153,9 @@
         </p>
 
         <p>
-          Some missions will also unlock Academy achievements recognizing
+          Some trail stops will also unlock Academy achievements recognizing
           the knowledge and skills you practiced.
         </p>
-
 
         <div class="badge-preview">
 
