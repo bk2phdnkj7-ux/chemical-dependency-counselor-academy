@@ -696,6 +696,23 @@
       margin-top: 13px;
     }
 
+    .next-station-button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 13px 19px;
+      background: var(--river-dark);
+      color: #fff;
+      border: 3px solid #173a47;
+      border-radius: 9px;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .next-station-button:hover {
+      background: #173a47;
+    }
+
     .sources {
       margin-top: 38px;
       background: #fff;
@@ -771,11 +788,11 @@
 
       <nav class="nav-row" aria-label="Academy navigation">
 
-        <a class="nav-button" href="index.html">
+        <a class="nav-button" href="../index.html">
           Return to Foundations Trail
         </a>
 
-        <a class="nav-button" href="../../index.html">
+        <a class="nav-button" href="../../../index.html">
           Counselor Academy Preserve
         </a>
 
@@ -1553,6 +1570,10 @@
                   completeStation(
                     "moral"
                   );
+
+                  addNextStationButton(
+                    "moral"
+                  );
                 } else {
                   feedback.className =
                     "feedback incorrect";
@@ -1668,6 +1689,10 @@
                     "Yes. The disease model emphasizes addiction as a health condition and supports medical and clinical approaches to treatment. A counselor should still remember that health conditions occur within social and environmental contexts.<br><strong>Evidence collected: Disease Model Clinical Lens</strong>";
 
                   completeStation(
+                    "disease"
+                  );
+
+                  addNextStationButton(
                     "disease"
                   );
                 } else {
@@ -1805,6 +1830,10 @@
                   completeStation(
                     "public"
                   );
+
+                  addNextStationButton(
+                    "public"
+                  );
                 } else {
                   feedback.className =
                     "feedback incorrect";
@@ -1917,6 +1946,10 @@
                     "Exactly. The sociological lens examines how environments, institutions, inequality, and access shape risk and recovery opportunities.<br><strong>Evidence collected: Sociological Risk Environment Map</strong>";
 
                   completeStation(
+                    "social"
+                  );
+
+                  addNextStationButton(
                     "social"
                   );
                 } else {
@@ -2040,6 +2073,10 @@
                   completeStation(
                     "compare"
                   );
+
+                  addNextStationButton(
+                    "compare"
+                  );
                 } else {
                   feedback.className =
                     "feedback incorrect";
@@ -2151,6 +2188,10 @@
                   completeStation(
                     "counselor"
                   );
+
+                  addNextStationButton(
+                    "counselor"
+                  );
                 } else {
                   feedback.className =
                     "feedback incorrect";
@@ -2166,6 +2207,63 @@
       area.scrollIntoView({
         behavior: "smooth"
       });
+    }
+
+    function addNextStationButton(currentId) {
+      const order = [
+        "moral",
+        "disease",
+        "public",
+        "social",
+        "compare",
+        "counselor"
+      ];
+
+      const labels = {
+        disease: "Continue to Field Station 2: Disease Model Overlook →",
+        public: "Continue to Field Station 3: Public Health Crossing →",
+        social: "Continue to Field Station 4: Sociological Model Lookout →",
+        compare: "Continue to Field Station 5: Compare the Lenses →",
+        counselor: "Continue to Field Station 6: Counselor Integration Point →"
+      };
+
+      const feedback = document.getElementById(currentId + "-feedback");
+      if (!feedback || feedback.querySelector(".next-station-button")) {
+        return;
+      }
+
+      const currentIndex = order.indexOf(currentId);
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "next-station-button";
+
+      if (currentIndex >= 0 && currentIndex < order.length - 1) {
+        const nextId = order[currentIndex + 1];
+        button.textContent = labels[nextId];
+        button.addEventListener("click", function() {
+          const nextButton = document.querySelector('[data-station="' + nextId + '"]');
+          if (nextButton) {
+            nextButton.click();
+          }
+        });
+      } else {
+        button.textContent = "Continue to the Final Counselor Case →";
+        button.addEventListener("click", function() {
+          const finalCase = document.getElementById("final-case");
+          if (finalCase) {
+            finalCase.classList.add("show");
+            finalCase.scrollIntoView({ behavior: "smooth", block: "start" });
+            const heading = document.getElementById("final-heading");
+            if (heading) {
+              heading.setAttribute("tabindex", "-1");
+              heading.focus({ preventScroll: true });
+            }
+          }
+        });
+      }
+
+      feedback.appendChild(document.createElement("br"));
+      feedback.appendChild(button);
     }
 
     function configureStations() {
@@ -2784,7 +2882,7 @@
 
                     <a
                       class="return-button"
-                      href="index.html">
+                      href="../index.html">
                       Return to the Foundations Trail Map
                     </a>
                   `;
