@@ -626,6 +626,37 @@
       font-weight: bold;
     }
 
+    .open-trail-button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 18px;
+      background-color: var(--forest-dark);
+      color: var(--white);
+      border: 3px solid #10281c;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    .open-trail-button:hover {
+      background-color: #0f2b1d;
+    }
+
+    .open-trail-button:focus {
+      outline: 4px solid #111111;
+      outline-offset: 4px;
+    }
+
+    .trail-stop:nth-child(even) .open-trail-button {
+      background-color: var(--river-dark);
+      border-color: #173a47;
+    }
+
+    .trail-stop:nth-child(even) .open-trail-button:hover {
+      background-color: #173a47;
+    }
+
     .trail-marker {
       position: absolute;
       left: 50%;
@@ -1117,9 +1148,11 @@
               helping professionals.
             </p>
 
-            <a href="trails/week1.html" style="display: inline-block; margin-top: 10px; padding: 12px 18px; background: #173f2c; color: #ffffff; text-decoration: none; border-radius: 10px; font-weight: 700;">
-  Enter Trail Stop 1 →
-</a>
+            <a
+              class="open-trail-button"
+              href="trails/week1.html">
+              Enter Trail Stop 1 →
+            </a>
 
           </article>
 
@@ -1139,7 +1172,9 @@
               developmental, and biopsychosocial explanations of addiction.
             </p>
 
-            <a href="trails/week2.html" style="display: inline-block; margin-top: 10px; padding: 12px 18px; background: #285263; color: #ffffff; text-decoration: none; border-radius: 10px; font-weight: 700;">
+            <a
+              class="open-trail-button"
+              href="trails/week2.html">
               Enter Trail Stop 2 →
             </a>
 
@@ -1157,14 +1192,25 @@
             </h3>
 
             <p>
-              Explore neurons, neurotransmitters, reward pathways,
-              tolerance, dependence, and the ways psychoactive substances
-              influence the nervous system.
+              Enter the neuroscience research station to explore how neurons
+              communicate, how neurotransmitters move across the synapse,
+              how reward pathways are affected by psychoactive substances,
+              and how repeated substance use can contribute to tolerance
+              and changes in brain functioning.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
+            <p>
+              Along the way, you will investigate neurons, synapses,
+              dopamine pathways, GABA and glutamate, brain adaptation,
+              tolerance, and the connection between neuroscience and
+              person-centered addiction counseling.
+            </p>
+
+            <a
+              class="open-trail-button"
+              href="trails/week3.html">
+              Enter Trail Stop 3 →
+            </a>
 
           </article>
 
