@@ -1,1 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Counseling Skills Trail Stop 1: The Helping Relationship in the Chemical Dependency Counselor Academy.">
 
+  <title>Trail Stop 1 | The Helping Relationship</title>
+
+  <style>
+    :root {
+      --ink: #203027;
+      --forest: #294f3a;
+      --forest-dark: #173425;
+      --pine: #3e684d;
+      --sage: #dce9dc;
+      --sage-light: #eef5ec;
+      --river: #3d7184;
+      --river-dark: #285263;
+      --river-light: #e4f1f4;
+      --sky: #dcecf4;
+      --sky-light: #eef7fa;
+      --cream: #fffdf7;
+      --sand: #eadcb9;
+      --gold: #7a6120;
+      --gold-light: #fff7df;
+      --white: #ffffff;
+      --border: #68786e;
+      --success: #285c3b;
+      --warning: #7a5b19;
+      --danger: #8b3d32;
+      --shadow: 0 14px 34px rgba(20,54,35,.16);
+      --soft-shadow: 0 8px 20px rgba(20,54,35,.10);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #f4f7f1;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #174f64;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: .18em;
+    }
+
+    button, input { font: inherit; }
+
+    button {
+      cursor: pointer;
+    }
+
+    a:focus,
+    button:focus,
+    input:focus {
+      outline: 4px solid #111;
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 9999;
+      padding: 12px 16px;
+      background: #fff;
+      color: #111;
+      border: 3px solid #111;
+      font-weight: bold;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(to bottom, #dceef5 0%, #e9f5f3 40%, #dcebdc 70%, #c4d9c0 100%);
+      border-bottom: 6px solid var(--forest-dark);
+    }
+
+    .sun {
+      position: absolute;
+      top: 70px;
+      right: 12%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255,240,177,.82);
+      box-shadow: 0 0 55px rgba(255,235,150,.45);
+      pointer-events: none;
+    }
+
+    .cloud {
+      position: absolute;
+      height: 40px;
+      border-radius: 50px;
+      background: rgba(255,255,255,.76);
+      box-shadow:
+        40px -12px 0 8px rgba(255,255,255,.7),
+        75px 1px 0 2px rgba(255,255,255,.68);
+      pointer-events: none;
+      animation: drift 34s ease-in-out infinite alternate;
+    }
+
+    .cloud.one { width: 110px; top: 105px; left: 8%; }
+    .cloud.two { width: 125px; top: 155px; right: 18%; animation-duration: 41s; }
+
+    @keyframes drift {
+      from { transform: translateX(-15px); }
+      to { transform: translateX(15px); }
+    }
+
+    .river-scene {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 240px;
+      pointer-events: none;
+    }
+
+    .river-bank {
+      position: absolute;
+      left: -4%;
+      right: -4%;
+      bottom: 0;
+      height: 180px;
+      background:
+        radial-gradient(ellipse at 15% 100%, #4d7454 0%, #4d7454 36%, transparent 37%),
+        radial-gradient(ellipse at 40% 100%, #3d6748 0%, #3d6748 35%, transparent 36%),
+        radial-gradient(ellipse at 72% 100%, #527a58 0%, #527a58 38%, transparent 39%),
+        radial-gradient(ellipse at 95% 100%, #3f674a 0%, #3f674a 34%, transparent 35%);
+    }
+
+    .river {
+      position: absolute;
+      left: 50%;
+      bottom: -70px;
+      width: 330px;
+      height: 330px;
+      transform: translateX(-50%) rotate(2deg);
+      background: linear-gradient(to bottom, #8dc0d0 0%, #4f899f 100%);
+      border-radius: 48% 52% 35% 65% / 20% 25% 75% 80%;
+      opacity: .92;
+      animation: riverPulse 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes riverPulse {
+      from { transform: translateX(-50%) rotate(2deg) scaleX(.96); }
+      to { transform: translateX(-50%) rotate(2deg) scaleX(1.04); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+      padding: 55px 0 145px;
+      text-align: center;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 10px 15px;
+      background: rgba(255,253,247,.97);
+      color: var(--forest-dark);
+      border: 3px solid var(--forest-dark);
+      border-radius: 9px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .trail-mark {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--river-dark);
+      color: #fff;
+      border: 5px solid #d5bb70;
+      box-shadow: var(--shadow);
+      font-size: 3rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--forest-dark);
+      font-size: .96rem;
+      font-weight: bold;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 950px;
+      margin: 0 auto;
+      color: var(--forest-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin: 16px auto 0;
+      color: #34503e;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.2rem, 3vw, 1.55rem);
+    }
+
+    .hero-card {
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 24px;
+      background: rgba(255,253,247,.97);
+      border: 3px solid #6c6a60;
+      border-left: 9px solid var(--river);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: left;
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      color: var(--forest-dark);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    /* SOUND */
+    .sound-panel {
+      max-width: 880px;
+      margin: -62px auto 32px;
+      position: relative;
+      z-index: 10;
+      padding: 23px;
+      background: var(--forest-dark);
+      color: #fff;
+      border: 4px solid #d3b96c;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .sound-panel h2 {
+      margin-top: 0;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .audio-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .audio-button {
+      padding: 11px 17px;
+      background: #fff;
+      color: var(--forest-dark);
+      border: 3px solid #d3b96c;
+      border-radius: 9px;
+      font-weight: bold;
+    }
+
+    /* PROGRESS */
+    .progress-panel {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #fff;
+      border-bottom: 3px solid var(--river);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .progress-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 12px 0;
+    }
+
+    .progress-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .progress-label {
+      font-weight: bold;
+      color: var(--forest-dark);
+    }
+
+    .progress-track {
+      flex: 1 1 300px;
+      height: 18px;
+      background: #e6ece8;
+      border: 2px solid #718077;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--river-dark);
+      transition: width .4s ease;
+    }
+
+    /* CONTENT */
+    main { padding-bottom: 60px; }
+
+    h2, h3, h4 {
+      color: var(--forest-dark);
+      line-height: 1.3;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 34px 0;
+    }
+
+    .mini-card {
+      background: #fff;
+      border: 2px solid var(--border);
+      border-top: 7px solid var(--river);
+      border-radius: 15px;
+      padding: 19px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .mini-card:nth-child(2) { border-top-color: var(--forest); }
+    .mini-card:nth-child(3) { border-top-color: var(--gold); }
+
+    .station {
+      margin: 30px 0;
+      padding: 25px;
+      background: #fff;
+      border: 3px solid var(--border);
+      border-left: 9px solid var(--river);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .station:nth-of-type(even) {
+      border-left-color: var(--forest);
+    }
+
+    .station-label {
+      display: inline-block;
+      margin-bottom: 9px;
+      padding: 6px 11px;
+      background: var(--river-dark);
+      color: #fff;
+      border-radius: 20px;
+      font-size: .88rem;
+      font-weight: bold;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .station h2 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    .callout {
+      margin: 16px 0;
+      padding: 15px;
+      background: var(--river-light);
+      border-left: 6px solid var(--river);
+      border-radius: 10px;
+    }
+
+    .callout.green {
+      background: var(--sage-light);
+      border-left-color: var(--forest);
+    }
+
+    .callout.gold {
+      background: var(--gold-light);
+      border-left-color: var(--gold);
+    }
+
+    .choice-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .choice {
+      width: 100%;
+      padding: 14px 16px;
+      text-align: left;
+      background: #fff;
+      color: var(--ink);
+      border: 2px solid #6f8076;
+      border-radius: 11px;
+      font-weight: bold;
+    }
+
+    .choice:hover {
+      background: #f3f8f5;
+    }
+
+    .choice.correct {
+      background: #e5f3e8;
+      border-color: var(--success);
+    }
+
+    .choice.incorrect {
+      background: #fff0ed;
+      border-color: var(--danger);
+    }
+
+    .feedback {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 10px;
+      border: 2px solid #73837a;
+      background: #f8fbf9;
+    }
+
+    .feedback.show { display: block; }
+
+    .feedback.good {
+      background: #e8f5ea;
+      border-color: var(--success);
+    }
+
+    .feedback.try {
+      background: #fff5e5;
+      border-color: var(--warning);
+    }
+
+    .continue-row {
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    .continue-button,
+    .primary-button {
+      display: inline-block;
+      padding: 12px 19px;
+      background: var(--forest);
+      color: #fff;
+      border: 3px solid var(--forest-dark);
+      border-radius: 9px;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: .18em;
+    }
+
+    .continue-button[disabled] {
+      background: #737d77;
+      border-color: #575f5a;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+
+    /* CLICKABLE ALLIANCE CARDS */
+    .alliance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .alliance-button {
+      min-height: 150px;
+      padding: 16px;
+      border: 3px solid var(--river);
+      border-radius: 14px;
+      background: var(--sky-light);
+      color: var(--forest-dark);
+      text-align: center;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .alliance-button span {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    .alliance-button.completed {
+      background: var(--sage-light);
+      border-color: var(--forest);
+    }
+
+    .alliance-info {
+      margin-top: 14px;
+      padding: 15px;
+      background: #fff;
+      border: 2px solid var(--river);
+      border-radius: 12px;
+      min-height: 120px;
+    }
+
+    /* ATTENDING */
+    .attending-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 16px;
+    }
+
+    .attending-card {
+      padding: 17px;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      background: var(--sage-light);
+    }
+
+    /* OARS */
+    .oars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .oars-card {
+      padding: 17px;
+      background: #fff;
+      border: 3px solid var(--river);
+      border-radius: 13px;
+      text-align: center;
+    }
+
+    .oars-letter {
+      display: block;
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--river-dark);
+    }
+
+    /* COMPLETION */
+    .completion {
+      display: none;
+      margin: 36px 0 0;
+      padding: 28px;
+      background: var(--cream);
+      border: 4px solid var(--gold);
+      border-left-width: 10px;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .completion.show { display: block; }
+
+    .name-field {
+      width: min(100%, 520px);
+      padding: 12px 14px;
+      border: 3px solid var(--river-dark);
+      border-radius: 8px;
+    }
+
+    .badge-preview {
+      margin: 22px auto;
+      max-width: 640px;
+      padding: 28px;
+      background:
+        linear-gradient(135deg, #eef7fa 0%, #eef5ec 100%);
+      border: 5px solid var(--forest-dark);
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .badge-preview h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      margin: 8px 0;
+    }
+
+    .badge-icon {
+      font-size: 4rem;
+    }
+
+    .source-note {
+      margin-top: 34px;
+      padding: 20px;
+      background: #f8fbf9;
+      border: 2px solid #7b8d82;
+      border-radius: 14px;
+    }
+
+    footer {
+      margin-top: 55px;
+      padding: 30px 0;
+      background: var(--forest-dark);
+      color: #fff;
+      text-align: center;
+      border-top: 5px solid #c6aa5e;
+    }
+
+    footer p { margin: 4px 0; }
+
+    @media (max-width: 900px) {
+      .intro-grid,
+      .oars-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      body { font-size: 17px; }
+
+      .intro-grid,
+      .attending-grid,
+      .oars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .station { padding: 18px; }
+      .hero-content { padding-top: 45px; }
+      .sound-panel { margin-top: -42px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .cloud, .river { animation: none; }
+      .progress-fill { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="cloud one" aria-hidden="true"></div>
+  <div class="cloud two" aria-hidden="true"></div>
+  <div class="river-scene" aria-hidden="true">
+    <div class="river-bank"></div>
+    <div class="river"></div>
+  </div>
+
+  <div class="container hero-content">
+
+    <nav class="top-nav" aria-label="Trail navigation">
+      <a class="nav-link" href="../index.html">Return to Counseling Skills Trail</a>
+      <a class="nav-link" href="../../../index.html">Return to Counselor Academy Preserve</a>
+    </nav>
+
+    <div class="trail-mark" aria-hidden="true">🧭</div>
+
+    <p class="eyebrow">Counseling Skills Trail • Trail Stop 1</p>
+
+    <h1>The Helping Relationship</h1>
+
+    <p class="subtitle">
+      Counselor Connection Point
+    </p>
+
+    <section class="hero-card" aria-labelledby="trail-welcome">
+      <h2 id="trail-welcome">The Relationship Comes First</h2>
+
+      <p>
+        Counseling skills matter, but techniques are much less useful when a
+        client does not experience the counselor as respectful, trustworthy,
+        attentive, and genuinely interested in understanding them.
+      </p>
+
+      <p>
+        At this Trail Stop, you will practice the foundations of a helping
+        relationship: empathy, active listening, respectful professional
+        presence, appropriate boundaries, client autonomy, and the communication
+        skills that help create a collaborative therapeutic alliance.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Your goal is not to find a perfect counseling script. Your goal is to
+        notice what helps another person feel heard, understood, respected,
+        and invited into the counseling process.
+      </p>
+    </section>
+
+  </div>
+</header>
+
+<section id="soundscape" class="sound-panel" aria-labelledby="sound-heading">
+  <h2 id="sound-heading">Counseling Skills River Soundscape</h2>
+
+  <p>
+    If a quiet river helps you focus, you may play the optional soundscape
+    while you work. Audio never begins automatically and is not required.
+  </p>
+
+  <div class="audio-controls">
+    <button id="play-audio" class="audio-button" type="button">Play River Soundscape</button>
+    <button id="pause-audio" class="audio-button" type="button">Pause Sound</button>
+  </div>
+
+  <p id="audio-status" role="status" aria-live="polite">
+    River soundscape is currently paused.
+  </p>
+
+  <audio id="trail-audio" loop preload="metadata">
+    <source
+      src="../../../assets/audio/nils_vega-river-sounds-547976.mp3"
+      type="audio/mpeg">
+  </audio>
+</section>
+
+<div class="progress-panel">
+  <div class="progress-inner">
+    <div class="progress-row">
+      <span class="progress-label" id="progress-label">Trail progress: 0 of 7 stations complete</span>
+      <div
+        class="progress-track"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="7"
+        aria-valuenow="0"
+        aria-label="Trail Stop progress">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+
+    <section class="intro-grid" aria-label="Trail Stop orientation">
+
+      <article class="mini-card">
+        <h3>Listen for Meaning</h3>
+        <p>
+          Effective listening involves more than hearing words. Pay attention
+          to meaning, emotion, context, and what the client may be trying to communicate.
+        </p>
+      </article>
+
+      <article class="mini-card">
+        <h3>Respect Autonomy</h3>
+        <p>
+          Clients are active partners in change. Counseling supports
+          self-direction rather than taking control of a client's decisions.
+        </p>
+      </article>
+
+      <article class="mini-card">
+        <h3>Practice, Not Perfection</h3>
+        <p>
+          Counselor development involves trying responses, receiving feedback,
+          adjusting, and building skill over time.
+        </p>
+      </article>
+
+    </section>
+
+    <!-- STATION 1 -->
+    <section class="station" id="station-1" aria-labelledby="station-1-heading">
+      <span class="station-label">Station 1 of 7</span>
+
+      <h2 id="station-1-heading">The Counselor's Role</h2>
+
+      <p>
+        A helping relationship is collaborative. The counselor brings
+        professional knowledge and skill; the client brings expertise about
+        their own life, experiences, values, strengths, and goals.
+      </p>
+
+      <div class="callout">
+        <strong>Trail Principle:</strong>
+        Helping is different from fixing. A counselor can facilitate change,
+        but cannot make change happen for another person.
+      </div>
+
+      <p><strong>Client statement:</strong></p>
+
+      <blockquote>
+        “Everyone keeps telling me I need to stop drinking. I know things aren't
+        going great, but I'm tired of people telling me what to do.”
+      </blockquote>
+
+      <p>
+        Which response best reflects a collaborative helping role?
+      </p>
+
+      <div class="choice-grid" data-question="q1">
+
+        <button class="choice" type="button" data-value="a">
+          “They are probably telling you that because they know what is best for you.”
+        </button>
+
+        <button class="choice" type="button" data-value="b">
+          “You need to decide today whether you are serious about treatment.”
+        </button>
+
+        <button class="choice" type="button" data-value="c">
+          “It sounds like having other people make decisions for you has been frustrating. What concerns, if any, do you have about your drinking?”
+        </button>
+
+        <button class="choice" type="button" data-value="d">
+          “Let's not talk about drinking yet. Tell me about something completely unrelated.”
+        </button>
+
+      </div>
+
+      <div id="q1-feedback" class="feedback" role="status" aria-live="polite"></div>
+
+      <div class="continue-row">
+        <button class="continue-button" id="continue-1" type="button" disabled data-next="station-2">
+          Continue to Station 2
+        </button>
+      </div>
+    </section>
+
+    <!-- STATION 2 -->
+    <section class="station" id="station-2" aria-labelledby="station-2-heading">
+      <span class="station-label">Station 2 of 7</span>
+
+      <h2 id="station-2-heading">Build the Therapeutic Alliance</h2>
+
+      <p>
+        Explore seven qualities emphasized in the course reading. Select every
+        card before continuing.
+      </p>
+
+      <div class="alliance-grid" id="alliance-grid">
+
+        <button class="alliance-button" type="button"
+          data-title="Empathy"
+          data-text="Listen to the client's story, understand context, take the client's perspective, and communicate your understanding without pretending that you know exactly what the client feels.">
+          <span aria-hidden="true">💬</span>
+          Empathy
+        </button>
+
+        <button class="alliance-button" type="button"
+          data-title="Trust"
+          data-text="Trust develops over time. Clients need enough safety to share honestly, and counselors communicate confidence that clients are capable of meaningful change.">
+          <span aria-hidden="true">🤝</span>
+          Trust
+        </button>
+
+        <button class="alliance-button" type="button"
+          data-title="Active Listening"
+          data-text="Listen for understanding rather than simply waiting for your turn to speak. Notice words, tone, context, and relevant nonverbal cues without assuming you know their meaning.">
+          <span aria-hidden="true">👂</span>
+          Active Listening
+        </button>
+
+        <button class="alliance-button" type="button"
+          data-title="Cultural Responsiveness"
+          data-text="Clients bring multiple identities, worldviews, values, and lived experiences. Effective counselors stay curious, avoid assumptions, and adapt their approach respectfully.">
+          <span aria-hidden="true">🌎</span>
+          Cultural Responsiveness
+        </button>
+
+        <button class="alliance-button" type="button"
+          data-title="Flexibility and Adaptability"
+          data-text="Counseling is not one-size-fits-all. Effective helpers tailor their approach, recognize when another service may be needed, and continue learning throughout their careers.">
+          <span aria-hidden="true">🌿</span>
+          Flexibility
+        </button>
+
+        <button class="alliance-button" type="button"
+          data-title="Respect"
+          data-text="Respect includes accepting clients as people of worth and honoring their thoughts, feelings, choices, and right to self-direction even when the counselor would make a different choice.">
+          <span aria-hidden="true">🫶</span>
+          Respect
+        </button>
+
+        <button class="alliance-button" type="button"
+          data-title="Boundaries"
+          data-text="Professional boundaries define the parameters of the counseling relationship and help keep the relationship ethical, focused, safe, and effective.">
+          <span aria-hidden="true">🧭</span>
+          Boundaries
+        </button>
+
+      </div>
+
+      <div class="alliance-info" id="alliance-info" role="status" aria-live="polite">
+        Select a card to explore the therapeutic alliance.
+      </div>
+
+      <p id="alliance-count"><strong>0 of 7 qualities explored.</strong></p>
+
+      <div class="continue-row">
+        <button class="continue-button" id="continue-2" type="button" disabled data-next="station-3">
+          Continue to Station 3
+        </button>
+      </div>
+    </section>
+
+    <!-- STATION 3 -->
+    <section class="station" id="station-3" aria-labelledby="station-3-heading">
+      <span class="station-label">Station 3 of 7</span>
+
+      <h2 id="station-3-heading">Empathy Lab</h2>
+
+      <p>
+        Empathy communicates an effort to understand the client's perspective.
+        It is not the same as agreeing, approving, giving advice, or telling the
+        client that you know exactly how they feel.
+      </p>
+
+      <p><strong>Client statement:</strong></p>
+
+      <blockquote>
+        “I've tried treatment before. I did okay for a while, then I used again.
+        I feel like everyone is probably thinking I failed.”
+      </blockquote>
+
+      <p>Which counselor response most clearly communicates empathy?</p>
+
+      <div class="choice-grid" data-question="q2">
+
+        <button class="choice" type="button" data-value="a">
+          “You shouldn't think of it that way. Relapse happens.”
+        </button>
+
+        <button class="choice" type="button" data-value="b">
+          “I know exactly how you feel.”
+        </button>
+
+        <button class="choice" type="button" data-value="c">
+          “You're worried that returning to use means other people will see you as a failure.”
+        </button>
+
+        <button class="choice" type="button" data-value="d">
+          “What you need is a stronger relapse-prevention plan.”
+        </button>
+
+      </div>
+
+      <div id="q2-feedback" class="feedback" role="status" aria-live="polite"></div>
+
+      <div class="continue-row">
+        <button class="continue-button" id="continue-3" type="button" disabled data-next="station-4">
+          Continue to Station 4
+        </button>
+      </div>
+    </section>
+
+    <!-- STATION 4 -->
+    <section class="station" id="station-4" aria-labelledby="station-4-heading">
+      <span class="station-label">Station 4 of 7</span>
+
+      <h2 id="station-4-heading">Attending Skills Field Station</h2>
+
+      <p>
+        Professional presence is communicated through both verbal and nonverbal
+        behavior. Attending means being psychologically present with the client,
+        not simply occupying the same room.
+      </p>
+
+      <div class="attending-grid">
+
+        <article class="attending-card">
+          <h3>Verbal Attending</h3>
+          <ul>
+            <li>Use brief encouragers when appropriate.</li>
+            <li>Ask questions with purpose rather than interrogating.</li>
+            <li>Reflect important meaning and feeling.</li>
+            <li>Allow thoughtful pauses.</li>
+            <li>Summarize to check understanding.</li>
+          </ul>
+        </article>
+
+        <article class="attending-card">
+          <h3>Nonverbal Attending</h3>
+          <ul>
+            <li>Use an attentive posture that is appropriate to the setting.</li>
+            <li>Reduce unnecessary distractions.</li>
+            <li>Notice tone, pace, affect, and behavior.</li>
+            <li>Avoid assuming that one nonverbal behavior means the same thing across people or cultures.</li>
+            <li>Use culturally responsive eye contact and interpersonal distance.</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="callout green">
+        <strong>Cultural Humility Check:</strong>
+        Eye contact, silence, physical distance, emotional expression, and
+        conversational style can carry different meanings across cultures and
+        individuals. Observe, ask respectfully, and avoid universal assumptions.
+      </div>
+
+      <p><strong>Which counselor behavior is most consistent with professional attending?</strong></p>
+
+      <div class="choice-grid" data-question="q3">
+
+        <button class="choice" type="button" data-value="a">
+          Looking frequently at the clock so the session stays on schedule.
+        </button>
+
+        <button class="choice" type="button" data-value="b">
+          Remaining engaged, reducing distractions, listening for meaning, and checking interpretations rather than assuming.
+        </button>
+
+        <button class="choice" type="button" data-value="c">
+          Maintaining continuous eye contact to prove that you are listening.
+        </button>
+
+        <button class="choice" type="button" data-value="d">
+          Filling every silence immediately so the client does not become uncomfortable.
+        </button>
+
+      </div>
+
+      <div id="q3-feedback" class="feedback" role="status" aria-live="polite"></div>
+
+      <div class="continue-row">
+        <button class="continue-button" id="continue-4" type="button" disabled data-next="station-5">
+          Continue to Station 5
+        </button>
+      </div>
+    </section>
+
+    <!-- STATION 5 -->
+    <section class="station" id="station-5" aria-labelledby="station-5-heading">
+      <span class="station-label">Station 5 of 7</span>
+
+      <h2 id="station-5-heading">Listening Under the Surface</h2>
+
+      <p>
+        Reflective listening is more than repeating the client's words. The
+        counselor forms a tentative understanding of meaning or feeling,
+        reflects that understanding, and then listens carefully to see whether
+        the client confirms, corrects, or expands it.
+      </p>
+
+      <div class="callout">
+        <strong>Think of a reflection as a hypothesis, not a verdict.</strong>
+        The counselor is saying, in effect, “This is what I think I hear. Help me
+        understand whether I have it right.”
+      </div>
+
+      <p><strong>Client statement:</strong></p>
+
+      <blockquote>
+        “My probation officer says I have to be here. Honestly, I don't think I
+        have the kind of problem everyone says I do.”
+      </blockquote>
+
+      <p>Which response best demonstrates reflective listening?</p>
+
+      <div class="choice-grid" data-question="q4">
+
+        <button class="choice" type="button" data-value="a">
+          “How many times have you been arrested for substance-related charges?”
+        </button>
+
+        <button class="choice" type="button" data-value="b">
+          “You're not convinced that your substance use is as serious as other people believe it is.”
+        </button>
+
+        <button class="choice" type="button" data-value="c">
+          “Denial is common in addiction.”
+        </button>
+
+        <button class="choice" type="button" data-value="d">
+          “Your probation officer would not send you here unless there were a problem.”
+        </button>
+
+      </div>
+
+      <div id="q4-feedback" class="feedback" role="status" aria-live="polite"></div>
+
+      <div class="continue-row">
+        <button class="continue-button" id="continue-5" type="button" disabled data-next="station-6">
+          Continue to Station 6
+        </button>
+      </div>
+    </section>
+
+    <!-- STATION 6 -->
+    <section class="station" id="station-6" aria-labelledby="station-6-heading">
+      <span class="station-label">Station 6 of 7</span>
+
+      <h2 id="station-6-heading">OARS Practice Camp</h2>
+
+      <p>
+        The source chapter introduces OARS as four core Motivational
+        Interviewing skills that are also broadly useful in person-centered
+        counseling.
+      </p>
+
+      <div class="oars-grid">
+
+        <article class="oars-card">
+          <span class="oars-letter">O</span>
+          <strong>Open Questions</strong>
+          <p>Invite clients to explain, reflect, and tell their story.</p>
+        </article>
+
+        <article class="oars-card">
+          <span class="oars-letter">A</span>
+          <strong>Affirmations</strong>
+          <p>Notice genuine strengths, efforts, values, and capabilities.</p>
+        </article>
+
+        <article class="oars-card">
+          <span class="oars-letter">R</span>
+          <strong>Reflective Listening</strong>
+          <p>Offer a tentative understanding of meaning or feeling.</p>
+        </article>
+
+        <article class="oars-card">
+          <span class="oars-letter">S</span>
+          <strong>Summaries</strong>
+          <p>Pull together important information and show that you have been listening.</p>
+        </article>
+
+      </div>
+
+      <p><strong>Which response is an open question?</strong></p>
+
+      <div class="choice-grid" data-question="q5">
+
+        <button class="choice" type="button" data-value="a">
+          “Did you drink yesterday?”
+        </button>
+
+        <button class="choice" type="button" data-value="b">
+          “Why didn't you just stop?”
+        </button>
+
+        <button class="choice" type="button" data-value="c">
+          “What has your substance use been like for you recently?”
+        </button>
+
+        <button class="choice" type="button" data-value="d">
+          “You know alcohol is affecting your health, right?”
+        </button>
+
+      </div>
+
+      <div id="q5-feedback" class="feedback" role="status" aria-live="polite"></div>
+
+      <div class="continue-row">
+        <button class="continue-button" id="continue-6" type="button" disabled data-next="station-7">
+          Continue to Final Challenge
+        </button>
+      </div>
+    </section>
+
+    <!-- STATION 7 -->
+    <section class="station" id="station-7" aria-labelledby="station-7-heading">
+      <span class="station-label">Station 7 of 7 • Final Challenge</span>
+
+      <h2 id="station-7-heading">Be the Counselor</h2>
+
+      <p>
+        Imagine this is the opening portion of an individual counseling session.
+        Read Maya's statement and choose the response that best integrates the
+        skills you practiced.
+      </p>
+
+      <div class="callout gold">
+        <strong>Client: Maya</strong><br>
+        “My sister keeps saying I'm ruining my life. I know I've missed work a
+        few times after drinking, but I still go most days. I don't know. Part
+        of me thinks she's exaggerating, and part of me is starting to wonder.”
+      </div>
+
+      <p>
+        Which response best demonstrates empathy, reflective listening,
+        autonomy support, and an invitation to explore?
+      </p>
+
+      <div class="choice-grid" data-question="q6">
+
+        <button class="choice" type="button" data-value="a">
+          “Your sister is right to be worried. Missing work is a clear sign that you need treatment.”
+        </button>
+
+        <button class="choice" type="button" data-value="b">
+          “You seem to be in denial about the seriousness of your drinking.”
+        </button>
+
+        <button class="choice" type="button" data-value="c">
+          “You're pulled in two directions. Part of you feels your sister is overstating things, and another part is beginning to have some concerns of your own. What have you noticed that makes you wonder?”
+        </button>
+
+        <button class="choice" type="button" data-value="d">
+          “How many drinks do you have per week?”
+        </button>
+
+      </div>
+
+      <div id="q6-feedback" class="feedback" role="status" aria-live="polite"></div>
+
+      <div class="continue-row">
+        <button class="continue-button" id="continue-7" type="button" disabled>
+          Complete Trail Stop 1
+        </button>
+      </div>
+    </section>
+
+    <!-- COMPLETION -->
+    <section class="completion" id="completion" aria-labelledby="completion-heading">
+
+      <span class="station-label">Trail Stop Complete</span>
+
+      <h2 id="completion-heading">You Reached Counselor Connection Point</h2>
+
+      <p>
+        You practiced the foundations of a respectful helping relationship:
+        empathy, active listening, attending, professional presence, autonomy,
+        boundaries, OARS, and collaborative counselor responses.
+      </p>
+
+      <div class="callout green">
+        <strong>Your next step:</strong>
+        Enter your name, generate your personalized badge, and download it
+        before leaving this page. Your Canvas assignment may require the badge
+        as proof of completion.
+      </div>
+
+      <label for="student-name"><strong>Name for your completion badge</strong></label><br>
+      <input
+        class="name-field"
+        id="student-name"
+        type="text"
+        maxlength="60"
+        autocomplete="name"
+        placeholder="Enter your name">
+
+      <div class="badge-preview" id="badge-preview" aria-live="polite">
+        <div class="badge-icon" aria-hidden="true">🧭</div>
+        <p style="margin:0; text-transform:uppercase; letter-spacing:.08em; font-weight:bold;">
+          Chemical Dependency Counselor Academy
+        </p>
+        <h3>Helping Relationship Pathfinder</h3>
+        <p>Counseling Skills Trail • Trail Stop 1</p>
+        <p id="badge-name"><strong>Your Name</strong></p>
+        <p style="margin-bottom:0;">The Helping Relationship</p>
+      </div>
+
+      <button class="primary-button" id="download-badge" type="button">
+        Download My Completion Badge
+      </button>
+
+      <p id="badge-status" role="status" aria-live="polite"></p>
+
+    </section>
+
+    <section class="source-note" aria-labelledby="source-heading">
+      <h2 id="source-heading">Source and Further Reading</h2>
+
+      <p>
+        This Trail Stop was developed from the individual counseling skills
+        content in <em>Addictions Counseling Essentials</em> by Andrea Polites,
+        Bruce Sewick, Jason Florin, and Julie Trytek, including material on the
+        therapeutic alliance, empathy, trust, active listening, cultural
+        responsiveness, flexibility, respect, boundaries, person-centered
+        counseling, and OARS.
+      </p>
+
+      <p>
+        <a
+          href="https://cod.pressbooks.pub/addictionscounseling/chapter/individual-and-group-counseling-skills/#chapter-138-section-1"
+          target="_blank"
+          rel="noopener">
+          Read Individual and Group Counseling Skills in Addictions Counseling Essentials
+        </a>
+      </p>
+
+      <p style="margin-bottom:0;">
+        Open educational resource content is used as a learning foundation;
+        interactive scenarios, instructional framing, and Academy activities
+        were developed for this course.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Chemical Dependency Counselor Academy</p>
+    <p>Counseling Skills Trail • Trail Stop 1</p>
+    <p>The Helping Relationship</p>
+    <p>Learning • Connection • Growth • Practice</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  const STORAGE_KEY = "cdca-counseling-week1-v1";
+  const totalStations = 7;
+
+  let state = {
+    completedStations: [],
+    allianceViewed: []
+  };
+
+  function loadState() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      if (saved && Array.isArray(saved.completedStations) && Array.isArray(saved.allianceViewed)) {
+        state = saved;
+      }
+    } catch (error) {
+      console.warn("Progress could not be loaded.", error);
+    }
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (error) {
+      console.warn("Progress could not be saved.", error);
+    }
+  }
+
+  function markStationComplete(number) {
+    if (!state.completedStations.includes(number)) {
+      state.completedStations.push(number);
+      state.completedStations.sort((a, b) => a - b);
+      saveState();
+    }
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const count = state.completedStations.length;
+    const percent = Math.round((count / totalStations) * 100);
+
+    document.getElementById("progress-label").textContent =
+      "Trail progress: " + count + " of " + totalStations + " stations complete";
+
+    document.getElementById("progress-fill").style.width = percent + "%";
+
+    const track = document.querySelector(".progress-track");
+    track.setAttribute("aria-valuenow", count);
+  }
+
+  function scrollToId(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  const answerKey = {
+    q1: "c",
+    q2: "c",
+    q3: "b",
+    q4: "b",
+    q5: "c",
+    q6: "c"
+  };
+
+  const feedbackText = {
+    q1: {
+      correct:
+        "Strong choice. This response acknowledges the client's frustration, avoids taking sides, respects autonomy, and invites the client to identify their own concerns.",
+      incorrect:
+        "Try again. Look for the response that avoids directing, judging, or escaping the topic and instead communicates respect for the client's autonomy while inviting exploration."
+    },
+    q2: {
+      correct:
+        "Yes. This response reflects the client's underlying worry without minimizing, advising, or claiming identical experience. It communicates an effort to understand.",
+      incorrect:
+        "Try again. Empathy is not reassurance, advice, or saying you know exactly how someone feels. Look for the response that reflects the client's experience back tentatively and respectfully."
+    },
+    q3: {
+      correct:
+        "Correct. Professional attending involves engaged presence, reduced distraction, purposeful observation, and checking meaning rather than making automatic assumptions.",
+      incorrect:
+        "Try again. Attending is not constant eye contact, eliminating every silence, or visibly monitoring time. Look for engaged presence combined with cultural humility."
+    },
+    q4: {
+      correct:
+        "Correct. This is a reflection: the counselor offers a tentative understanding of the client's perspective and leaves room for the client to confirm, correct, or expand it.",
+      incorrect:
+        "Try again. Reflective listening is different from interrogation, labeling, or arguing. Look for the response that captures the possible meaning underneath the client's words."
+    },
+    q5: {
+      correct:
+        "Correct. This open question invites a fuller response and gives the client room to describe their recent experience in their own words.",
+      incorrect:
+        "Try again. An open question invites explanation rather than a yes/no answer, accusation, or leading response."
+    },
+    q6: {
+      correct:
+        "Excellent. This response reflects Maya's ambivalence, communicates empathy, honors her autonomy, and follows with an open question that invites her to explore her own concerns.",
+      incorrect:
+        "Try again. The strongest response will not diagnose, argue, or rush into assessment. Look for a response that reflects both sides of Maya's ambivalence and invites further exploration."
+    }
+  };
+
+  function configureQuestion(questionElement) {
+    const questionId = questionElement.dataset.question;
+    const choices = Array.from(questionElement.querySelectorAll(".choice"));
+    const feedback = document.getElementById(questionId + "-feedback");
+
+    const stationMap = {
+      q1: 1,
+      q2: 3,
+      q3: 4,
+      q4: 5,
+      q5: 6,
+      q6: 7
+    };
+
+    const continueMap = {
+      q1: "continue-1",
+      q2: "continue-3",
+      q3: "continue-4",
+      q4: "continue-5",
+      q5: "continue-6",
+      q6: "continue-7"
+    };
+
+    choices.forEach(choice => {
+      choice.addEventListener("click", function () {
+        choices.forEach(c => c.classList.remove("correct", "incorrect"));
+
+        const isCorrect = this.dataset.value === answerKey[questionId];
+
+        if (isCorrect) {
+          this.classList.add("correct");
+          feedback.className = "feedback show good";
+          feedback.textContent = feedbackText[questionId].correct;
+
+          const continueButton =
+            document.getElementById(continueMap[questionId]);
+
+          continueButton.disabled = false;
+
+          markStationComplete(stationMap[questionId]);
+        } else {
+          this.classList.add("incorrect");
+          feedback.className = "feedback show try";
+          feedback.textContent = feedbackText[questionId].incorrect;
+        }
+      });
+    });
+  }
+
+  function configureAlliance() {
+    const buttons = Array.from(document.querySelectorAll(".alliance-button"));
+    const info = document.getElementById("alliance-info");
+    const count = document.getElementById("alliance-count");
+    const continueButton = document.getElementById("continue-2");
+
+    buttons.forEach((button, index) => {
+      if (state.allianceViewed.includes(index)) {
+        button.classList.add("completed");
+      }
+
+      button.addEventListener("click", function () {
+        info.innerHTML =
+          "<h3 style='margin-top:0;'>" +
+          this.dataset.title +
+          "</h3><p style='margin-bottom:0;'>" +
+          this.dataset.text +
+          "</p>";
+
+        if (!state.allianceViewed.includes(index)) {
+          state.allianceViewed.push(index);
+          state.allianceViewed.sort((a, b) => a - b);
+          saveState();
+        }
+
+        this.classList.add("completed");
+
+        count.innerHTML =
+          "<strong>" +
+          state.allianceViewed.length +
+          " of 7 qualities explored.</strong>";
+
+        if (state.allianceViewed.length === 7) {
+          continueButton.disabled = false;
+          markStationComplete(2);
+        }
+      });
+    });
+
+    count.innerHTML =
+      "<strong>" +
+      state.allianceViewed.length +
+      " of 7 qualities explored.</strong>";
+
+    if (state.allianceViewed.length === 7) {
+      continueButton.disabled = false;
+    }
+  }
+
+  function configureContinueButtons() {
+    document.querySelectorAll(".continue-button[data-next]").forEach(button => {
+      button.addEventListener("click", function () {
+        scrollToId(this.dataset.next);
+      });
+    });
+
+    document.getElementById("continue-7").addEventListener("click", function () {
+      markStationComplete(7);
+
+      const completion = document.getElementById("completion");
+      completion.classList.add("show");
+      completion.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  function restoreCompletedButtons() {
+    const stationButtonMap = {
+      1: "continue-1",
+      2: "continue-2",
+      3: "continue-3",
+      4: "continue-4",
+      5: "continue-5",
+      6: "continue-6",
+      7: "continue-7"
+    };
+
+    state.completedStations.forEach(number => {
+      const button = document.getElementById(stationButtonMap[number]);
+      if (button) button.disabled = false;
+    });
+
+    if (state.completedStations.includes(7)) {
+      document.getElementById("completion").classList.add("show");
+    }
+  }
+
+  function configureAudio() {
+    const audio = document.getElementById("trail-audio");
+    const playButton = document.getElementById("play-audio");
+    const pauseButton = document.getElementById("pause-audio");
+    const status = document.getElementById("audio-status");
+
+    audio.volume = 0.25;
+
+    playButton.addEventListener("click", async function () {
+      try {
+        await audio.play();
+        playButton.textContent = "River Soundscape Playing";
+        status.textContent = "The river soundscape is playing quietly.";
+      } catch (error) {
+        console.error("Audio playback error:", error);
+        status.textContent =
+          "Your browser could not start the optional river soundscape. You can continue without audio.";
+      }
+    });
+
+    pauseButton.addEventListener("click", function () {
+      audio.pause();
+      playButton.textContent = "Play River Soundscape";
+      status.textContent = "River soundscape is currently paused.";
+    });
+  }
+
+  function configureBadge() {
+    const input = document.getElementById("student-name");
+    const previewName = document.getElementById("badge-name");
+    const downloadButton = document.getElementById("download-badge");
+    const status = document.getElementById("badge-status");
+
+    input.addEventListener("input", function () {
+      const value = this.value.trim();
+      previewName.innerHTML =
+        "<strong>" + (value || "Your Name") + "</strong>";
+    });
+
+    downloadButton.addEventListener("click", function () {
+      const name = input.value.trim();
+
+      if (!name) {
+        status.textContent =
+          "Please enter your name before downloading your badge.";
+        input.focus();
+        return;
+      }
+
+      const canvas = document.createElement("canvas");
+      canvas.width = 1600;
+      canvas.height = 1000;
+
+      const ctx = canvas.getContext("2d");
+
+      const gradient = ctx.createLinearGradient(0, 0, 1600, 1000);
+      gradient.addColorStop(0, "#eef7fa");
+      gradient.addColorStop(1, "#eef5ec");
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 1600, 1000);
+
+      ctx.strokeStyle = "#173425";
+      ctx.lineWidth = 24;
+      ctx.strokeRect(35, 35, 1530, 930);
+
+      ctx.strokeStyle = "#7a6120";
+      ctx.lineWidth = 8;
+      ctx.strokeRect(65, 65, 1470, 870);
+
+      ctx.textAlign = "center";
+
+      ctx.fillStyle = "#173425";
+      ctx.font = "bold 42px Arial";
+      ctx.fillText("CHEMICAL DEPENDENCY COUNSELOR ACADEMY", 800, 165);
+
+      ctx.font = "100px Arial";
+      ctx.fillText("🧭", 800, 300);
+
+      ctx.font = "bold 74px Georgia";
+      ctx.fillText("Helping Relationship Pathfinder", 800, 410);
+
+      ctx.font = "38px Arial";
+      ctx.fillText("Counseling Skills Trail • Trail Stop 1", 800, 485);
+
+      ctx.fillStyle = "#285263";
+      ctx.font = "bold 64px Georgia";
+      ctx.fillText(name, 800, 610);
+
+      ctx.fillStyle = "#203027";
+      ctx.font = "36px Arial";
+      ctx.fillText("Completed: The Helping Relationship", 800, 690);
+
+      ctx.font = "30px Arial";
+      ctx.fillText(
+        "Empathy • Listening • Respect • Professional Presence • Boundaries",
+        800,
+        760
+      );
+
+      ctx.font = "28px Arial";
+      ctx.fillText("Learning • Connection • Growth • Practice", 800, 865);
+
+      const link = document.createElement("a");
+      const safeName = name.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "");
+      link.download =
+        (safeName || "student") + "-helping-relationship-pathfinder.png";
+      link.href = canvas.toDataURL("image/png");
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      status.textContent =
+        "Your personalized completion badge has been downloaded. Save it somewhere you can easily find for your Canvas submission.";
+    });
+  }
+
+  function initialize() {
+    loadState();
+    updateProgress();
+
+    document.querySelectorAll("[data-question]").forEach(configureQuestion);
+
+    configureAlliance();
+    configureContinueButtons();
+    restoreCompletedButtons();
+    configureAudio();
+    configureBadge();
+  }
+
+  document.addEventListener("DOMContentLoaded", initialize);
+
+})();
+</script>
+
+</body>
+</html>
