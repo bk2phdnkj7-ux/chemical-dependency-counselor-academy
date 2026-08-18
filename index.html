@@ -37,13 +37,8 @@
       --radius: 20px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -61,9 +56,7 @@
       font-weight: bold;
     }
 
-    button {
-      font: inherit;
-    }
+    button { font: inherit; }
 
     a:focus,
     button:focus {
@@ -83,9 +76,7 @@
       font-weight: bold;
     }
 
-    .skip-link:focus {
-      top: 16px;
-    }
+    .skip-link:focus { top: 16px; }
 
     .container {
       width: min(1180px, calc(100% - 32px));
@@ -117,8 +108,7 @@
       height: 105px;
       border-radius: 50%;
       background-color: rgba(255, 240, 177, 0.78);
-      box-shadow:
-        0 0 55px rgba(255, 235, 150, 0.45);
+      box-shadow: 0 0 55px rgba(255, 235, 150, 0.45);
       pointer-events: none;
     }
 
@@ -134,12 +124,7 @@
       pointer-events: none;
     }
 
-    .cloud-one {
-      width: 110px;
-      top: 105px;
-      left: 7%;
-    }
-
+    .cloud-one { width: 110px; top: 105px; left: 7%; }
     .cloud-two {
       width: 125px;
       top: 165px;
@@ -148,13 +133,8 @@
     }
 
     @keyframes drift {
-      from {
-        transform: translateX(-18px);
-      }
-
-      to {
-        transform: translateX(18px);
-      }
+      from { transform: translateX(-18px); }
+      to { transform: translateX(18px); }
     }
 
     .mountain-back {
@@ -165,18 +145,8 @@
       height: 330px;
       opacity: 0.72;
       background:
-        linear-gradient(
-          145deg,
-          transparent 0 38%,
-          #9cb7aa 39% 61%,
-          transparent 62%
-        ),
-        linear-gradient(
-          215deg,
-          transparent 0 39%,
-          #aec5b7 40% 62%,
-          transparent 63%
-        );
+        linear-gradient(145deg, transparent 0 38%, #9cb7aa 39% 61%, transparent 62%),
+        linear-gradient(215deg, transparent 0 39%, #aec5b7 40% 62%, transparent 63%);
       pointer-events: none;
     }
 
@@ -187,18 +157,8 @@
       bottom: 65px;
       height: 350px;
       background:
-        linear-gradient(
-          145deg,
-          transparent 0 39%,
-          #5e8067 40% 62%,
-          transparent 63%
-        ),
-        linear-gradient(
-          215deg,
-          transparent 0 39%,
-          #4c7058 40% 63%,
-          transparent 64%
-        );
+        linear-gradient(145deg, transparent 0 39%, #5e8067 40% 62%, transparent 63%),
+        linear-gradient(215deg, transparent 0 39%, #4c7058 40% 63%, transparent 64%);
       opacity: 0.9;
       pointer-events: none;
     }
@@ -210,36 +170,11 @@
       bottom: 0;
       height: 210px;
       background:
-        radial-gradient(
-          ellipse at 12% 100%,
-          #4d7454 0%,
-          #4d7454 31%,
-          transparent 32%
-        ),
-        radial-gradient(
-          ellipse at 32% 100%,
-          #3d6748 0%,
-          #3d6748 35%,
-          transparent 36%
-        ),
-        radial-gradient(
-          ellipse at 55% 100%,
-          #527a58 0%,
-          #527a58 34%,
-          transparent 35%
-        ),
-        radial-gradient(
-          ellipse at 78% 100%,
-          #3f674a 0%,
-          #3f674a 35%,
-          transparent 36%
-        ),
-        radial-gradient(
-          ellipse at 94% 100%,
-          #557d5c 0%,
-          #557d5c 31%,
-          transparent 32%
-        );
+        radial-gradient(ellipse at 12% 100%, #4d7454 0%, #4d7454 31%, transparent 32%),
+        radial-gradient(ellipse at 32% 100%, #3d6748 0%, #3d6748 35%, transparent 36%),
+        radial-gradient(ellipse at 55% 100%, #527a58 0%, #527a58 34%, transparent 35%),
+        radial-gradient(ellipse at 78% 100%, #3f674a 0%, #3f674a 35%, transparent 36%),
+        radial-gradient(ellipse at 94% 100%, #557d5c 0%, #557d5c 31%, transparent 32%);
       pointer-events: none;
     }
 
@@ -252,18 +187,8 @@
       transform: translateX(-50%);
       background-color: rgba(228, 210, 169, 0.9);
       clip-path: polygon(
-        42% 0%,
-        58% 0%,
-        67% 22%,
-        45% 42%,
-        61% 58%,
-        37% 74%,
-        78% 100%,
-        20% 100%,
-        42% 77%,
-        25% 59%,
-        49% 40%,
-        34% 20%
+        42% 0%, 58% 0%, 67% 22%, 45% 42%, 61% 58%, 37% 74%,
+        78% 100%, 20% 100%, 42% 77%, 25% 59%, 49% 40%, 34% 20%
       );
       pointer-events: none;
     }
@@ -327,18 +252,24 @@
       text-align: left;
     }
 
-    .welcome-card h2 {
+    .welcome-card h2,
+    .sound-panel h2,
+    .academy-features h2,
+    .instructor-note h2 {
       margin-top: 0;
-      color: var(--forest-dark);
       font-family: Georgia, "Times New Roman", serif;
     }
 
-    .hero-actions {
+    .welcome-card h2 { color: var(--forest-dark); }
+
+    .hero-actions,
+    .audio-controls {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 18px;
     }
+
+    .hero-actions { margin-top: 18px; }
 
     .hero-button {
       display: inline-block;
@@ -370,11 +301,7 @@
       text-align: center;
     }
 
-    .sound-panel h2 {
-      margin-top: 0;
-      color: var(--white);
-      font-family: Georgia, "Times New Roman", serif;
-    }
+    .sound-panel h2 { color: var(--white); }
 
     .sound-panel p {
       max-width: 700px;
@@ -383,10 +310,7 @@
     }
 
     .audio-controls {
-      display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
       margin-top: 16px;
     }
 
@@ -405,12 +329,9 @@
       font-weight: bold;
     }
 
-    main {
-      padding-bottom: 60px;
-    }
+    main { padding-bottom: 60px; }
 
-    h2,
-    h3 {
+    h2, h3, h4 {
       color: var(--forest-dark);
       line-height: 1.3;
     }
@@ -443,28 +364,15 @@
       box-shadow: var(--soft-shadow);
     }
 
-    .orientation-card:nth-child(2) {
-      border-top-color: var(--river);
-    }
-
-    .orientation-card:nth-child(3) {
-      border-top-color: var(--gold);
-    }
-
-    .orientation-card h3 {
-      margin-top: 0;
-    }
+    .orientation-card:nth-child(2) { border-top-color: var(--river); }
+    .orientation-card:nth-child(3) { border-top-color: var(--gold); }
+    .orientation-card h3 { margin-top: 0; }
 
     .preserve {
       position: relative;
       overflow: hidden;
       padding: 34px;
-      background:
-        linear-gradient(
-          to bottom,
-          #edf5eb 0%,
-          #e2efe1 100%
-        );
+      background: linear-gradient(to bottom, #edf5eb 0%, #e2efe1 100%);
       border: 3px solid #657c67;
       border-radius: 26px;
       box-shadow: var(--shadow);
@@ -502,35 +410,12 @@
       box-shadow: var(--shadow);
     }
 
-    .foundations {
-      background-color: #f3f7ed;
-      border-color: #587453;
-    }
-
-    .counseling {
-      background-color: #edf5f1;
-      border-color: #3f6d58;
-    }
-
-    .diversity {
-      background-color: #eef5f7;
-      border-color: #4d6f77;
-    }
-
-    .behaviors {
-      background-color: #f8f2e5;
-      border-color: #796641;
-    }
-
-    .seminar {
-      background-color: #f0f3ec;
-      border-color: #626d59;
-    }
-
-    .group {
-      background-color: #edf3ee;
-      border-color: #4e6858;
-    }
+    .foundations { background-color: #f3f7ed; border-color: #587453; }
+    .counseling { background-color: #edf5f1; border-color: #3f6d58; }
+    .diversity { background-color: #eef5f7; border-color: #4d6f77; }
+    .behaviors { background-color: #f8f2e5; border-color: #796641; }
+    .seminar { background-color: #f0f3ec; border-color: #626d59; }
+    .group { background-color: #edf3ee; border-color: #4e6858; }
 
     .trail-icon {
       display: block;
@@ -585,8 +470,52 @@
       text-decoration: underline;
     }
 
-    .trail-enter-button:hover {
-      background-color: var(--forest-dark);
+    .trail-enter-button:hover { background-color: var(--forest-dark); }
+
+    /* Trail Stop 2 direct-entry card */
+    .trail-stop-preview {
+      margin-top: 18px;
+      padding: 16px;
+      background-color: #ffffff;
+      border: 2px solid #587453;
+      border-left: 7px solid var(--forest);
+      border-radius: 14px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .trail-stop-preview .stop-label {
+      margin: 0 0 4px;
+      color: #3d5b45;
+      font-size: 0.88rem;
+      font-weight: bold;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .trail-stop-preview h4 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.18rem;
+    }
+
+    .trail-stop-preview p { margin: 0 0 12px; }
+
+    .trail-stop-button {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: var(--river-dark);
+      color: var(--white);
+      border: 3px solid #173a47;
+      border-radius: 9px;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .trail-stop-button:hover { background-color: #173a47; }
+
+    .trail-stop-button:focus {
+      outline: 4px solid #111111;
+      outline-offset: 4px;
     }
 
     .academy-features {
@@ -597,11 +526,6 @@
       border-left-width: 9px;
       border-radius: var(--radius);
       box-shadow: var(--soft-shadow);
-    }
-
-    .academy-features h2 {
-      margin-top: 0;
-      font-family: Georgia, "Times New Roman", serif;
     }
 
     .badge-preview {
@@ -640,11 +564,6 @@
       box-shadow: var(--soft-shadow);
     }
 
-    .instructor-note h2 {
-      margin-top: 0;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
     footer {
       padding: 32px 0;
       background-color: var(--forest-dark);
@@ -653,63 +572,33 @@
       border-top: 5px solid #c6aa5e;
     }
 
-    footer p {
-      margin: 5px 0;
-    }
+    footer p { margin: 5px 0; }
 
     @media (max-width: 900px) {
-      .orientation,
-      .trail-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .preserve::before {
-        display: none;
-      }
-
-      .hero {
-        min-height: 720px;
-      }
+      .orientation, .trail-grid { grid-template-columns: 1fr; }
+      .preserve::before { display: none; }
+      .hero { min-height: 720px; }
     }
 
     @media (max-width: 600px) {
-      body {
-        font-size: 17px;
-      }
-
-      .hero-content {
-        padding-top: 52px;
-      }
-
-      .preserve {
-        padding: 18px;
-      }
-
-      .sound-panel {
-        margin-top: -45px;
-      }
+      body { font-size: 17px; }
+      .hero-content { padding-top: 52px; }
+      .preserve { padding: 18px; }
+      .sound-panel { margin-top: -45px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .cloud {
-        animation: none;
-      }
+      html { scroll-behavior: auto; }
+      .cloud { animation: none; }
     }
   </style>
 </head>
 
 <body>
 
-  <a class="skip-link" href="#main-content">
-    Skip to main content
-  </a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="hero">
-
     <div class="sun" aria-hidden="true"></div>
     <div class="cloud cloud-one" aria-hidden="true"></div>
     <div class="cloud cloud-two" aria-hidden="true"></div>
@@ -719,28 +608,16 @@
     <div class="winding-road" aria-hidden="true"></div>
 
     <div class="container hero-content">
+      <div class="academy-mark" aria-hidden="true">🌿</div>
 
-      <div class="academy-mark" aria-hidden="true">
-        🌿
-      </div>
+      <p class="eyebrow">Counselor Education and Human Services</p>
 
-      <p class="eyebrow">
-        Counselor Education and Human Services
-      </p>
+      <h1>Chemical Dependency Counselor Academy</h1>
 
-      <h1>
-        Chemical Dependency Counselor Academy
-      </h1>
-
-      <p class="tagline">
-        Learning • Connection • Growth • Practice
-      </p>
+      <p class="tagline">Learning • Connection • Growth • Practice</p>
 
       <section class="welcome-card" aria-labelledby="welcome-heading">
-
-        <h2 id="welcome-heading">
-          Welcome to the Academy
-        </h2>
+        <h2 id="welcome-heading">Welcome to the Academy</h2>
 
         <p>
           Every helping professional begins somewhere.
@@ -764,36 +641,18 @@
         </p>
 
         <div class="hero-actions">
-
-          <a class="hero-button" href="#learning-trails">
-            Follow the Trail
-          </a>
-
-          <a class="hero-button sound-button" href="#soundscape">
-            Visit the Nature Soundscape
-          </a>
-
+          <a class="hero-button" href="#learning-trails">Follow the Trail</a>
+          <a class="hero-button sound-button" href="#soundscape">Visit the Nature Soundscape</a>
         </div>
-
       </section>
-
     </div>
-
   </header>
 
-
   <main id="main-content">
-
     <div class="container">
 
-      <section
-        id="soundscape"
-        class="sound-panel"
-        aria-labelledby="soundscape-heading">
-
-        <h2 id="soundscape-heading">
-          Academy Nature Soundscape
-        </h2>
+      <section id="soundscape" class="sound-panel" aria-labelledby="soundscape-heading">
+        <h2 id="soundscape-heading">Academy Nature Soundscape</h2>
 
         <p>
           If you would like a more immersive experience, you may play the
@@ -802,151 +661,78 @@
         </p>
 
         <div class="audio-controls">
-
-          <button
-            id="play-audio"
-            class="audio-button"
-            type="button">
-
-            Play Nature Soundscape
-          </button>
-
-          <button
-            id="pause-audio"
-            class="audio-button"
-            type="button">
-
-            Pause Sound
-          </button>
-
+          <button id="play-audio" class="audio-button" type="button">Play Nature Soundscape</button>
+          <button id="pause-audio" class="audio-button" type="button">Pause Sound</button>
         </div>
 
-        <p
-          id="audio-status"
-          class="audio-status"
-          role="status"
-          aria-live="polite">
-
+        <p id="audio-status" class="audio-status" role="status" aria-live="polite">
           Nature soundscape is currently paused.
         </p>
 
-        <audio
-          id="academy-audio"
-          loop
-          preload="metadata">
-
-          <source
-            src="assets/audio/alex_jauk-calm-nature-sounds-196258.mp3"
-            type="audio/mpeg">
-
+        <audio id="academy-audio" loop preload="metadata">
+          <source src="assets/audio/alex_jauk-calm-nature-sounds-196258.mp3" type="audio/mpeg">
         </audio>
-
       </section>
 
-
       <section aria-labelledby="journey-heading">
-
         <div class="section-heading">
-
-          <h2 id="journey-heading">
-            Your Counselor Development Journey
-          </h2>
-
+          <h2 id="journey-heading">Your Counselor Development Journey</h2>
           <p>
             The Academy is designed to help you move beyond simply knowing
             information and begin applying it in thoughtful, ethical,
             culturally responsive, and realistic ways.
           </p>
-
         </div>
 
         <div class="orientation">
-
           <article class="orientation-card">
-
-            <h3>
-              Learn
-            </h3>
-
+            <h3>Learn</h3>
             <p>
               Explore research, theory, terminology, treatment approaches,
               ethical standards, and evidence-informed practices.
             </p>
-
           </article>
 
           <article class="orientation-card">
-
-            <h3>
-              Practice
-            </h3>
-
+            <h3>Practice</h3>
             <p>
               Work through client cases, counseling choices, branching
               scenarios, interactive videos, reflection activities,
               and professional decisions.
             </p>
-
           </article>
 
           <article class="orientation-card">
-
-            <h3>
-              Grow
-            </h3>
-
+            <h3>Grow</h3>
             <p>
               Develop cultural humility, professional judgment,
               communication skills, self-awareness, and your identity as
               a helping professional.
             </p>
-
           </article>
-
         </div>
-
       </section>
 
-
-      <section
-        id="learning-trails"
-        aria-labelledby="trails-heading">
-
+      <section id="learning-trails" aria-labelledby="trails-heading">
         <div class="section-heading">
-
-          <h2 id="trails-heading">
-            Choose Your Learning Trail
-          </h2>
-
+          <h2 id="trails-heading">Choose Your Learning Trail</h2>
           <p>
             Each course follows a different path through the Academy.
             Your instructor will direct you to the trail associated with
             your course.
           </p>
-
         </div>
 
-
         <div class="preserve">
-
           <div class="trail-grid">
 
-
             <article class="trail-card foundations">
-
               <div>
+                <span class="trail-icon" aria-hidden="true">🌲</span>
 
-                <span class="trail-icon" aria-hidden="true">
-                  🌲
-                </span>
+                <p class="course-name">Introduction to Chemical Dependency</p>
 
-                <p class="course-name">
-                  Introduction to Chemical Dependency
-                </p>
-
-                <h3>
-                  Foundations Trail
-                </h3>
+                <h3>Foundations Trail</h3>
 
                 <p>
                   Begin at the trailhead and explore substance use,
@@ -955,195 +741,112 @@
                   families, and foundational helping concepts.
                 </p>
 
-                <p class="trail-status open">
-                  Trail Now Open
-                </p>
+                <p class="trail-status open">Trail Now Open</p>
 
+                <div class="trail-stop-preview" aria-labelledby="trail-stop-2-heading">
+                  <p class="stop-label">Newly Open • Trail Stop 2</p>
+
+                  <h4 id="trail-stop-2-heading">Models of Addiction Overlook</h4>
+
+                  <p>
+                    Explore four influential ways of understanding addiction:
+                    the moral view, disease model, public health perspective,
+                    and sociological model. Compare the lenses, apply them to
+                    a client case, and practice multi-perspective thinking.
+                  </p>
+
+                  <a class="trail-stop-button" href="courses/intro/week2.html">
+                    Enter Trail Stop 2
+                  </a>
+                </div>
               </div>
 
-              <a
-                class="trail-enter-button"
-                href="courses/intro/index.html">
-
-                Enter Foundations Trail
+              <a class="trail-enter-button" href="courses/intro/index.html">
+                View the Full Foundations Trail
               </a>
-
             </article>
 
-
             <article class="trail-card counseling">
-
               <div>
-
-                <span class="trail-icon" aria-hidden="true">
-                  🧭
-                </span>
-
-                <p class="course-name">
-                  Chemical Dependency Counseling
-                </p>
-
-                <h3>
-                  Counseling Skills Trail
-                </h3>
-
+                <span class="trail-icon" aria-hidden="true">🧭</span>
+                <p class="course-name">Chemical Dependency Counseling</p>
+                <h3>Counseling Skills Trail</h3>
                 <p>
                   Practice screening, assessment, DSM concepts,
                   interviewing, treatment planning, motivational
                   strategies, referrals, documentation, ethics,
                   boundaries, and recovery support.
                 </p>
-
               </div>
-
-              <p class="trail-status">
-                Trail Opening Soon
-              </p>
-
+              <p class="trail-status">Trail Opening Soon</p>
             </article>
 
-
             <article class="trail-card diversity">
-
               <div>
-
-                <span class="trail-icon" aria-hidden="true">
-                  🌎
-                </span>
-
-                <p class="course-name">
-                  Cultural Diversity for Counselors
-                </p>
-
-                <h3>
-                  Cultural Humility Pathway
-                </h3>
-
+                <span class="trail-icon" aria-hidden="true">🌎</span>
+                <p class="course-name">Cultural Diversity for Counselors</p>
+                <h3>Cultural Humility Pathway</h3>
                 <p>
                   Explore worldview, identity, intersectionality,
                   counselor self-awareness, bias, cultural humility,
                   responsive helping relationships, and culturally
                   informed case conceptualization.
                 </p>
-
               </div>
-
-              <p class="trail-status">
-                Pathway Opening Soon
-              </p>
-
+              <p class="trail-status">Pathway Opening Soon</p>
             </article>
 
-
             <article class="trail-card behaviors">
-
               <div>
-
-                <span class="trail-icon" aria-hidden="true">
-                  🔎
-                </span>
-
-                <p class="course-name">
-                  Addictive Behaviors
-                </p>
-
-                <h3>
-                  Behavioral Addictions Expedition
-                </h3>
-
+                <span class="trail-icon" aria-hidden="true">🔎</span>
+                <p class="course-name">Addictive Behaviors</p>
+                <h3>Behavioral Addictions Expedition</h3>
                 <p>
                   Investigate gambling, technology-related behaviors,
                   compulsive buying, hoarding, exercise, eating-related
                   concerns, hypersexual behaviors, and emerging behavioral
                   addiction concepts.
                 </p>
-
               </div>
-
-              <p class="trail-status">
-                Expedition Opening Soon
-              </p>
-
+              <p class="trail-status">Expedition Opening Soon</p>
             </article>
 
-
             <article class="trail-card seminar">
-
               <div>
-
-                <span class="trail-icon" aria-hidden="true">
-                  🏕️
-                </span>
-
-                <p class="course-name">
-                  Chemical Dependency Seminar
-                </p>
-
-                <h3>
-                  Professional Practice Basecamp
-                </h3>
-
+                <span class="trail-icon" aria-hidden="true">🏕️</span>
+                <p class="course-name">Chemical Dependency Seminar</p>
+                <h3>Professional Practice Basecamp</h3>
                 <p>
                   Connect classroom learning to field experience through
                   supervision, ethical reflection, professional identity,
                   case consultation, practicum experiences, counselor
                   wellness, and career development.
                 </p>
-
               </div>
-
-              <p class="trail-status">
-                Basecamp Opening Soon
-              </p>
-
+              <p class="trail-status">Basecamp Opening Soon</p>
             </article>
 
-
             <article class="trail-card group">
-
               <div>
-
-                <span class="trail-icon" aria-hidden="true">
-                  🔥
-                </span>
-
-                <p class="course-name">
-                  Group Counseling Techniques
-                </p>
-
-                <h3>
-                  Group Facilitation Lodge
-                </h3>
-
+                <span class="trail-icon" aria-hidden="true">🔥</span>
+                <p class="course-name">Group Counseling Techniques</p>
+                <h3>Group Facilitation Lodge</h3>
                 <p>
                   Enter simulated group environments to explore group
                   development, leadership, cohesion, conflict, silence,
                   challenging behaviors, boundaries, therapeutic factors,
                   and counselor presence.
                 </p>
-
               </div>
-
-              <p class="trail-status">
-                Lodge Opening Soon
-              </p>
-
+              <p class="trail-status">Lodge Opening Soon</p>
             </article>
 
           </div>
-
         </div>
-
       </section>
 
-
-      <section
-        class="academy-features"
-        aria-labelledby="academy-growth-heading">
-
-        <h2 id="academy-growth-heading">
-          What You May Discover Along the Way
-        </h2>
+      <section class="academy-features" aria-labelledby="academy-growth-heading">
+        <h2 id="academy-growth-heading">What You May Discover Along the Way</h2>
 
         <p>
           As the trails open, you may encounter counseling simulations,
@@ -1158,49 +861,17 @@
         </p>
 
         <div class="badge-preview">
-
-          <div class="badge">
-            <span aria-hidden="true">🌲</span>
-            <p>Foundations Explorer</p>
-          </div>
-
-          <div class="badge">
-            <span aria-hidden="true">🧭</span>
-            <p>Clinical Skills Navigator</p>
-          </div>
-
-          <div class="badge">
-            <span aria-hidden="true">🌎</span>
-            <p>Cultural Humility Guide</p>
-          </div>
-
-          <div class="badge">
-            <span aria-hidden="true">🔎</span>
-            <p>Behavioral Patterns Investigator</p>
-          </div>
-
-          <div class="badge">
-            <span aria-hidden="true">🔥</span>
-            <p>Group Facilitation Leader</p>
-          </div>
-
-          <div class="badge">
-            <span aria-hidden="true">🏕️</span>
-            <p>Professional Practice Scholar</p>
-          </div>
-
+          <div class="badge"><span aria-hidden="true">🌲</span><p>Foundations Explorer</p></div>
+          <div class="badge"><span aria-hidden="true">🧭</span><p>Clinical Skills Navigator</p></div>
+          <div class="badge"><span aria-hidden="true">🌎</span><p>Cultural Humility Guide</p></div>
+          <div class="badge"><span aria-hidden="true">🔎</span><p>Behavioral Patterns Investigator</p></div>
+          <div class="badge"><span aria-hidden="true">🔥</span><p>Group Facilitation Leader</p></div>
+          <div class="badge"><span aria-hidden="true">🏕️</span><p>Professional Practice Scholar</p></div>
         </div>
-
       </section>
 
-
-      <section
-        class="instructor-note"
-        aria-labelledby="instructor-heading">
-
-        <h2 id="instructor-heading">
-          A Note from Dr. Holdaway
-        </h2>
+      <section class="instructor-note" aria-labelledby="instructor-heading">
+        <h2 id="instructor-heading">A Note from Dr. Holdaway</h2>
 
         <p>
           The work of helping people affected by substance use and other
@@ -1225,139 +896,59 @@
           Consider the evidence. Reflect on your own perspective.
           And keep developing the counselor you want to become.
         </p>
-
       </section>
 
     </div>
-
   </main>
 
-
   <footer>
-
     <div class="container">
-
-      <p>
-        Chemical Dependency Counselor Academy
-      </p>
-
-      <p>
-        Counselor Education and Human Services
-      </p>
-
-      <p>
-        Dr. Tonya Holdaway
-      </p>
-
-      <p>
-        Learning • Connection • Growth • Practice
-      </p>
-
+      <p>Chemical Dependency Counselor Academy</p>
+      <p>Counselor Education and Human Services</p>
+      <p>Dr. Tonya Holdaway</p>
+      <p>Learning • Connection • Growth • Practice</p>
     </div>
-
   </footer>
 
-
   <script>
-
     function configureAcademyAudio() {
-
-      const audio =
-        document.getElementById(
-          "academy-audio"
-        );
-
-      const playButton =
-        document.getElementById(
-          "play-audio"
-        );
-
-      const pauseButton =
-        document.getElementById(
-          "pause-audio"
-        );
-
-      const status =
-        document.getElementById(
-          "audio-status"
-        );
+      const audio = document.getElementById("academy-audio");
+      const playButton = document.getElementById("play-audio");
+      const pauseButton = document.getElementById("pause-audio");
+      const status = document.getElementById("audio-status");
 
       audio.volume = 0.25;
 
-
-      playButton.addEventListener(
-        "click",
-        async function() {
-
-          try {
-
-            await audio.play();
-
-            playButton.textContent =
-              "Nature Soundscape Playing";
-
-            status.textContent =
-              "Nature soundscape is playing quietly.";
-
-          } catch (error) {
-
-            console.error(
-              "Audio playback error:",
-              error
-            );
-
-            status.textContent =
-              "Your browser could not start the optional nature soundscape. You can continue exploring the Academy without audio.";
-          }
-        }
-      );
-
-
-      pauseButton.addEventListener(
-        "click",
-        function() {
-
-          audio.pause();
-
-          playButton.textContent =
-            "Play Nature Soundscape";
-
+      playButton.addEventListener("click", async function() {
+        try {
+          await audio.play();
+          playButton.textContent = "Nature Soundscape Playing";
+          status.textContent = "Nature soundscape is playing quietly.";
+        } catch (error) {
+          console.error("Audio playback error:", error);
           status.textContent =
-            "Nature soundscape is currently paused.";
+            "Your browser could not start the optional nature soundscape. You can continue exploring the Academy without audio.";
         }
-      );
+      });
 
+      pauseButton.addEventListener("click", function() {
+        audio.pause();
+        playButton.textContent = "Play Nature Soundscape";
+        status.textContent = "Nature soundscape is currently paused.";
+      });
 
-      audio.addEventListener(
-        "play",
-        function() {
+      audio.addEventListener("play", function() {
+        status.textContent = "Nature soundscape is playing quietly.";
+      });
 
-          status.textContent =
-            "Nature soundscape is playing quietly.";
+      audio.addEventListener("pause", function() {
+        if (!audio.ended) {
+          status.textContent = "Nature soundscape is currently paused.";
         }
-      );
-
-
-      audio.addEventListener(
-        "pause",
-        function() {
-
-          if (!audio.ended) {
-
-            status.textContent =
-              "Nature soundscape is currently paused.";
-          }
-        }
-      );
-
+      });
     }
 
-
-    document.addEventListener(
-      "DOMContentLoaded",
-      configureAcademyAudio
-    );
-
+    document.addEventListener("DOMContentLoaded", configureAcademyAudio);
   </script>
 
 </body>
