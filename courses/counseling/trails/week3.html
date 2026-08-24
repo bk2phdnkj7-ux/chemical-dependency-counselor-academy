@@ -1,1 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Counseling Skills Trail Stop 2: Psychoeducational Group Skills Practice and Application in the Chemical Dependency Counselor Academy.">
 
+  <title>Trail Stop 2 | Psychoeducational Group Skills</title>
+
+  <style>
+    :root {
+      --ink: #203027;
+      --forest: #294f3a;
+      --forest-dark: #173425;
+      --pine: #3e684d;
+      --sage: #dce9dc;
+      --sage-light: #eef5ec;
+      --river: #3d7184;
+      --river-dark: #285263;
+      --river-light: #e4f1f4;
+      --sky: #dcecf4;
+      --sky-light: #eef7fa;
+      --cream: #fffdf7;
+      --sand: #eadcb9;
+      --gold: #7a6120;
+      --gold-light: #fff7df;
+      --white: #ffffff;
+      --border: #68786e;
+      --success: #285c3b;
+      --warning: #7a5b19;
+      --danger: #8b3d32;
+      --shadow: 0 14px 34px rgba(20,54,35,.16);
+      --soft-shadow: 0 8px 20px rgba(20,54,35,.10);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #f4f7f1;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #174f64;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: .18em;
+    }
+
+    button, input { font: inherit; }
+
+    button {
+      cursor: pointer;
+    }
+
+    a:focus,
+    button:focus,
+    input:focus {
+      outline: 4px solid #111;
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 9999;
+      padding: 12px 16px;
+      background: #fff;
+      color: #111;
+      border: 3px solid #111;
+      font-weight: bold;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(to bottom, #dceef5 0%, #e9f5f3 40%, #dcebdc 70%, #c4d9c0 100%);
+      border-bottom: 6px solid var(--forest-dark);
+    }
+
+    .sun {
+      position: absolute;
+      top: 70px;
+      right: 12%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255,240,177,.82);
+      box-shadow: 0 0 55px rgba(255,235,150,.45);
+      pointer-events: none;
+    }
+
+    .cloud {
+      position: absolute;
+      height: 40px;
+      border-radius: 50px;
+      background: rgba(255,255,255,.76);
+      box-shadow:
+        40px -12px 0 8px rgba(255,255,255,.7),
+        75px 1px 0 2px rgba(255,255,255,.68);
+      pointer-events: none;
+      animation: drift 34s ease-in-out infinite alternate;
+    }
+
+    .cloud.one { width: 110px; top: 105px; left: 8%; }
+    .cloud.two { width: 125px; top: 155px; right: 18%; animation-duration: 41s; }
+
+    @keyframes drift {
+      from { transform: translateX(-15px); }
+      to { transform: translateX(15px); }
+    }
+
+    .river-scene {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 240px;
+      pointer-events: none;
+    }
+
+    .river-bank {
+      position: absolute;
+      left: -4%;
+      right: -4%;
+      bottom: 0;
+      height: 180px;
+      background:
+        radial-gradient(ellipse at 15% 100%, #4d7454 0%, #4d7454 36%, transparent 37%),
+        radial-gradient(ellipse at 40% 100%, #3d6748 0%, #3d6748 35%, transparent 36%),
+        radial-gradient(ellipse at 72% 100%, #527a58 0%, #527a58 38%, transparent 39%),
+        radial-gradient(ellipse at 95% 100%, #3f674a 0%, #3f674a 34%, transparent 35%);
+    }
+
+    .river {
+      position: absolute;
+      left: 50%;
+      bottom: -70px;
+      width: 330px;
+      height: 330px;
+      transform: translateX(-50%) rotate(2deg);
+      background: linear-gradient(to bottom, #8dc0d0 0%, #4f899f 100%);
+      border-radius: 48% 52% 35% 65% / 20% 25% 75% 80%;
+      opacity: .92;
+      animation: riverPulse 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes riverPulse {
+      from { transform: translateX(-50%) rotate(2deg) scaleX(.96); }
+      to { transform: translateX(-50%) rotate(2deg) scaleX(1.04); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+      padding: 55px 0 145px;
+      text-align: center;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 10px 15px;
+      background: rgba(255,253,247,.97);
+      color: var(--forest-dark);
+      border: 3px solid var(--forest-dark);
+      border-radius: 9px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .trail-mark {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--river-dark);
+      color: #fff;
+      border: 5px solid #d5bb70;
+      box-shadow: var(--shadow);
+      font-size: 3rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--forest-dark);
+      font-size: .96rem;
+      font-weight: bold;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 950px;
+      margin: 0 auto;
+      color: var(--forest-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin: 16px auto 0;
+      color: #34503e;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.2rem, 3vw, 1.55rem);
+    }
+
+    .hero-card {
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 24px;
+      background: rgba(255,253,247,.97);
+      border: 3px solid #6c6a60;
+      border-left: 9px solid var(--river);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: left;
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      color: var(--forest-dark);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    /* SOUND */
+    .sound-panel {
+      max-width: 880px;
+      margin: -62px auto 32px;
+      position: relative;
+      z-index: 10;
+      padding: 23px;
+      background: var(--forest-dark);
+      color: #fff;
+      border: 4px solid #d3b96c;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .sound-panel h2 {
+      margin-top: 0;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .audio-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .audio-button {
+      padding: 11px 17px;
+      background: #fff;
+      color: var(--forest-dark);
+      border: 3px solid #d3b96c;
+      border-radius: 9px;
+      font-weight: bold;
+    }
+
+    /* PROGRESS */
+    .progress-panel {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #fff;
+      border-bottom: 3px solid var(--river);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .progress-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 12px 0;
+    }
+
+    .progress-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .progress-label {
+      font-weight: bold;
+      color: var(--forest-dark);
+    }
+
+    .progress-track {
+      flex: 1 1 300px;
+      height: 18px;
+      background: #e6ece8;
+      border: 2px solid #718077;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--river-dark);
+      transition: width .4s ease;
+    }
+
+    /* CONTENT */
+    main { padding-bottom: 60px; }
+
+    h2, h3, h4 {
+      color: var(--forest-dark);
+      line-height: 1.3;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 34px 0;
+    }
+
+    .mini-card {
+      background: #fff;
+      border: 2px solid var(--border);
+      border-top: 7px solid var(--river);
+      border-radius: 15px;
+      padding: 19px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .mini-card:nth-child(2) { border-top-color: var(--forest); }
+    .mini-card:nth-child(3) { border-top-color: var(--gold); }
+
+    .station {
+      margin: 30px 0;
+      padding: 25px;
+      background: #fff;
+      border: 3px solid var(--border);
+      border-left: 9px solid var(--river);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .station:nth-of-type(even) {
+      border-left-color: var(--forest);
+    }
+
+    .station-label {
+      display: inline-block;
+      margin-bottom: 9px;
+      padding: 6px 11px;
+      background: var(--river-dark);
+      color: #fff;
+      border-radius: 20px;
+      font-size: .88rem;
+      font-weight: bold;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .station h2 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    .callout {
+      margin: 16px 0;
+      padding: 15px;
+      background: var(--river-light);
+      border-left: 6px solid var(--river);
+      border-radius: 10px;
+    }
+
+    .callout.green {
+      background: var(--sage-light);
+      border-left-color: var(--forest);
+    }
+
+    .callout.gold {
+      background: var(--gold-light);
+      border-left-color: var(--gold);
+    }
+
+    .choice-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .choice {
+      width: 100%;
+      padding: 14px 16px;
+      text-align: left;
+      background: #fff;
+      color: var(--ink);
+      border: 2px solid #6f8076;
+      border-radius: 11px;
+      font-weight: bold;
+    }
+
+    .choice:hover {
+      background: #f3f8f5;
+    }
+
+    .choice.correct {
+      background: #e5f3e8;
+      border-color: var(--success);
+    }
+
+    .choice.incorrect {
+      background: #fff0ed;
+      border-color: var(--danger);
+    }
+
+    .feedback {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 10px;
+      border: 2px solid #73837a;
+      background: #f8fbf9;
+    }
+
+    .feedback.show { display: block; }
+
+    .feedback.good {
+      background: #e8f5ea;
+      border-color: var(--success);
+    }
+
+    .feedback.try {
+      background: #fff5e5;
+      border-color: var(--warning);
+    }
+
+    .continue-row {
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    .continue-button,
+    .primary-button {
+      display: inline-block;
+      padding: 12px 19px;
+      background: var(--forest);
+      color: #fff;
+      border: 3px solid var(--forest-dark);
+      border-radius: 9px;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: .18em;
+    }
+
+    .continue-button[disabled] {
+      background: #737d77;
+      border-color: #575f5a;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+
+    /* CLICKABLE ALLIANCE CARDS */
+    .alliance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .alliance-button {
+      min-height: 150px;
+      padding: 16px;
+      border: 3px solid var(--river);
+      border-radius: 14px;
+      background: var(--sky-light);
+      color: var(--forest-dark);
+      text-align: center;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .alliance-button span {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    .alliance-button.completed {
+      background: var(--sage-light);
+      border-color: var(--forest);
+    }
+
+    .alliance-info {
+      margin-top: 14px;
+      padding: 15px;
+      background: #fff;
+      border: 2px solid var(--river);
+      border-radius: 12px;
+      min-height: 120px;
+    }
+
+    /* ATTENDING */
+    .attending-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 16px;
+    }
+
+    .attending-card {
+      padding: 17px;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      background: var(--sage-light);
+    }
+
+    /* OARS */
+    .oars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .oars-card {
+      padding: 17px;
+      background: #fff;
+      border: 3px solid var(--river);
+      border-radius: 13px;
+      text-align: center;
+    }
+
+    .oars-letter {
+      display: block;
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--river-dark);
+    }
+
+    /* COMPLETION */
+    .completion {
+      display: none;
+      margin: 36px 0 0;
+      padding: 28px;
+      background: var(--cream);
+      border: 4px solid var(--gold);
+      border-left-width: 10px;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .completion.show { display: block; }
+
+    .name-field {
+      width: min(100%, 520px);
+      padding: 12px 14px;
+      border: 3px solid var(--river-dark);
+      border-radius: 8px;
+    }
+
+    .badge-preview {
+      margin: 22px auto;
+      max-width: 640px;
+      padding: 28px;
+      background:
+        linear-gradient(135deg, #eef7fa 0%, #eef5ec 100%);
+      border: 5px solid var(--forest-dark);
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .badge-preview h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      margin: 8px 0;
+    }
+
+    .badge-icon {
+      font-size: 4rem;
+    }
+
+    .source-note {
+      margin-top: 34px;
+      padding: 20px;
+      background: #f8fbf9;
+      border: 2px solid #7b8d82;
+      border-radius: 14px;
+    }
+
+    footer {
+      margin-top: 55px;
+      padding: 30px 0;
+      background: var(--forest-dark);
+      color: #fff;
+      text-align: center;
+      border-top: 5px solid #c6aa5e;
+    }
+
+    footer p { margin: 4px 0; }
+
+    @media (max-width: 900px) {
+      .intro-grid,
+      .oars-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      body { font-size: 17px; }
+
+      .intro-grid,
+      .attending-grid,
+      .oars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .station { padding: 18px; }
+      .hero-content { padding-top: 45px; }
+      .sound-panel { margin-top: -42px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .cloud, .river { animation: none; }
+      .progress-fill { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div><div class="cloud one" aria-hidden="true"></div><div class="cloud two" aria-hidden="true"></div>
+  <div class="river-scene" aria-hidden="true"><div class="river-bank"></div><div class="river"></div></div>
+  <div class="container hero-content">
+    <nav class="top-nav" aria-label="Trail navigation">
+      <a class="nav-link" href="../index.html">Return to Counseling Skills Trail</a>
+      <a class="nav-link" href="../../../index.html">Return to Counselor Academy Preserve</a>
+    </nav>
+    <div class="trail-mark" aria-hidden="true">🌲</div>
+    <p class="eyebrow">Counseling Skills Trail • Trail Stop 2</p>
+    <h1>Psychoeducational Group Skills</h1>
+    <p class="subtitle">Teaching Becomes Facilitation</p>
+    <section class="hero-card" aria-labelledby="trail-welcome">
+      <h2 id="trail-welcome">Information Is Only the Beginning</h2>
+      <p>Psychoeducational groups are common in substance use treatment because clients often need accurate information about triggers, cravings, coping, relapse prevention, recovery, communication, and behavior change.</p>
+      <p>But a psychoeducational group is not simply a lecture with several people in the room. Effective facilitators connect information to discussion, practice, reflection, and real-world application.</p>
+      <p style="margin-bottom:0;">At this Trail Stop, you will practice thinking like a group counselor: choosing a useful topic, matching tools to learning objectives, planning an interactive session, adapting to member needs, and deciding when a concern requires more than group psychoeducation.</p>
+    </section>
+  </div>
+</header>
+<section id="soundscape" class="sound-panel" aria-labelledby="sound-heading">
+  <h2 id="sound-heading">Counseling Skills River Soundscape</h2>
+  <p>If a quiet river helps you focus, you may play the optional nature soundscape while you work. Audio never begins automatically and is not required.</p>
+  <div class="audio-controls"><button id="play-audio" class="audio-button" type="button">Play River Soundscape</button><button id="pause-audio" class="audio-button" type="button">Pause Sound</button></div>
+  <p id="audio-status" role="status" aria-live="polite">River soundscape is currently paused.</p>
+  <audio id="trail-audio" loop preload="metadata"><source src="../../../assets/audio/nils_vega-river-sounds-547976.mp3" type="audio/mpeg"></audio>
+</section>
+<div class="progress-panel"><div class="progress-inner"><div class="progress-row"><span class="progress-label" id="progress-label">Trail progress: 0 of 7 stations complete</span><div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" aria-label="Trail Stop progress"><div class="progress-fill" id="progress-fill"></div></div></div></div></div>
+<main id="main-content"><div class="container">
+  <section class="intro-grid" aria-label="Trail Stop orientation">
+    <article class="mini-card"><h3>Teach With Purpose</h3><p>Begin with what members need to understand or do, then choose content, activities, and tools that support that learning objective.</p></article>
+    <article class="mini-card"><h3>Engage the Group</h3><p>Psychoeducation becomes group work when members discuss, practice, compare ideas, ask questions, and learn from one another.</p></article>
+    <article class="mini-card"><h3>Adapt, Do Not Assume</h3><p>Reading level, trauma history, culture, anxiety, cognition, readiness, and accessibility may all influence how members engage with a lesson.</p></article>
+  </section>
+
+  <section class="station" id="station-1" aria-labelledby="station-1-heading"><span class="station-label">Station 1 of 7</span><h2 id="station-1-heading">Psychoeducation Basecamp</h2>
+    <p>A psychoeducational group combines accurate information with interaction and application. Members should have opportunities to make meaning from what they learn rather than only listen passively.</p>
+    <div class="callout"><strong>Trail Principle:</strong> Information is the starting point. Application and interaction turn the information into group work.</div>
+    <p><strong>Which example best represents a psychoeducational group?</strong></p>
+    <div class="choice-grid" data-question="q1">
+      <button class="choice" type="button" data-value="a">The counselor lectures for 50 minutes about relapse and dismisses the group.</button>
+      <button class="choice" type="button" data-value="b">Members spend the entire hour sharing personal experiences without a defined learning topic.</button>
+      <button class="choice" type="button" data-value="c">The counselor briefly explains triggers, models a trigger-mapping tool, invites members to practice with a fictional or personal example, facilitates discussion, and closes with one coping takeaway.</button>
+      <button class="choice" type="button" data-value="d">Members independently read a handout in silence and turn it in before leaving.</button>
+    </div><div id="q1-feedback" class="feedback" role="status" aria-live="polite"></div>
+    <div class="continue-row"><button class="continue-button" id="continue-1" type="button" disabled data-next="station-2">Continue to Station 2</button></div>
+  </section>
+
+  <section class="station" id="station-2" aria-labelledby="station-2-heading"><span class="station-label">Station 2 of 7</span><h2 id="station-2-heading">Purpose and Population Lookout</h2>
+    <p>Explore seven planning decisions. Select every card before continuing.</p>
+    <div class="alliance-grid" id="alliance-grid">
+      <button class="alliance-button" type="button" data-title="Population" data-text="Identify who the group is designed to serve. Consider age, treatment setting, recovery stage, language, culture, cognitive needs, and other factors that may affect learning."><span aria-hidden="true">👥</span>Population</button>
+      <button class="alliance-button" type="button" data-title="Topic" data-text="Choose a focused topic connected to a meaningful treatment or recovery need, such as triggers, cravings, coping, communication, sleep, relapse prevention, or emotional regulation."><span aria-hidden="true">🗺️</span>Topic</button>
+      <button class="alliance-button" type="button" data-title="Purpose" data-text="Be able to explain why this topic matters for the group. Purpose keeps the session clinically relevant rather than becoming information for information's sake."><span aria-hidden="true">🧭</span>Purpose</button>
+      <button class="alliance-button" type="button" data-title="Learning Objectives" data-text="State what members should be able to understand, identify, explain, practice, or plan by the end of the session. Clear objectives guide the rest of the lesson."><span aria-hidden="true">🎯</span>Objectives</button>
+      <button class="alliance-button" type="button" data-title="Interactive Method" data-text="Decide how members will actively work with the information: discussion, scenario analysis, worksheet practice, role play, pair work, mapping, or another structured activity."><span aria-hidden="true">🧩</span>Interaction</button>
+      <button class="alliance-button" type="button" data-title="Adaptation" data-text="Plan for different reading levels, attention needs, anxiety, trauma responses, cultural perspectives, accessibility needs, and readiness for personal disclosure."><span aria-hidden="true">🌿</span>Adaptation</button>
+      <button class="alliance-button" type="button" data-title="Evaluation" data-text="Decide how you will know whether members learned something. A brief teach-back, scenario, exit question, or application plan may be more useful than asking only, 'Does everyone understand?'"><span aria-hidden="true">🔎</span>Evaluation</button>
+    </div>
+    <div class="alliance-info" id="alliance-info" role="status" aria-live="polite">Select a card to explore a planning decision.</div>
+    <p id="alliance-count"><strong>0 of 7 planning decisions explored.</strong></p>
+    <div class="continue-row"><button class="continue-button" id="continue-2" type="button" disabled data-next="station-3">Continue to Station 3</button></div>
+  </section>
+
+  <section class="station" id="station-3" aria-labelledby="station-3-heading"><span class="station-label">Station 3 of 7</span><h2 id="station-3-heading">Learning Objective Trail Marker</h2>
+    <p>Strong learning objectives help the counselor decide what to teach, what activity to use, and how to evaluate learning.</p>
+    <div class="callout green"><strong>Better objective:</strong> “By the end of group, members will be able to identify two possible triggers and name one coping response.”</div>
+    <p>Which objective is most useful for a psychoeducational session on cravings?</p>
+    <div class="choice-grid" data-question="q2">
+      <button class="choice" type="button" data-value="a">Members will understand cravings better.</button><button class="choice" type="button" data-value="b">The counselor will teach about cravings.</button><button class="choice" type="button" data-value="c">By the end of group, members will be able to describe one fact about cravings and demonstrate one coping strategy they could use during an urge.</button><button class="choice" type="button" data-value="d">Members will complete a worksheet.</button>
+    </div><div id="q2-feedback" class="feedback" role="status" aria-live="polite"></div><div class="continue-row"><button class="continue-button" id="continue-3" type="button" disabled data-next="station-4">Continue to Station 4</button></div>
+  </section>
+
+  <section class="station" id="station-4" aria-labelledby="station-4-heading"><span class="station-label">Station 4 of 7</span><h2 id="station-4-heading">Counselor Toolkit Station</h2>
+    <p>Worksheets and handouts can support learning, but the counselor should choose the tool because it matches the learning objective, not because it simply looks useful.</p>
+    <div class="attending-grid"><article class="attending-card"><h3>Trigger Tools</h3><ul><li>Triggers worksheet</li><li>Internal trigger questionnaire</li><li>External trigger questionnaire</li><li>Trigger–Thought–Craving–Use map</li></ul></article><article class="attending-card"><h3>Coping and Change Tools</h3><ul><li>Coping plan</li><li>Change plan</li><li>Urge monitoring</li><li>Problem-solving worksheet</li><li>Thought record</li><li>Relapse analysis chart</li></ul></article></div>
+    <div class="callout"><strong>FIT Check:</strong> Does the tool <strong>Fit the population</strong>, serve an <strong>Instructional purpose</strong>, and support <strong>Transfer to real life</strong>?</div>
+    <p>You are leading an early-recovery group. Members say cravings seem to happen “out of nowhere.” Your objective is for members to identify possible triggers and explain how triggers may influence thoughts and cravings.</p><p><strong>Which tool is the strongest fit?</strong></p>
+    <div class="choice-grid" data-question="q3"><button class="choice" type="button" data-value="a">Assertive communication worksheet</button><button class="choice" type="button" data-value="b">Trigger–Thought–Craving–Use worksheet</button><button class="choice" type="button" data-value="c">Weekly appointment calendar</button><button class="choice" type="button" data-value="d">General satisfaction survey</button></div>
+    <div id="q3-feedback" class="feedback" role="status" aria-live="polite"></div><div class="continue-row"><button class="continue-button" id="continue-4" type="button" disabled data-next="station-5">Continue to Station 5</button></div>
+  </section>
+
+  <section class="station" id="station-5" aria-labelledby="station-5-heading"><span class="station-label">Station 5 of 7</span><h2 id="station-5-heading">From Worksheet to Group Experience</h2>
+    <p>A worksheet is not a lesson plan. Effective facilitation creates a sequence that helps members understand, practice, process, and apply the learning.</p>
+    <div class="callout gold"><strong>Session Arc:</strong> Introduce → Teach → Model → Practice → Process → Apply → Close</div>
+    <div class="oars-grid"><article class="oars-card"><span class="oars-letter">1</span><strong>Introduce</strong><p>Explain why the topic matters.</p></article><article class="oars-card"><span class="oars-letter">2</span><strong>Teach</strong><p>Give enough information to understand the concept.</p></article><article class="oars-card"><span class="oars-letter">3</span><strong>Model</strong><p>Demonstrate with a fictional example.</p></article><article class="oars-card"><span class="oars-letter">4</span><strong>Practice</strong><p>Let members actively use the idea.</p></article></div>
+    <div class="oars-grid"><article class="oars-card"><span class="oars-letter">5</span><strong>Process</strong><p>Discuss patterns and observations.</p></article><article class="oars-card"><span class="oars-letter">6</span><strong>Apply</strong><p>Connect learning to life outside group.</p></article><article class="oars-card"><span class="oars-letter">7</span><strong>Close</strong><p>Summarize and identify one next step.</p></article></div>
+    <p><strong>Which facilitator approach best follows this sequence?</strong></p>
+    <div class="choice-grid" data-question="q4"><button class="choice" type="button" data-value="a">Hand out the worksheet immediately, wait silently, collect it, and move to the next topic.</button><button class="choice" type="button" data-value="b">Explain the concept briefly, model the worksheet with a fictional example, let members practice, process what they noticed, discuss application, and close with a takeaway.</button><button class="choice" type="button" data-value="c">Spend nearly the entire session lecturing so members have all possible information before they speak.</button><button class="choice" type="button" data-value="d">Ask each member to disclose their most difficult personal trigger before explaining the activity.</button></div>
+    <div id="q4-feedback" class="feedback" role="status" aria-live="polite"></div><div class="continue-row"><button class="continue-button" id="continue-5" type="button" disabled data-next="station-6">Continue to Station 6</button></div>
+  </section>
+
+  <section class="station" id="station-6" aria-labelledby="station-6-heading"><span class="station-label">Station 6 of 7</span><h2 id="station-6-heading">Facilitation and Adaptation Camp</h2>
+    <p>Worksheets should serve members. Members should not have to prove they can adapt themselves to a worksheet.</p>
+    <div class="attending-grid"><article class="attending-card"><h3>Possible Member Needs</h3><ul><li>Difficulty concentrating</li><li>Low literacy</li><li>Language differences</li><li>Accessibility needs</li><li>High anxiety</li><li>Trauma-related symptoms</li><li>Cognitive difficulties</li><li>Fatigue or early-recovery discomfort</li></ul></article><article class="attending-card"><h3>Possible Adaptations</h3><ul><li>Read instructions aloud</li><li>Model one item first</li><li>Reduce the number of questions</li><li>Use larger print or visuals</li><li>Complete part together</li><li>Use fictional scenarios</li><li>Allow verbal participation</li><li>Allow members to pass on personal questions</li></ul></article></div>
+    <blockquote>You distribute a two-page internal-triggers worksheet. One member finishes quickly. Another writes one answer. A third stares at the page. A fourth says, “I don't really understand what they're asking.”</blockquote>
+    <p>What is the strongest facilitator response?</p>
+    <div class="choice-grid" data-question="q5"><button class="choice" type="button" data-value="a">Continue without interruption so the faster members are not held back.</button><button class="choice" type="button" data-value="b">Ask the quiet member in front of everyone whether reading is difficult for them.</button><button class="choice" type="button" data-value="c">Pause, clarify the concept with a simple example, model one item together, and offer more than one way to participate.</button><button class="choice" type="button" data-value="d">Tell members they must finish every question because completing the worksheet is the objective.</button></div>
+    <div id="q5-feedback" class="feedback" role="status" aria-live="polite"></div><div class="continue-row"><button class="continue-button" id="continue-6" type="button" disabled data-next="station-7">Continue to Final Challenge</button></div>
+  </section>
+
+  <section class="station" id="station-7" aria-labelledby="station-7-heading"><span class="station-label">Station 7 of 7 • Final Challenge</span><h2 id="station-7-heading">Lead the Group</h2>
+    <p>Imagine you are preparing a 45-minute psychoeducational group for adults in early recovery. Several members report difficulty recognizing triggers before cravings become intense.</p>
+    <div class="callout gold"><strong>Your session goal:</strong><br>Members will be able to identify at least two possible triggers, describe how a trigger may influence thoughts and cravings, and name one realistic coping response.</div>
+    <p>Which plan best demonstrates purposeful, interactive, person-centered psychoeducational facilitation?</p>
+    <div class="choice-grid" data-question="q6"><button class="choice" type="button" data-value="a">Deliver a detailed lecture on neurobiology for the entire session and ask whether anyone has questions in the final two minutes.</button><button class="choice" type="button" data-value="b">Ask every member to disclose their most serious trigger so the group has enough examples to discuss.</button><button class="choice" type="button" data-value="c">Briefly teach internal and external triggers, model a Trigger–Thought–Craving–Use map with a fictional scenario, let members practice with a fictional or personally chosen example, process patterns, identify coping options, and close with one takeaway.</button><button class="choice" type="button" data-value="d">Give members several worksheets and ask them to complete as many as possible before group ends.</button></div>
+    <div id="q6-feedback" class="feedback" role="status" aria-live="polite"></div>
+    <div class="callout green"><strong>Clinical judgment reminder:</strong> If an activity reveals severe withdrawal concerns, urgent safety issues, significant psychiatric symptoms, medication questions outside your role, or another need that cannot be appropriately addressed in group, competent practice includes pausing, consulting, assessing further, referring, or coordinating with another professional.</div>
+    <div class="continue-row"><button class="continue-button" id="continue-7" type="button" disabled>Complete Trail Stop 2</button></div>
+  </section>
+
+  <section class="completion" id="completion" aria-labelledby="completion-heading"><span class="station-label">Trail Stop Complete</span><h2 id="completion-heading">You Reached Psychoeducation Practice Point</h2>
+    <p>You practiced the core decisions involved in psychoeducational group facilitation: defining purpose, identifying a population, writing learning objectives, selecting an appropriate tool, using an interactive session arc, adapting for member needs, and applying clinical judgment.</p>
+    <div class="callout green"><strong>Your next step:</strong> Enter your name, generate your personalized badge, and download it before leaving this page. Your Canvas assignment may require the badge as proof of completion.</div>
+    <label for="student-name"><strong>Name for your completion badge</strong></label><br><input class="name-field" id="student-name" type="text" maxlength="60" autocomplete="name" placeholder="Enter your name">
+    <div class="badge-preview" id="badge-preview" aria-live="polite"><div class="badge-icon" aria-hidden="true">🌲</div><p style="margin:0;text-transform:uppercase;letter-spacing:.08em;font-weight:bold;">Chemical Dependency Counselor Academy</p><h3>Psychoeducational Group Guide</h3><p>Counseling Skills Trail • Trail Stop 2</p><p id="badge-name"><strong>Your Name</strong></p><p style="margin-bottom:0;">Psychoeducational Group Skills: Practice &amp; Application</p></div>
+    <button class="primary-button" id="download-badge" type="button">Download My Completion Badge</button><p id="badge-status" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="source-note" aria-labelledby="source-heading"><h2 id="source-heading">Source and Further Reading</h2>
+    <p>This Trail Stop was developed to support practice with psychoeducational group design and facilitation in substance use treatment. The emphasis is on purposeful teaching, active participation, applied learning, adaptation, and the counselor's role in turning information into a therapeutic learning experience.</p>
+    <p><a href="https://library.samhsa.gov/sites/default/files/d7/priv/sma15-3991.pdf" target="_blank" rel="noopener">SAMHSA TIP 41: Substance Abuse Treatment — Group Therapy</a></p>
+    <p><a href="https://library.samhsa.gov/sites/default/files/sma11-4664_0_0.pdf" target="_blank" rel="noopener">SAMHSA TIP 41 In-Service Training Curriculum</a></p>
+    <p><a href="https://cod.pressbooks.pub/addictionscounseling/chapter/individual-and-group-counseling-skills/#chapter-138-section-2" target="_blank" rel="noopener">Addiction Counseling Essentials: Group Counseling Skills</a></p>
+    <p><a href="https://www.mirecc.va.gov/visn5/ebt.asp" target="_blank" rel="noopener">VA CBT for Substance Use Disorder Tools</a></p>
+    <p style="margin-bottom:0;">Open educational and public professional resources are used as learning foundations; interactive scenarios, instructional framing, Trail Stop sequencing, feedback, and Academy activities were developed for this course.</p>
+  </section>
+</div></main>
+<footer><div class="container"><p>Chemical Dependency Counselor Academy</p><p>Counseling Skills Trail • Trail Stop 2</p><p>Psychoeducational Group Skills</p><p>Learning • Connection • Growth • Practice</p></div></footer>
+<script>
+(function(){"use strict";
+const STORAGE_KEY="cdca-counseling-week3-psychoeducation-v1";const totalStations=7;let state={completedStations:[],allianceViewed:[]};
+function loadState(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(saved&&Array.isArray(saved.completedStations)&&Array.isArray(saved.allianceViewed)){state=saved;}}catch(e){console.warn("Progress could not be loaded.",e);}}
+function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch(e){console.warn("Progress could not be saved.",e);}}
+function markStationComplete(n){if(!state.completedStations.includes(n)){state.completedStations.push(n);state.completedStations.sort((a,b)=>a-b);saveState();}updateProgress();}
+function updateProgress(){const count=state.completedStations.length;const percent=Math.round((count/totalStations)*100);document.getElementById("progress-label").textContent="Trail progress: "+count+" of "+totalStations+" stations complete";document.getElementById("progress-fill").style.width=percent+"%";document.querySelector(".progress-track").setAttribute("aria-valuenow",count);}
+function scrollToId(id){const e=document.getElementById(id);if(e)e.scrollIntoView({behavior:"smooth",block:"start"});}
+const answerKey={q1:"c",q2:"c",q3:"b",q4:"b",q5:"c",q6:"c"};
+const feedbackText={q1:{correct:"Strong choice. This plan uses brief teaching, active practice, member interaction, processing, and application. That is psychoeducation functioning as group work rather than lecture alone.",incorrect:"Try again. Look for a plan that combines accurate information with member engagement, practice, processing, and application rather than passive listening or unstructured sharing."},q2:{correct:"Correct. This objective is specific and observable. It tells the counselor what members should be able to describe and do by the end of the session.",incorrect:"Try again. A useful learning objective focuses on what members will be able to understand, identify, explain, demonstrate, or apply—not simply what the counselor will cover."},q3:{correct:"Correct. The Trigger–Thought–Craving–Use tool directly supports the objective by helping members visualize how triggers may connect with thinking and craving.",incorrect:"Try again. Choose the tool that most directly matches the stated learning objective, not simply a worksheet that might be useful at another point in treatment."},q4:{correct:"Correct. This sequence teaches the concept, demonstrates the tool, gives members a chance to practice, processes the learning, and connects it to real life.",incorrect:"Try again. Effective psychoeducation is more than handing out a worksheet or lecturing. Look for a sequence that includes teaching, modeling, active practice, processing, application, and closure."},q5:{correct:"Correct. This response checks accessibility without embarrassing anyone, supports the whole group, models the task, and creates multiple pathways for participation.",incorrect:"Try again. Avoid interpreting slow or quiet participation as refusal, publicly identifying literacy concerns, or continuing when the instructions are not accessible."},q6:{correct:"Excellent. This plan is purposeful, interactive, flexible, and aligned with the learning objective. It also allows participation without requiring personal disclosure.",incorrect:"Try again. The strongest plan will match the objective, use brief teaching, model the skill, invite practice, process learning, respect choice, and end with real-world application."}};
+function configureQuestion(el){const q=el.dataset.question,choices=Array.from(el.querySelectorAll(".choice")),feedback=document.getElementById(q+"-feedback");const stationMap={q1:1,q2:3,q3:4,q4:5,q5:6,q6:7};const continueMap={q1:"continue-1",q2:"continue-3",q3:"continue-4",q4:"continue-5",q5:"continue-6",q6:"continue-7"};choices.forEach(choice=>choice.addEventListener("click",function(){choices.forEach(c=>c.classList.remove("correct","incorrect"));const ok=this.dataset.value===answerKey[q];if(ok){this.classList.add("correct");feedback.className="feedback show good";feedback.textContent=feedbackText[q].correct;document.getElementById(continueMap[q]).disabled=false;markStationComplete(stationMap[q]);}else{this.classList.add("incorrect");feedback.className="feedback show try";feedback.textContent=feedbackText[q].incorrect;}}));}
+function configureAlliance(){const buttons=Array.from(document.querySelectorAll(".alliance-button")),info=document.getElementById("alliance-info"),count=document.getElementById("alliance-count"),continueButton=document.getElementById("continue-2");buttons.forEach((button,index)=>{if(state.allianceViewed.includes(index))button.classList.add("completed");button.addEventListener("click",function(){info.innerHTML="<h3 style='margin-top:0;'>"+this.dataset.title+"</h3><p style='margin-bottom:0;'>"+this.dataset.text+"</p>";if(!state.allianceViewed.includes(index)){state.allianceViewed.push(index);state.allianceViewed.sort((a,b)=>a-b);saveState();}this.classList.add("completed");count.innerHTML="<strong>"+state.allianceViewed.length+" of 7 planning decisions explored.</strong>";if(state.allianceViewed.length===7){continueButton.disabled=false;markStationComplete(2);}});});count.innerHTML="<strong>"+state.allianceViewed.length+" of 7 planning decisions explored.</strong>";if(state.allianceViewed.length===7)continueButton.disabled=false;}
+function configureContinueButtons(){document.querySelectorAll(".continue-button[data-next]").forEach(b=>b.addEventListener("click",function(){scrollToId(this.dataset.next);}));document.getElementById("continue-7").addEventListener("click",function(){markStationComplete(7);const c=document.getElementById("completion");c.classList.add("show");c.scrollIntoView({behavior:"smooth",block:"start"});});}
+function restoreCompletedButtons(){const map={1:"continue-1",2:"continue-2",3:"continue-3",4:"continue-4",5:"continue-5",6:"continue-6",7:"continue-7"};state.completedStations.forEach(n=>{const b=document.getElementById(map[n]);if(b)b.disabled=false;});if(state.completedStations.includes(7))document.getElementById("completion").classList.add("show");}
+function configureAudio(){const audio=document.getElementById("trail-audio"),play=document.getElementById("play-audio"),pause=document.getElementById("pause-audio"),status=document.getElementById("audio-status");audio.volume=.25;play.addEventListener("click",async function(){try{await audio.play();play.textContent="River Soundscape Playing";status.textContent="The river soundscape is playing quietly.";}catch(e){console.error("Audio playback error:",e);status.textContent="Your browser could not start the optional river soundscape. You can continue without audio.";}});pause.addEventListener("click",function(){audio.pause();play.textContent="Play River Soundscape";status.textContent="River soundscape is currently paused.";});}
+function configureBadge(){const input=document.getElementById("student-name"),preview=document.getElementById("badge-name"),button=document.getElementById("download-badge"),status=document.getElementById("badge-status");input.addEventListener("input",function(){preview.innerHTML="<strong>"+(this.value.trim()||"Your Name")+"</strong>";});button.addEventListener("click",function(){const name=input.value.trim();if(!name){status.textContent="Please enter your name before downloading your badge.";input.focus();return;}const canvas=document.createElement("canvas");canvas.width=1600;canvas.height=1000;const ctx=canvas.getContext("2d"),gradient=ctx.createLinearGradient(0,0,1600,1000);gradient.addColorStop(0,"#eef7fa");gradient.addColorStop(1,"#eef5ec");ctx.fillStyle=gradient;ctx.fillRect(0,0,1600,1000);ctx.strokeStyle="#173425";ctx.lineWidth=24;ctx.strokeRect(35,35,1530,930);ctx.strokeStyle="#7a6120";ctx.lineWidth=8;ctx.strokeRect(65,65,1470,870);ctx.textAlign="center";ctx.fillStyle="#173425";ctx.font="bold 42px Arial";ctx.fillText("CHEMICAL DEPENDENCY COUNSELOR ACADEMY",800,165);ctx.font="100px Arial";ctx.fillText("🌲",800,300);ctx.font="bold 72px Georgia";ctx.fillText("Psychoeducational Group Guide",800,410);ctx.font="38px Arial";ctx.fillText("Counseling Skills Trail • Trail Stop 2",800,485);ctx.fillStyle="#285263";ctx.font="bold 64px Georgia";ctx.fillText(name,800,610);ctx.fillStyle="#203027";ctx.font="34px Arial";ctx.fillText("Completed: Psychoeducational Group Skills",800,690);ctx.font="29px Arial";ctx.fillText("Purpose • Objectives • Tools • Facilitation • Adaptation • Application",800,760);ctx.font="28px Arial";ctx.fillText("Learning • Connection • Growth • Practice",800,865);const link=document.createElement("a"),safe=name.replace(/[^a-z0-9]+/gi,"-").replace(/^-|-$/g,"");link.download=(safe||"student")+"-psychoeducational-group-guide.png";link.href=canvas.toDataURL("image/png");document.body.appendChild(link);link.click();link.remove();status.textContent="Your personalized completion badge has been downloaded. Save it somewhere you can easily find for your Canvas submission.";});}
+function initialize(){loadState();updateProgress();document.querySelectorAll("[data-question]").forEach(configureQuestion);configureAlliance();configureContinueButtons();restoreCompletedButtons();configureAudio();configureBadge();}
+document.addEventListener("DOMContentLoaded",initialize);})();
+</script>
+</body>
+</html>
