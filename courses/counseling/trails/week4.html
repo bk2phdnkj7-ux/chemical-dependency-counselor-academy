@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Trail Stop 3: Trauma-Informed Group Skills Shelter for HUSEV 28 Group Counseling.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Trauma-Informed Group Skills Trail Stop for HUSEV 28 Group Counseling in the Chemical Dependency Counselor Academy.">
+
   <title>Trail Stop 3 | Trauma-Informed Group Skills Shelter</title>
 
   <style>
@@ -16,7 +23,6 @@
       --sage-light: #eef5ec;
       --river: #3d7184;
       --river-dark: #285263;
-      --river-mid: #5e91a2;
       --river-light: #e4f1f4;
       --sky: #dcecf4;
       --sky-light: #eef7fa;
@@ -33,9 +39,13 @@
       --radius: 20px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -50,12 +60,21 @@
       color: #174f64;
       font-weight: bold;
       text-decoration: underline;
-      text-underline-offset: .18em;
+      text-underline-offset: 0.18em;
     }
 
-    button { font: inherit; }
+    button,
+    input {
+      font: inherit;
+    }
 
-    a:focus, button:focus, summary:focus {
+    button {
+      cursor: pointer;
+    }
+
+    a:focus,
+    button:focus,
+    input:focus {
       outline: 4px solid #111111;
       outline-offset: 4px;
     }
@@ -72,34 +91,43 @@
       font-weight: bold;
     }
 
-    .skip-link:focus { top: 16px; }
+    .skip-link:focus {
+      top: 16px;
+    }
 
     .container {
-      width: min(1180px, calc(100% - 32px));
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
     }
 
     /* HERO */
+
     .hero {
       position: relative;
       overflow: hidden;
-      min-height: 720px;
+      min-height: 760px;
       display: flex;
       align-items: center;
       background:
-        linear-gradient(to bottom, #d8edf7 0%, #e9f5f5 38%, #dfeede 68%, #c5dcc1 100%);
+        linear-gradient(
+          to bottom,
+          #d7edf6 0%,
+          #e7f3f1 37%,
+          #dcebdc 67%,
+          #bed5bb 100%
+        );
       border-bottom: 6px solid var(--forest-dark);
     }
 
     .sun {
       position: absolute;
-      top: 76px;
+      top: 75px;
       right: 12%;
-      width: 108px;
-      height: 108px;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
-      background-color: rgba(255,240,177,.82);
-      box-shadow: 0 0 55px rgba(255,235,150,.48);
+      background-color: rgba(255, 240, 177, 0.82);
+      box-shadow: 0 0 55px rgba(255, 235, 150, 0.48);
       pointer-events: none;
     }
 
@@ -107,16 +135,26 @@
       position: absolute;
       height: 42px;
       border-radius: 50px;
-      background-color: rgba(255,255,255,.76);
+      background-color: rgba(255,255,255,0.76);
       box-shadow:
-        42px -13px 0 8px rgba(255,255,255,.70),
-        78px 1px 0 2px rgba(255,255,255,.68);
+        42px -13px 0 8px rgba(255,255,255,0.70),
+        78px 1px 0 2px rgba(255,255,255,0.68);
       pointer-events: none;
       animation: drift 34s ease-in-out infinite alternate;
     }
 
-    .cloud-one { width: 110px; top: 110px; left: 7%; }
-    .cloud-two { width: 125px; top: 165px; right: 18%; animation-duration: 42s; }
+    .cloud-one {
+      width: 110px;
+      top: 100px;
+      left: 8%;
+    }
+
+    .cloud-two {
+      width: 125px;
+      top: 160px;
+      right: 19%;
+      animation-duration: 42s;
+    }
 
     @keyframes drift {
       from { transform: translateX(-18px); }
@@ -127,12 +165,22 @@
       position: absolute;
       left: -6%;
       right: -6%;
-      bottom: 135px;
-      height: 330px;
-      opacity: .72;
+      bottom: 160px;
+      height: 320px;
+      opacity: 0.68;
       background:
-        linear-gradient(145deg, transparent 0 38%, #a6bdb0 39% 61%, transparent 62%),
-        linear-gradient(215deg, transparent 0 39%, #b7c9bd 40% 62%, transparent 63%);
+        linear-gradient(
+          145deg,
+          transparent 0 38%,
+          #a6bdb0 39% 61%,
+          transparent 62%
+        ),
+        linear-gradient(
+          215deg,
+          transparent 0 39%,
+          #b7c9bd 40% 62%,
+          transparent 63%
+        );
       pointer-events: none;
     }
 
@@ -140,12 +188,22 @@
       position: absolute;
       left: -4%;
       right: -4%;
-      bottom: 55px;
+      bottom: 90px;
       height: 350px;
-      opacity: .92;
+      opacity: 0.92;
       background:
-        linear-gradient(145deg, transparent 0 39%, #60816a 40% 62%, transparent 63%),
-        linear-gradient(215deg, transparent 0 39%, #4e7059 40% 63%, transparent 64%);
+        linear-gradient(
+          145deg,
+          transparent 0 39%,
+          #60816a 40% 62%,
+          transparent 63%
+        ),
+        linear-gradient(
+          215deg,
+          transparent 0 39%,
+          #4e7059 40% 63%,
+          transparent 64%
+        );
       pointer-events: none;
     }
 
@@ -156,18 +214,117 @@
       bottom: 0;
       height: 205px;
       background:
-        radial-gradient(ellipse at 12% 100%, #4d7454 0%, #4d7454 31%, transparent 32%),
-        radial-gradient(ellipse at 32% 100%, #3d6748 0%, #3d6748 35%, transparent 36%),
-        radial-gradient(ellipse at 55% 100%, #527a58 0%, #527a58 34%, transparent 35%),
-        radial-gradient(ellipse at 78% 100%, #3f674a 0%, #3f674a 35%, transparent 36%),
-        radial-gradient(ellipse at 94% 100%, #557d5c 0%, #557d5c 31%, transparent 32%);
+        radial-gradient(
+          ellipse at 12% 100%,
+          #4d7454 0%,
+          #4d7454 31%,
+          transparent 32%
+        ),
+        radial-gradient(
+          ellipse at 32% 100%,
+          #3d6748 0%,
+          #3d6748 35%,
+          transparent 36%
+        ),
+        radial-gradient(
+          ellipse at 55% 100%,
+          #527a58 0%,
+          #527a58 34%,
+          transparent 35%
+        ),
+        radial-gradient(
+          ellipse at 78% 100%,
+          #3f674a 0%,
+          #3f674a 35%,
+          transparent 36%
+        ),
+        radial-gradient(
+          ellipse at 94% 100%,
+          #557d5c 0%,
+          #557d5c 31%,
+          transparent 32%
+        );
       pointer-events: none;
+    }
+
+    /* MOVING RIVER */
+
+    .hero-river {
+      position: absolute;
+      left: 50%;
+      bottom: -65px;
+      width: 370px;
+      height: 450px;
+      transform: translateX(-50%);
+      overflow: hidden;
+      border-radius: 48% 52% 8% 8% / 14% 16% 5% 5%;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(141, 194, 208, 0.86),
+          rgba(71, 132, 153, 0.94)
+        );
+      clip-path: polygon(
+        44% 0%,
+        58% 0%,
+        67% 20%,
+        49% 38%,
+        62% 55%,
+        38% 72%,
+        74% 100%,
+        24% 100%,
+        42% 76%,
+        28% 57%,
+        50% 38%,
+        36% 19%
+      );
+      pointer-events: none;
+    }
+
+    .river-wave {
+      position: absolute;
+      left: -30%;
+      width: 160%;
+      height: 60px;
+      border-radius: 50%;
+      border-top: 8px solid rgba(255,255,255,0.34);
+      animation: river-flow 8s linear infinite;
+    }
+
+    .wave-one {
+      top: 100px;
+    }
+
+    .wave-two {
+      top: 210px;
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+
+    .wave-three {
+      top: 325px;
+      animation-delay: -6s;
+      animation-duration: 12s;
+    }
+
+    @keyframes river-flow {
+      0% {
+        transform: translateX(-40px) translateY(-8px);
+      }
+
+      50% {
+        transform: translateX(40px) translateY(8px);
+      }
+
+      100% {
+        transform: translateX(-40px) translateY(-8px);
+      }
     }
 
     .hero-content {
       position: relative;
       z-index: 5;
-      padding: 60px 0 150px;
+      padding: 65px 0 170px;
       text-align: center;
     }
 
@@ -175,7 +332,7 @@
       display: inline-block;
       margin-bottom: 22px;
       padding: 11px 17px;
-      background-color: rgba(255,253,247,.96);
+      background-color: rgba(255,253,247,0.96);
       color: var(--forest-dark);
       border: 3px solid var(--forest-dark);
       border-radius: 9px;
@@ -200,18 +357,18 @@
     .eyebrow {
       margin: 0 0 8px;
       color: var(--forest-dark);
-      font-size: .96rem;
+      font-size: 0.96rem;
       font-weight: bold;
-      letter-spacing: .11em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      max-width: 980px;
+      max-width: 900px;
       margin: 0 auto;
       color: var(--forest-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      font-size: clamp(2.8rem, 7vw, 5rem);
       line-height: 1.05;
     }
 
@@ -219,14 +376,14 @@
       margin: 15px auto 0;
       color: #34503e;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-size: clamp(1.2rem, 3vw, 1.55rem);
     }
 
     .hero-card {
-      max-width: 860px;
+      max-width: 830px;
       margin: 30px auto 0;
-      padding: 26px;
-      background-color: rgba(255,253,247,.96);
+      padding: 25px;
+      background-color: rgba(255,253,247,0.97);
       border: 3px solid var(--stone);
       border-left: 9px solid var(--river);
       border-radius: var(--radius);
@@ -240,14 +397,17 @@
       font-family: Georgia, "Times New Roman", serif;
     }
 
-    .hero-actions {
+    .hero-actions,
+    .button-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 18px;
     }
 
-    .hero-button {
+    .hero-button,
+    .resource-button,
+    .action-button {
       display: inline-block;
       padding: 13px 20px;
       background-color: var(--forest);
@@ -263,10 +423,37 @@
       border-color: #173a47;
     }
 
+    main {
+      padding-bottom: 70px;
+    }
+
+    h2,
+    h3 {
+      color: var(--forest-dark);
+      line-height: 1.3;
+    }
+
+    .section {
+      margin: 38px 0;
+    }
+
+    .section-heading {
+      max-width: 840px;
+      margin: 0 auto 25px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+    }
+
     /* AUDIO */
+
     .sound-panel {
-      max-width: 900px;
-      margin: -65px auto 40px;
+      max-width: 880px;
+      margin: -68px auto 48px;
       position: relative;
       z-index: 10;
       padding: 25px;
@@ -298,7 +485,6 @@
       color: var(--forest-dark);
       border: 3px solid #d3b96c;
       border-radius: 9px;
-      cursor: pointer;
       font-weight: bold;
     }
 
@@ -307,404 +493,286 @@
       font-weight: bold;
     }
 
-    /* MOVING RIVER */
-    .river-scene {
-      position: relative;
-      overflow: hidden;
-      height: 230px;
-      margin: 28px 0 44px;
-      border: 3px solid #4f7468;
-      border-radius: 26px;
-      box-shadow: var(--soft-shadow);
-      background:
-        linear-gradient(to bottom, #dfeeda 0 36%, #b8d4b7 36% 48%, #6a9caf 48% 100%);
-    }
+    /* CARDS */
 
-    .river-bank-left,
-    .river-bank-right {
-      position: absolute;
-      top: 38%;
-      bottom: 0;
-      width: 24%;
-      background: linear-gradient(to bottom, #8fa982, #627e5e);
-      z-index: 2;
-    }
-
-    .river-bank-left {
-      left: 0;
-      clip-path: polygon(0 0, 100% 13%, 75% 100%, 0 100%);
-    }
-
-    .river-bank-right {
-      right: 0;
-      clip-path: polygon(0 13%, 100% 0, 100% 100%, 25% 100%);
-    }
-
-    .river-water {
-      position: absolute;
-      left: 14%;
-      right: 14%;
-      top: 43%;
-      bottom: 0;
-      overflow: hidden;
-      background:
-        linear-gradient(to bottom, #6e9faf 0%, #4f8396 55%, #3f7185 100%);
-      clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
-    }
-
-    .river-water::before,
-    .river-water::after {
-      content: "";
-      position: absolute;
-      left: -25%;
-      width: 150%;
-      height: 60px;
-      border-radius: 50%;
-      background:
-        repeating-linear-gradient(
-          100deg,
-          rgba(255,255,255,.34) 0 10px,
-          rgba(255,255,255,0) 10px 34px
-        );
-      animation: riverFlow 13s linear infinite;
-    }
-
-    .river-water::before { top: 22%; }
-    .river-water::after {
-      top: 59%;
-      opacity: .62;
-      animation-duration: 18s;
-      animation-direction: reverse;
-    }
-
-    @keyframes riverFlow {
-      from { transform: translateX(-7%); }
-      to { transform: translateX(7%); }
-    }
-
-    .river-glint {
-      position: absolute;
-      z-index: 3;
-      width: 70px;
-      height: 7px;
-      border-radius: 10px;
-      background-color: rgba(255,255,255,.75);
-      box-shadow: 0 0 12px rgba(255,255,255,.44);
-      animation: glintMove 11s ease-in-out infinite alternate;
-    }
-
-    .glint-1 { left: 42%; top: 61%; }
-    .glint-2 { left: 55%; top: 72%; width: 90px; animation-duration: 15s; }
-    .glint-3 { left: 35%; top: 83%; width: 54px; animation-duration: 18s; }
-
-    @keyframes glintMove {
-      from { transform: translateX(-22px); opacity: .38; }
-      to { transform: translateX(22px); opacity: .92; }
-    }
-
-    .leaf {
-      position: absolute;
-      z-index: 4;
-      width: 18px;
-      height: 11px;
-      background-color: #d7bd67;
-      border-radius: 100% 0 100% 0;
-      transform: rotate(25deg);
-      animation: leafFloat 17s linear infinite;
-    }
-
-    .leaf-one { left: 43%; top: 57%; }
-    .leaf-two { left: 52%; top: 66%; animation-delay: 6s; animation-duration: 22s; }
-
-    @keyframes leafFloat {
-      0% { transform: translate(-45px,-8px) rotate(15deg); }
-      50% { transform: translate(10px,45px) rotate(35deg); }
-      100% { transform: translate(75px,110px) rotate(70deg); }
-    }
-
-    .river-caption {
-      position: absolute;
-      z-index: 5;
-      left: 50%;
-      bottom: 14px;
-      transform: translateX(-50%);
-      width: min(720px, calc(100% - 38px));
-      padding: 10px 14px;
-      background-color: rgba(255,253,247,.94);
-      border: 2px solid #5f7863;
-      border-radius: 12px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    /* PAGE STRUCTURE */
-    main { padding-bottom: 64px; }
-
-    h2, h3 { color: var(--forest-dark); line-height: 1.3; }
-
-    .section-heading {
-      max-width: 840px;
-      margin: 0 auto 28px;
-      text-align: center;
-    }
-
-    .section-heading h2 {
-      margin-bottom: 10px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 4vw, 2.7rem);
-    }
-
-    .learning-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin: 24px 0 40px;
-    }
-
-    .learning-card {
-      padding: 20px;
-      background: var(--white);
-      border: 2px solid var(--border);
-      border-top: 7px solid var(--forest);
-      border-radius: 16px;
-      box-shadow: var(--soft-shadow);
-    }
-
-    .learning-card:nth-child(2n) { border-top-color: var(--river); }
-    .learning-card:nth-child(3n) { border-top-color: var(--gold); }
-
-    .learning-card h3 {
-      margin-top: 0;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    .content-panel {
-      margin: 26px 0;
-      padding: 26px;
+    .trail-card {
+      padding: 24px;
       background-color: var(--white);
-      border: 2px solid #c9d8cf;
+      border: 2px solid var(--border);
+      border-left: 8px solid var(--forest);
       border-radius: var(--radius);
       box-shadow: var(--soft-shadow);
+      margin-bottom: 20px;
     }
 
-    .content-panel h2 {
-      margin-top: 0;
-      font-family: Georgia, "Times New Roman", serif;
+    .trail-card.river-card {
+      border-left-color: var(--river);
+      background-color: var(--sky-light);
     }
 
-    .green-panel {
-      background-color: var(--sage-light);
-      border-left: 9px solid var(--forest);
-    }
-
-    .blue-panel {
-      background-color: var(--river-light);
-      border-left: 9px solid var(--river);
-    }
-
-    .gold-panel {
+    .trail-card.gold-card {
+      border-left-color: var(--gold);
       background-color: var(--gold-light);
-      border-left: 9px solid var(--gold);
+    }
+
+    .trail-card.sage-card {
+      border-left-color: var(--pine);
+      background-color: var(--sage-light);
+    }
+
+    .trail-card h2,
+    .trail-card h3 {
+      margin-top: 0;
     }
 
     .principle-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
+      gap: 16px;
     }
 
     .principle-card {
       padding: 18px;
       background-color: var(--white);
-      border: 2px solid #83958a;
+      border: 2px solid var(--border);
+      border-top: 7px solid var(--forest);
       border-radius: 14px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .principle-card:nth-child(even) {
+      border-top-color: var(--river);
     }
 
     .principle-card h3 {
-      margin: 0 0 7px;
-      font-size: 1.08rem;
-    }
-
-    details {
-      margin: 14px 0;
-      background-color: var(--white);
-      border: 2px solid #a8b8af;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    summary {
-      cursor: pointer;
-      padding: 15px 18px;
-      background-color: #eef5ec;
-      color: var(--forest-dark);
-      font-weight: bold;
-    }
-
-    details > div { padding: 0 18px 18px; }
-
-    /* DECISION LAB */
-    .decision-lab {
-      margin: 34px 0;
-      padding: 28px;
-      background:
-        linear-gradient(to bottom, #eef7fa, #edf6ef);
-      border: 3px solid #668177;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .decision-lab h2 {
       margin-top: 0;
-      font-family: Georgia, "Times New Roman", serif;
     }
 
-    .scenario-card {
-      padding: 20px;
-      margin: 18px 0;
+    /* CHOICE BUTTONS */
+
+    .choice-panel {
+      padding: 22px;
       background-color: var(--cream);
-      border-left: 8px solid var(--river);
-      border-radius: 15px;
+      border: 3px solid var(--gold);
+      border-radius: var(--radius);
+      box-shadow: var(--soft-shadow);
+      margin: 22px 0;
     }
 
-    .choice-grid {
+    .choice-panel h3 {
+      margin-top: 0;
+    }
+
+    .choice-buttons {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      gap: 10px;
       margin-top: 14px;
     }
 
     .choice-button {
       width: 100%;
-      padding: 14px;
-      background-color: var(--white);
-      color: var(--forest-dark);
-      border: 3px solid var(--forest);
-      border-radius: 11px;
-      cursor: pointer;
+      padding: 13px;
       text-align: left;
+      background-color: var(--white);
+      color: var(--ink);
+      border: 2px solid var(--border);
+      border-radius: 9px;
       font-weight: bold;
     }
 
-    .choice-button:hover { background-color: var(--sage-light); }
-
-    .feedback-box {
-      display: none;
-      margin-top: 14px;
-      padding: 16px;
-      background-color: #fffdf7;
-      border: 3px solid var(--gold);
-      border-radius: 12px;
+    .choice-button:hover {
+      background-color: var(--river-light);
     }
 
-    .feedback-box.show { display: block; }
+    .feedback {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      background-color: var(--sage-light);
+      border: 2px solid var(--pine);
+      border-radius: 10px;
+    }
 
-    /* VIDEO */
-    .video-card {
-      padding: 25px;
-      background-color: #f6fbfd;
-      border: 3px solid var(--river);
-      border-radius: 20px;
+    .feedback.show {
+      display: block;
+    }
+
+    /* DETAILS */
+
+    details {
+      margin-bottom: 14px;
+      background-color: var(--white);
+      border: 2px solid #c4d2cb;
+      border-radius: 12px;
       box-shadow: var(--soft-shadow);
     }
 
-    .resource-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .resource-button {
-      display: inline-block;
-      padding: 12px 18px;
-      color: var(--white);
-      background-color: var(--river-dark);
-      border: 3px solid #173a47;
-      border-radius: 10px;
-      text-decoration: underline;
-    }
-
-    .resource-button.green {
-      background-color: var(--forest);
-      border-color: var(--forest-dark);
-    }
-
-    .reflection-box {
-      margin-top: 18px;
-      padding: 18px;
-      background-color: var(--white);
-      border-left: 7px solid var(--gold);
-      border-radius: 12px;
-    }
-
-    /* QUICK CHECK */
-    .quick-check {
-      padding: 24px;
-      background-color: var(--sage-light);
-      border: 3px solid #6e846f;
-      border-radius: 20px;
-      margin: 34px 0;
-    }
-
-    .check-item {
-      margin: 12px 0;
-      padding: 16px;
-      background: var(--white);
-      border: 2px solid #c2d0c5;
-      border-radius: 12px;
-    }
-
-    .reveal-button {
-      padding: 10px 14px;
-      background: var(--forest-dark);
-      color: var(--white);
-      border: 2px solid #10281c;
-      border-radius: 8px;
+    summary {
       cursor: pointer;
+      padding: 15px 17px;
+      color: var(--forest-dark);
       font-weight: bold;
     }
 
-    .answer {
-      display: none;
-      margin-top: 12px;
-      padding: 12px;
-      background-color: var(--gold-light);
-      border-left: 5px solid var(--gold);
-      border-radius: 8px;
+    .details-content {
+      padding: 0 18px 18px;
     }
 
-    .answer.show { display: block; }
+    /* RIVER BREAK */
 
-    .achievement {
-      margin-top: 42px;
-      padding: 28px;
-      background-color: var(--river-light);
-      border: 4px solid var(--river);
+    .river-break {
+      position: relative;
+      height: 145px;
+      margin: 45px 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(
+          to bottom,
+          #dcecf4,
+          #cbe5eb 42%,
+          #86bdca 43%,
+          #4e8799 100%
+        );
+      border: 3px solid var(--river-dark);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .river-break::before,
+    .river-break::after {
+      content: "";
+      position: absolute;
+      width: 130%;
+      height: 90px;
+      left: -15%;
+      border-radius: 50%;
+      border-top: 10px solid rgba(255,255,255,0.4);
+      animation: stream 10s ease-in-out infinite;
+    }
+
+    .river-break::before {
+      top: 58px;
+    }
+
+    .river-break::after {
+      top: 90px;
+      animation-duration: 14s;
+      animation-delay: -5s;
+    }
+
+    @keyframes stream {
+      0% { transform: translateX(-45px); }
+      50% { transform: translateX(45px); }
+      100% { transform: translateX(-45px); }
+    }
+
+    .river-label {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      margin: 18px auto 0;
+      padding: 10px 16px;
+      background-color: rgba(255,253,247,0.94);
+      border: 2px solid var(--forest);
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* VIDEO */
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+      border-radius: 14px;
+      background-color: #000000;
+      margin: 16px 0;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* COMPLETION */
+
+    .completion-section {
+      margin-top: 50px;
+      padding: 30px;
+      background-color: var(--cream);
+      border: 4px solid var(--gold);
       border-left-width: 10px;
-      border-radius: 22px;
+      border-radius: 24px;
       box-shadow: var(--shadow);
     }
 
-    .achievement h2 {
+    .completion-section h2 {
       margin-top: 0;
       font-family: Georgia, "Times New Roman", serif;
     }
 
-    .instructor-note {
-      margin-top: 34px;
-      padding: 27px;
-      background-color: var(--cream);
-      border: 3px solid var(--gold);
-      border-left-width: 9px;
-      border-radius: var(--radius);
-      box-shadow: var(--soft-shadow);
+    .completion-card {
+      margin-top: 18px;
+      padding: 22px;
+      background-color: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .completion-card label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .completion-card input {
+      width: min(100%, 520px);
+      padding: 12px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+
+    .certificate-preview {
+      margin-top: 25px;
+      padding: 34px;
+      background-color: #fffdf7;
+      border: 10px double var(--forest-dark);
+      outline: 4px solid var(--gold);
+      outline-offset: -18px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .certificate-preview h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--forest-dark);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .certificate-name {
+      color: var(--river-dark);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: bold;
+    }
+
+    .certificate-small {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .return-area {
-      margin-top: 32px;
-      text-align: center;
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .return-button {
@@ -719,45 +787,68 @@
     }
 
     footer {
-      padding: 32px 0;
+      padding: 34px 0;
       background-color: var(--forest-dark);
       color: var(--white);
       text-align: center;
       border-top: 5px solid #c6aa5e;
     }
 
-    footer p { margin: 5px 0; }
+    footer p {
+      margin: 5px 0;
+    }
 
-    @media (max-width: 920px) {
-      .learning-grid, .principle-grid, .choice-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 850px) {
+      .principle-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 650px) {
-      body { font-size: 17px; }
-      .hero-content { padding-top: 50px; }
-      .sound-panel { margin-top: -42px; }
-      .river-scene { height: 210px; }
+    @media (max-width: 620px) {
+      body {
+        font-size: 17px;
+      }
+
+      .principle-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding-top: 50px;
+      }
+
+      .sound-panel {
+        margin-top: -42px;
+      }
+
+      .completion-section {
+        padding: 20px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
+
       .cloud,
-      .river-water::before,
-      .river-water::after,
-      .river-glint,
-      .leaf {
-        animation: none !important;
+      .river-wave,
+      .river-break::before,
+      .river-break::after {
+        animation: none;
       }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
 
   <header class="hero">
+
     <div class="sun" aria-hidden="true"></div>
     <div class="cloud cloud-one" aria-hidden="true"></div>
     <div class="cloud cloud-two" aria-hidden="true"></div>
@@ -765,514 +856,1469 @@
     <div class="mountain-front" aria-hidden="true"></div>
     <div class="forest-line" aria-hidden="true"></div>
 
+    <div class="hero-river" aria-hidden="true">
+      <div class="river-wave wave-one"></div>
+      <div class="river-wave wave-two"></div>
+      <div class="river-wave wave-three"></div>
+    </div>
+
     <div class="container hero-content">
-      <a class="academy-link" href="../index.html">Return to Counseling Skills Trail Map</a>
 
-      <div class="trail-mark" aria-hidden="true">🌿</div>
+      <a class="academy-link" href="../index.html">
+        Return to Counseling Skills Trail
+      </a>
 
-      <p class="eyebrow">Trail Stop 3 • Week 4</p>
+      <div class="trail-mark" aria-hidden="true">
+        🌿
+      </div>
 
-      <h1>Trauma-Informed Group Skills Shelter</h1>
+      <p class="eyebrow">
+        Trail Stop 3 • HUSEV 28
+      </p>
 
-      <p class="subtitle">Safety • Choice • Trust • Collaboration • Empowerment</p>
+      <h1>
+        Trauma-Informed Group Skills Shelter
+      </h1>
+
+      <p class="subtitle">
+        Safety • Choice • Trust • Collaboration • Empowerment
+      </p>
 
       <section class="hero-card" aria-labelledby="welcome-heading">
-        <h2 id="welcome-heading">Welcome to the Shelter</h2>
+
+        <h2 id="welcome-heading">
+          Welcome to the Shelter
+        </h2>
 
         <p>
-          Trauma-informed group counseling is not about asking members to tell
-          their trauma stories. It is about creating a group environment that
-          recognizes how trauma can affect safety, trust, participation, emotion,
-          attention, relationships, and substance use.
+          Trauma-informed group counseling is not about asking members to
+          tell their trauma stories. It is about creating conditions in which
+          people can participate without being unnecessarily overwhelmed,
+          pressured, shamed, or stripped of choice.
         </p>
 
         <p>
-          At this Trail Stop, you will practice what a counselor can actually do
-          to create safer group experiences: offer meaningful choice, establish
-          predictable structure, avoid unnecessary pressure, respond to distress,
-          use grounding and pacing thoughtfully, and recognize when a concern
-          requires individual follow-up, consultation, or referral.
+          At this Trail Stop, you will practice looking at ordinary group
+          counseling decisions through a trauma-informed lens. You will consider
+          how the facilitator's language, pacing, structure, environment,
+          expectations, and responses can increase either safety or distress.
+        </p>
+
+        <p>
+          Your challenge is to think beyond:
+          <strong>"What activity should I use?"</strong>
+          and begin asking:
+          <strong>"How might this activity be experienced by the people in front of me?"</strong>
         </p>
 
         <div class="hero-actions">
-          <a class="hero-button" href="#learning-path">Begin the Trail Stop</a>
-          <a class="hero-button secondary-button" href="#soundscape">Play River Soundscape</a>
+          <a class="hero-button" href="#begin-trail">
+            Begin Trail Stop 3
+          </a>
+
+          <a class="hero-button secondary-button" href="#soundscape">
+            Play River Soundscape
+          </a>
         </div>
+
       </section>
+
     </div>
+
   </header>
 
   <main id="main-content">
+
     <div class="container">
 
-      <section id="soundscape" class="sound-panel" aria-labelledby="soundscape-heading">
-        <h2 id="soundscape-heading">Optional River Soundscape</h2>
+      <section
+        id="soundscape"
+        class="sound-panel"
+        aria-labelledby="soundscape-heading">
+
+        <h2 id="soundscape-heading">
+          Trauma-Informed River Soundscape
+        </h2>
+
         <p>
-          You may play the same quiet river soundscape used throughout the Counselor
-          Academy. Audio never begins automatically and is not required.
+          If a quieter background helps you focus, you may play the optional
+          river soundscape while exploring this trail. Audio never begins
+          automatically and is not required.
         </p>
 
         <div class="audio-controls">
-          <button id="play-audio" class="audio-button" type="button">Play River Soundscape</button>
-          <button id="pause-audio" class="audio-button" type="button">Pause Sound</button>
+
+          <button
+            id="play-audio"
+            class="audio-button"
+            type="button">
+            Play River Soundscape
+          </button>
+
+          <button
+            id="pause-audio"
+            class="audio-button"
+            type="button">
+            Pause Sound
+          </button>
+
         </div>
 
-        <p id="audio-status" class="audio-status" role="status" aria-live="polite">
+        <p
+          id="audio-status"
+          class="audio-status"
+          role="status"
+          aria-live="polite">
           River soundscape is currently paused.
         </p>
 
-        <audio id="trail-audio" loop preload="metadata">
-          <source src="../../../assets/audio/nils_vega-river-sounds-547976.mp3" type="audio/mpeg">
+        <audio
+          id="trail-audio"
+          loop
+          preload="metadata">
+
+          <source
+            src="../../assets/audio/nils_vega-river-sounds-547976.mp3"
+            type="audio/mpeg">
+
         </audio>
+
       </section>
 
-      <div class="river-scene" aria-label="Decorative animated river scene. Motion is disabled when reduced motion is requested.">
-        <div class="river-bank-left" aria-hidden="true"></div>
-        <div class="river-bank-right" aria-hidden="true"></div>
-        <div class="river-water" aria-hidden="true"></div>
-        <span class="river-glint glint-1" aria-hidden="true"></span>
-        <span class="river-glint glint-2" aria-hidden="true"></span>
-        <span class="river-glint glint-3" aria-hidden="true"></span>
-        <span class="leaf leaf-one" aria-hidden="true"></span>
-        <span class="leaf leaf-two" aria-hidden="true"></span>
-        <div class="river-caption">Trauma-informed practice asks: “What helps this person feel safer and more able to participate?”</div>
+      <section id="begin-trail" class="section">
+
+        <div class="section-heading">
+          <p class="eyebrow">Trail Orientation</p>
+          <h2>What Makes a Group Trauma-Informed?</h2>
+        </div>
+
+        <div class="trail-card">
+
+          <p>
+            Trauma-informed care begins with the recognition that many people
+            entering behavioral health and substance use services have experienced
+            trauma, adversity, chronic stress, violence, loss, or circumstances
+            in which control and safety were limited.
+          </p>
+
+          <p>
+            This does not mean that every behavior should be interpreted as
+            trauma or that counselors should diagnose trauma based on observation.
+            Instead, trauma-informed practice asks us to create services that
+            recognize the possibility of trauma and avoid practices that may
+            unnecessarily recreate powerlessness, humiliation, coercion, or fear.
+          </p>
+
+          <p style="margin-bottom: 0;">
+            In group counseling, that can change everything from how we arrange
+            the room to how we invite participation.
+          </p>
+
+        </div>
+
+        <div class="trail-card river-card">
+
+          <h2>The Four Rs</h2>
+
+          <p>
+            A trauma-informed approach asks helping systems and professionals to:
+          </p>
+
+          <ol>
+            <li>
+              <strong>Realize</strong> the widespread impact of trauma and
+              understand possible paths toward recovery.
+            </li>
+
+            <li>
+              <strong>Recognize</strong> signs and possible trauma-related
+              responses in clients, families, staff, and others.
+            </li>
+
+            <li>
+              <strong>Respond</strong> by integrating trauma knowledge into
+              policies, procedures, environments, and practices.
+            </li>
+
+            <li>
+              <strong>Resist retraumatization</strong> by considering how
+              services and interactions may recreate distress, powerlessness,
+              or loss of control.
+            </li>
+          </ol>
+
+        </div>
+
+      </section>
+
+      <div class="river-break" aria-hidden="true">
+        <div class="river-label">
+          Trail Reflection: The environment is part of the intervention.
+        </div>
       </div>
 
-      <section id="learning-path" aria-labelledby="learning-heading">
+      <section class="section" aria-labelledby="principles-heading">
+
         <div class="section-heading">
-          <h2 id="learning-heading">Your Learning Path</h2>
-          <p>
-            Move through these stations at your own pace. The goal is practical
-            counselor judgment, not memorization.
+
+          <p class="eyebrow">
+            Six Trail Markers
           </p>
+
+          <h2 id="principles-heading">
+            Trauma-Informed Principles in Group Counseling
+          </h2>
+
+          <p>
+            Use these six principles as a decision-making compass when planning
+            or facilitating a group.
+          </p>
+
         </div>
-
-        <div class="learning-grid">
-          <article class="learning-card">
-            <h3>1. Recognize</h3>
-            <p>Notice how trauma responses may appear in a group without assuming or diagnosing.</p>
-          </article>
-
-          <article class="learning-card">
-            <h3>2. Regulate</h3>
-            <p>Use pacing, grounding, structure, and calm facilitation to support participation.</p>
-          </article>
-
-          <article class="learning-card">
-            <h3>3. Respond</h3>
-            <p>Offer choice, protect dignity, avoid retraumatization, and know when to follow up or refer.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-panel green-panel" aria-labelledby="what-trauma-informed">
-        <h2 id="what-trauma-informed">What Does Trauma-Informed Mean?</h2>
-
-        <p>
-          SAMHSA describes a trauma-informed approach as one that realizes the widespread
-          impact of trauma, recognizes possible signs and symptoms, responds by integrating
-          knowledge about trauma into practice, and seeks to resist retraumatization.
-        </p>
-
-        <p>
-          In group counseling, that means the facilitator thinks beyond the lesson plan.
-          The counselor also considers how the environment, group rules, tone, pacing,
-          activities, expectations, and interpersonal interactions may affect members'
-          sense of safety and control.
-        </p>
 
         <div class="principle-grid">
-          <article class="principle-card"><h3>Safety</h3><p>Create physical and emotional conditions that reduce unnecessary threat.</p></article>
-          <article class="principle-card"><h3>Trust & Transparency</h3><p>Explain what will happen, why it is happening, and what members can expect.</p></article>
-          <article class="principle-card"><h3>Peer Support</h3><p>Use shared experience carefully to build hope, connection, and mutual support.</p></article>
-          <article class="principle-card"><h3>Collaboration</h3><p>Reduce unnecessary power differences and invite members into the process.</p></article>
-          <article class="principle-card"><h3>Empowerment & Choice</h3><p>Offer meaningful options and recognize strengths, voice, and autonomy.</p></article>
-          <article class="principle-card"><h3>Cultural Responsiveness</h3><p>Consider culture, identity, history, community, power, and lived experience.</p></article>
+
+          <article class="principle-card">
+            <h3>1. Safety</h3>
+            <p>
+              Members should experience the environment, interactions, routines,
+              and facilitator as physically and psychologically as safe as possible.
+            </p>
+          </article>
+
+          <article class="principle-card">
+            <h3>2. Trustworthiness &amp; Transparency</h3>
+            <p>
+              Explain expectations, limits, procedures, confidentiality,
+              activities, and changes clearly rather than surprising members.
+            </p>
+          </article>
+
+          <article class="principle-card">
+            <h3>3. Peer Support</h3>
+            <p>
+              Shared experience can reduce isolation, increase hope, and help
+              members recognize strengths in themselves and others.
+            </p>
+          </article>
+
+          <article class="principle-card">
+            <h3>4. Collaboration &amp; Mutuality</h3>
+            <p>
+              The counselor leads the group without communicating that professional
+              authority means member voices do not matter.
+            </p>
+          </article>
+
+          <article class="principle-card">
+            <h3>5. Empowerment, Voice &amp; Choice</h3>
+            <p>
+              Members are supported in making meaningful choices and identifying
+              strengths rather than being treated as passive recipients of care.
+            </p>
+          </article>
+
+          <article class="principle-card">
+            <h3>6. Cultural, Historical &amp; Gender Considerations</h3>
+            <p>
+              Trauma and safety are experienced within cultural, historical,
+              social, gender, family, community, and identity contexts.
+            </p>
+          </article>
+
         </div>
+
       </section>
 
-      <section class="content-panel blue-panel" aria-labelledby="group-signs">
-        <h2 id="group-signs">Trauma Responses May Look Different in a Group</h2>
+      <section class="section">
 
-        <p>
-          A trauma-informed counselor avoids labeling every difficult behavior as resistance.
-          A member's behavior may reflect anxiety, shame, fear, hypervigilance, dissociation,
-          distrust, depression, withdrawal, a previous negative treatment experience, or many
-          other possibilities.
-        </p>
+        <div class="choice-panel">
 
-        <details>
-          <summary>Quiet or withdrawn member</summary>
-          <div>
-            <p>
-              Quiet participation is still participation. Avoid forcing disclosure. You can
-              invite, normalize listening, offer alternatives such as writing, and check in
-              privately when appropriate.
-            </p>
-          </div>
-        </details>
+          <h3>Trail Decision 1: The Mandatory Round</h3>
 
-        <details>
-          <summary>Member appears restless or scans the room</summary>
-          <div>
-            <p>
-              Do not assume the person is uninterested. Consider whether the environment feels
-              unsafe or overstimulating. Predictability, seating choice, clear exits, and calm
-              orientation to the space may help.
-            </p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Member becomes emotionally overwhelmed</summary>
-          <div>
-            <p>
-              Slow the pace. Offer choice. Avoid public interrogation. Help the member orient
-              to the present and determine whether they want to pause, step out, listen, or
-              receive additional support.
-            </p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Member shares graphic trauma details</summary>
-          <div>
-            <p>
-              A facilitator can validate the member without allowing graphic details to overwhelm
-              the group. Redirect toward emotions, coping, safety, and what support is needed now.
-            </p>
-          </div>
-        </details>
-      </section>
-
-      <section class="decision-lab" aria-labelledby="decision-heading">
-        <h2 id="decision-heading">Counselor Decision Point 1: “You Have to Share”</h2>
-
-        <div class="scenario-card">
           <p>
-            You are leading a group for adults with substance use concerns. During a round,
-            several members share. One member, Jordan, looks down and says,
-            “I’d rather just listen today.”
+            You begin a group by asking every member to answer:
           </p>
 
-          <p><strong>What is the strongest trauma-informed response?</strong></p>
+          <blockquote>
+            "Tell us about the worst thing that has ever happened to you."
+          </blockquote>
 
-          <div class="choice-grid">
-            <button class="choice-button" type="button" data-feedback="feedback-a">
-              A. “Everyone has to participate, so tell us something small.”
-            </button>
-
-            <button class="choice-button" type="button" data-feedback="feedback-b">
-              B. “That’s okay. Listening is participation too. You can share if and when you feel ready.”
-            </button>
-
-            <button class="choice-button" type="button" data-feedback="feedback-c">
-              C. “Why don’t you want to share? Did something happen?”
-            </button>
-
-            <button class="choice-button" type="button" data-feedback="feedback-d">
-              D. Skip Jordan and do not acknowledge them again.
-            </button>
-          </div>
-
-          <div id="feedback-a" class="feedback-box" role="status">
-            This increases pressure and may reduce trust. Participation can be encouraged without requiring disclosure.
-          </div>
-
-          <div id="feedback-b" class="feedback-box" role="status">
-            Strong choice. This preserves autonomy, validates quiet participation, and leaves the door open for later engagement.
-          </div>
-
-          <div id="feedback-c" class="feedback-box" role="status">
-            This may place Jordan on the spot and invite disclosure they did not choose. A private follow-up later may be more appropriate if concern remains.
-          </div>
-
-          <div id="feedback-d" class="feedback-box" role="status">
-            Respecting a pass is appropriate, but completely disengaging can feel rejecting. Briefly acknowledging the choice communicates continued belonging.
-          </div>
-        </div>
-      </section>
-
-      <section class="content-panel gold-panel" aria-labelledby="grounding-heading">
-        <h2 id="grounding-heading">Grounding Is an Option, Not a Demand</h2>
-
-        <p>
-          Grounding can help some members reconnect with the present moment, but no single
-          technique is universally calming. A trauma-informed facilitator explains the purpose,
-          offers options, and allows members to opt out.
-        </p>
-
-        <p><strong>Examples of low-pressure options:</strong></p>
-        <ul>
-          <li>Notice three neutral objects in the room.</li>
-          <li>Feel your feet supported by the floor.</li>
-          <li>Take a slow breath if that feels comfortable.</li>
-          <li>Hold a cool cup or textured object.</li>
-          <li>Name one thing you can see, hear, or feel right now.</li>
-          <li>Simply sit quietly and listen if another exercise does not feel helpful.</li>
-        </ul>
-
-        <div class="reflection-box">
-          <p style="margin:0;">
-            <strong>Facilitator language:</strong> “I’m going to offer a brief grounding option.
-            You are welcome to participate, modify it, or simply sit quietly. Choose what feels
-            most useful to you.”
-          </p>
-        </div>
-      </section>
-
-      <section class="decision-lab" aria-labelledby="decision-two-heading">
-        <h2 id="decision-two-heading">Counselor Decision Point 2: A Member Becomes Overwhelmed</h2>
-
-        <div class="scenario-card">
           <p>
-            During a discussion of coping with triggers, Maya becomes tearful, stops speaking,
-            and appears disconnected from the conversation.
+            One member becomes visibly tense, looks toward the door, and says,
+            "I don't want to talk about that."
           </p>
 
-          <p><strong>Which response best protects both Maya and the group?</strong></p>
+          <p>
+            What is the strongest trauma-informed response?
+          </p>
 
-          <div class="choice-grid">
-            <button class="choice-button" type="button" data-feedback="feedback2-a">
-              A. Ask Maya to explain exactly what memory came up so the group can process it.
+          <div class="choice-buttons">
+
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-1a">
+              A. Explain that everyone must participate equally.
             </button>
 
-            <button class="choice-button" type="button" data-feedback="feedback2-b">
-              B. Calmly acknowledge the change, offer options, orient to the present, and determine whether Maya wants to pause, step out, listen, or receive individual support.
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-1b">
+              B. Tell the member that avoiding trauma prevents recovery.
             </button>
 
-            <button class="choice-button" type="button" data-feedback="feedback2-c">
-              C. Ignore the reaction so Maya does not feel embarrassed.
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-1c">
+              C. Respect the choice to pass and revise the activity so disclosure is optional.
             </button>
 
-            <button class="choice-button" type="button" data-feedback="feedback2-d">
-              D. End the group immediately for everyone.
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-1d">
+              D. Ask the member privately why they are resistant.
             </button>
+
           </div>
 
-          <div id="feedback2-a" class="feedback-box" role="status">
-            Avoid pressing for trauma details. The immediate goal is safety and regulation, not deeper trauma processing in front of the group.
+          <div id="feedback-1a" class="feedback">
+            Equal participation does not require identical disclosure.
+            Requiring personal trauma disclosure may reduce safety and choice.
           </div>
 
-          <div id="feedback2-b" class="feedback-box" role="status">
-            Strong choice. This is calm, choice-oriented, present-focused, and responsive without demanding disclosure.
+          <div id="feedback-1b" class="feedback">
+            Avoidance may sometimes be clinically relevant, but a psychoeducational
+            or recovery group should not force traumatic disclosure or assume that
+            immediate disclosure is required for healing.
           </div>
 
-          <div id="feedback2-c" class="feedback-box" role="status">
-            Avoiding public embarrassment matters, but complete nonresponse may leave the member unsupported. A brief, respectful check-in is better.
+          <div id="feedback-1c" class="feedback">
+            <strong>Strong choice.</strong> A trauma-informed facilitator protects
+            member choice while still offering meaningful ways to participate.
+            Listening, using fictional scenarios, writing privately, or passing
+            may all be valid forms of participation.
           </div>
 
-          <div id="feedback2-d" class="feedback-box" role="status">
-            Ending the whole session is usually unnecessary unless safety requires it. The facilitator can support Maya while maintaining the group's structure.
+          <div id="feedback-1d" class="feedback">
+            Curiosity can be useful, but labeling the response as resistance may
+            overlook fear, safety, culture, readiness, or previous experiences
+            with authority.
           </div>
+
         </div>
+
       </section>
 
-      <section class="video-card" aria-labelledby="video-heading">
-        <h2 id="video-heading">Video & Professional Resource Stop</h2>
+      <section class="section">
 
-        <p>
-          Review SAMHSA's trauma-informed care resources. The recorded implementation resource
-          is particularly useful for thinking about how trauma-informed principles become actual
-          policies, environments, and counselor behaviors rather than remaining abstract ideas.
-        </p>
-
-        <div class="resource-buttons">
-          <a class="resource-button" href="https://www.samhsa.gov/resource/dbhis/implementing-trauma-informed-care-organizational-culture-practice" target="_blank" rel="noopener">
-            Watch / Review Trauma-Informed Care Implementation Resource
-          </a>
-
-          <a class="resource-button green" href="https://www.samhsa.gov/resource/dbhis/tip-57-trauma-informed-care-behavioral-health-services" target="_blank" rel="noopener">
-            Open SAMHSA TIP 57
-          </a>
-
-          <a class="resource-button" href="https://www.samhsa.gov/mental-health/trauma-violence/trauma-informed-approaches-programs" target="_blank" rel="noopener">
-            SAMHSA Trauma-Informed Approaches
-          </a>
+        <div class="section-heading">
+          <p class="eyebrow">Facilitator Practice</p>
+          <h2>Trauma-Informed Language Matters</h2>
         </div>
 
-        <div class="reflection-box">
-          <h3>Video / Resource Reflection Questions</h3>
+        <div class="trail-card sage-card">
+
+          <h3>Instead of Control, Think Invitation</h3>
+
+          <p>
+            Compare these statements:
+          </p>
+
+          <p>
+            <strong>Directive:</strong>
+            "Everyone needs to share before we move on."
+          </p>
+
+          <p>
+            <strong>Trauma-informed alternative:</strong>
+            "I'll invite everyone to participate. You may share, pass for now,
+            or come back to the question later."
+          </p>
+
+          <p>
+            The second statement still creates structure. It simply communicates
+            that participation can include choice.
+          </p>
+
+        </div>
+
+        <details>
+
+          <summary>
+            Practice: "You Need to Calm Down"
+          </summary>
+
+          <div class="details-content">
+
+            <p>
+              A member becomes visibly distressed and says,
+              "I can't do this right now."
+            </p>
+
+            <p>
+              Rather than saying,
+              <strong>"You need to calm down,"</strong>
+              a facilitator might say:
+            </p>
+
+            <p>
+              <em>
+                "I can see this feels like a lot right now. You have some choices.
+                We can pause, you can step out briefly, or you can stay and
+                participate in whatever way feels manageable."
+              </em>
+            </p>
+
+            <p>
+              Notice that the counselor acknowledges the response, provides
+              options, and supports regulation without demanding disclosure.
+            </p>
+
+          </div>
+
+        </details>
+
+        <details>
+
+          <summary>
+            Practice: "Why Won't You Participate?"
+          </summary>
+
+          <div class="details-content">
+
+            <p>
+              A quieter member has attended every session but rarely speaks.
+            </p>
+
+            <p>
+              A trauma-informed facilitator avoids assuming that quiet behavior
+              means defiance, lack of motivation, or treatment failure.
+            </p>
+
+            <p>
+              A possible response:
+            </p>
+
+            <p>
+              <em>
+                "I've noticed you've been consistently present and listening.
+                I want you to know that you are welcome to contribute when you
+                feel ready. Is there anything I can do to make participating
+                feel more comfortable or accessible?"
+              </em>
+            </p>
+
+          </div>
+
+        </details>
+
+      </section>
+
+      <div class="river-break" aria-hidden="true">
+
+        <div class="river-label">
+          Trail Reminder: Quiet participation can still be participation.
+        </div>
+
+      </div>
+
+      <section class="section">
+
+        <div class="section-heading">
+          <p class="eyebrow">Applied Group Skills</p>
+          <h2>When a Member Becomes Overwhelmed</h2>
+        </div>
+
+        <div class="trail-card">
+
+          <p>
+            Imagine you are facilitating a coping-skills group. During a discussion
+            about family conflict, Jordan suddenly stops speaking, appears distant,
+            and seems to have difficulty following the conversation.
+          </p>
+
+          <p>
+            Your job is not to diagnose what is happening in front of the group.
+            Your first responsibility is to respond in a way that supports safety
+            and regulation.
+          </p>
+
+        </div>
+
+        <div class="choice-panel">
+
+          <h3>Trail Decision 2</h3>
+
+          <p>
+            Which response would you try first?
+          </p>
+
+          <div class="choice-buttons">
+
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-2a">
+              A. Ask Jordan to describe the trauma that caused the reaction.
+            </button>
+
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-2b">
+              B. Pause, orient Jordan to the present, offer choices, and reduce pressure to participate.
+            </button>
+
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-2c">
+              C. Continue the activity so Jordan does not receive extra attention.
+            </button>
+
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-2d">
+              D. Tell Jordan that the group cannot continue unless everyone participates.
+            </button>
+
+          </div>
+
+          <div id="feedback-2a" class="feedback">
+            Asking for trauma details may increase distress and is not necessary
+            to provide immediate trauma-informed support.
+          </div>
+
+          <div id="feedback-2b" class="feedback">
+            <strong>Strong choice.</strong> Slow the process. Orient to the
+            present. Offer manageable choices. Once the member is more regulated,
+            the facilitator can determine whether additional individual follow-up,
+            assessment, consultation, or referral is appropriate.
+          </div>
+
+          <div id="feedback-2c" class="feedback">
+            Continuing without acknowledging significant distress could leave
+            the member unsupported and affect the sense of safety for the entire group.
+          </div>
+
+          <div id="feedback-2d" class="feedback">
+            This increases pressure and may recreate a sense of powerlessness.
+            Participation and safety should not be framed as obedience.
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="section">
+
+        <div class="trail-card river-card">
+
+          <h2>A Simple Grounding Sequence</h2>
+
+          <p>
+            Grounding helps redirect attention toward the present environment.
+            A facilitator might slowly invite a member to:
+          </p>
+
           <ol>
-            <li>Which trauma-informed principle seems most visible in the resource, and what behavior demonstrates it?</li>
-            <li>What is one practice that could unintentionally reduce a client's sense of safety or control?</li>
-            <li>How would you adapt that practice for a substance use counseling group?</li>
-            <li>What is the difference between being trauma-informed and providing trauma-specific therapy?</li>
-            <li>What would you want group members to notice about your leadership if you were facilitating from a trauma-informed perspective?</li>
+            <li>Notice their feet contacting the floor.</li>
+            <li>Look around and identify several things they can see.</li>
+            <li>Notice one sound in the room.</li>
+            <li>Take a comfortable breath without forcing a particular pattern.</li>
+            <li>Choose whether to remain in the activity, observe, or take a brief break.</li>
           </ol>
+
+          <p style="margin-bottom: 0;">
+            Grounding should be offered rather than imposed. Not every strategy
+            works for every person.
+          </p>
+
         </div>
+
       </section>
 
-      <section class="content-panel green-panel" aria-labelledby="planning-heading">
-        <h2 id="planning-heading">Build a Trauma-Informed Group Session</h2>
+      <section class="section">
 
-        <p>Before you lead a group, ask yourself:</p>
+        <div class="section-heading">
+          <p class="eyebrow">Practice Lab</p>
+          <h2>Trauma-Informed Group Design</h2>
+        </div>
 
-        <ol>
-          <li><strong>Purpose:</strong> What is this session trying to accomplish?</li>
-          <li><strong>Predictability:</strong> Do members know what will happen and how long each part will last?</li>
-          <li><strong>Choice:</strong> Where can members make meaningful choices?</li>
-          <li><strong>Participation:</strong> Are there ways to participate without personal disclosure?</li>
-          <li><strong>Language:</strong> Am I using respectful, nonstigmatizing, noncoercive language?</li>
-          <li><strong>Environment:</strong> Is the physical or virtual space accessible and reasonably calming?</li>
-          <li><strong>Pacing:</strong> Does the session allow time to settle, process, and close?</li>
-          <li><strong>Clinical limits:</strong> What concerns would require individual follow-up, consultation, referral, or a higher level of care?</li>
-        </ol>
+        <div class="trail-card">
+
+          <p>
+            Imagine you are preparing a substance use recovery group focused on
+            managing cravings.
+          </p>
+
+          <p>
+            Before the session begins, ask yourself:
+          </p>
+
+          <ul>
+            <li>Do members know what today's session will involve?</li>
+            <li>Are participation expectations clear?</li>
+            <li>Can members pass on personal disclosure?</li>
+            <li>Can the activity be practiced with a fictional example first?</li>
+            <li>Are instructions understandable and predictable?</li>
+            <li>Could the content be unnecessarily graphic or triggering?</li>
+            <li>What choices can I offer?</li>
+            <li>How will I notice signs that someone is becoming overwhelmed?</li>
+            <li>What will I do if someone needs additional support?</li>
+            <li>How will I close the group in a regulated, predictable way?</li>
+          </ul>
+
+        </div>
+
       </section>
 
-      <section class="quick-check" aria-labelledby="check-heading">
-        <h2 id="check-heading">Trail Self-Check</h2>
+      <section class="section">
 
-        <div class="check-item">
-          <p><strong>1. Trauma-informed group counseling means every member should process past trauma in detail.</strong></p>
-          <button class="reveal-button" type="button" data-answer="answer1">Check Answer</button>
-          <div id="answer1" class="answer">False. Trauma-informed care focuses on how services are delivered. Trauma-specific treatment is different and may require specialized training and a different treatment structure.</div>
+        <div class="section-heading">
+          <p class="eyebrow">Watch &amp; Think</p>
+          <h2>Connect the Principles to Practice</h2>
         </div>
 
-        <div class="check-item">
-          <p><strong>2. A member can participate meaningfully by listening.</strong></p>
-          <button class="reveal-button" type="button" data-answer="answer2">Check Answer</button>
-          <div id="answer2" class="answer">True. Quiet participation can be meaningful, especially while safety and trust are still developing.</div>
+        <div class="trail-card river-card">
+
+          <p>
+            Use the SAMHSA trauma-informed resources below to reinforce the
+            principles you have practiced on this trail.
+          </p>
+
+          <div class="button-row">
+
+            <a
+              class="resource-button"
+              href="https://www.samhsa.gov/mental-health/trauma-violence/trauma-informed-approaches-programs"
+              target="_blank"
+              rel="noopener">
+              SAMHSA: Trauma-Informed Approaches
+            </a>
+
+            <a
+              class="resource-button secondary-button"
+              href="https://library.samhsa.gov/sites/default/files/sma14-4884.pdf"
+              target="_blank"
+              rel="noopener">
+              SAMHSA Trauma-Informed Guidance
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="check-item">
-          <p><strong>3. Every grounding exercise is calming for every trauma survivor.</strong></p>
-          <button class="reveal-button" type="button" data-answer="answer3">Check Answer</button>
-          <div id="answer3" class="answer">False. Trauma-informed facilitation offers options and pays attention to the member's response rather than assuming one technique works for everyone.</div>
+        <div class="trail-card">
+
+          <h3>Reflection Questions</h3>
+
+          <ol>
+            <li>
+              Which trauma-informed principle do you think most directly
+              affects group participation?
+            </li>
+
+            <li>
+              How can a counselor provide structure without becoming overly controlling?
+            </li>
+
+            <li>
+              How can choice be offered while still maintaining appropriate group boundaries?
+            </li>
+
+            <li>
+              Why might requiring trauma disclosure undermine psychological safety?
+            </li>
+
+            <li>
+              What might a facilitator notice before assuming a quiet member is "resistant"?
+            </li>
+          </ol>
+
         </div>
 
-        <div class="check-item">
-          <p><strong>4. Predictability and clear structure can support a sense of safety.</strong></p>
-          <button class="reveal-button" type="button" data-answer="answer4">Check Answer</button>
-          <div id="answer4" class="answer">True. Explaining expectations, transitions, activities, and limits can reduce uncertainty and support trust.</div>
-        </div>
-
-        <div class="check-item">
-          <p><strong>5. Trauma-informed care still requires professional boundaries, scope awareness, and referral when appropriate.</strong></p>
-          <button class="reveal-button" type="button" data-answer="answer5">Check Answer</button>
-          <div id="answer5" class="answer">True. Being supportive does not mean treating concerns outside your competence or role.</div>
-        </div>
       </section>
 
-      <section class="achievement" aria-labelledby="achievement-heading">
-        <h2 id="achievement-heading">Trail Achievement: Trauma-Informed Group Guide</h2>
+      <div class="river-break" aria-hidden="true">
+
+        <div class="river-label">
+          The goal is not to remove every difficult emotion. The goal is to create enough safety and choice for therapeutic work to remain possible.
+        </div>
+
+      </div>
+
+      <section class="section">
+
+        <div class="section-heading">
+          <p class="eyebrow">Clinical Judgment</p>
+          <h2>Trauma-Informed Does Not Mean "No Boundaries"</h2>
+        </div>
+
+        <div class="trail-card gold-card">
+
+          <p>
+            Trauma-informed practice is sometimes misunderstood as avoiding
+            limits, expectations, accountability, or difficult conversations.
+            That is not the goal.
+          </p>
+
+          <p>
+            Groups still require:
+          </p>
+
+          <ul>
+            <li>Clear boundaries</li>
+            <li>Confidentiality expectations</li>
+            <li>Respectful communication</li>
+            <li>Safety expectations</li>
+            <li>Appropriate redirection</li>
+            <li>Professional limits</li>
+            <li>Referral when needs exceed the scope of the group</li>
+          </ul>
+
+          <p style="margin-bottom: 0;">
+            Trauma-informed facilitation asks us to establish those boundaries
+            in ways that are clear, transparent, respectful, predictable, and
+            attentive to power.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="section">
+
+        <div class="choice-panel">
+
+          <h3>Trail Decision 3: A Member Interrupts Repeatedly</h3>
+
+          <p>
+            A member repeatedly interrupts peers and begins giving forceful advice.
+            Other members become quieter.
+          </p>
+
+          <p>
+            Which response best combines trauma-informed care with healthy boundaries?
+          </p>
+
+          <div class="choice-buttons">
+
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-3a">
+              A. Ignore the behavior because correction may feel triggering.
+            </button>
+
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-3b">
+              B. Shame the member so the rest of the group knows the behavior is unacceptable.
+            </button>
+
+            <button
+              class="choice-button"
+              type="button"
+              data-feedback="feedback-3c">
+              C. Calmly interrupt, acknowledge the member's desire to help, restate the group agreement, and create room for others.
+            </button>
+
+          </div>
+
+          <div id="feedback-3a" class="feedback">
+            Trauma-informed care does not mean abandoning boundaries. Allowing
+            one person to dominate may reduce safety and choice for others.
+          </div>
+
+          <div id="feedback-3b" class="feedback">
+            Public humiliation is unnecessary and can undermine trust.
+          </div>
+
+          <div id="feedback-3c" class="feedback">
+            <strong>Strong choice.</strong> You can protect the group while
+            preserving dignity: "I appreciate that you're trying to help.
+            Let's pause the advice for a moment and make room for others to
+            respond from their own experience."
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="section">
+
+        <div class="trail-card sage-card">
+
+          <h2>Facilitator Script Bank</h2>
+
+          <p>
+            Here are examples of language you might adapt in practice:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Offering choice:</strong>
+              "You may answer, pass, or come back to this later."
+            </li>
+
+            <li>
+              <strong>Supporting regulation:</strong>
+              "Would it help to pause for a moment before we continue?"
+            </li>
+
+            <li>
+              <strong>Clarifying expectations:</strong>
+              "Before we begin, let me explain what the activity will involve."
+            </li>
+
+            <li>
+              <strong>Protecting boundaries:</strong>
+              "Let's speak from our own experience rather than telling another
+              member what they should do."
+            </li>
+
+            <li>
+              <strong>Inviting a quieter member:</strong>
+              "You're welcome to add something if you'd like, but there is no pressure."
+            </li>
+
+            <li>
+              <strong>Responding to distress:</strong>
+              "We can slow this down. You have choices about how you participate."
+            </li>
+
+            <li>
+              <strong>Closing predictably:</strong>
+              "We have about ten minutes left. Let's begin bringing today's
+              discussion toward a close."
+            </li>
+          </ul>
+
+        </div>
+
+      </section>
+
+      <section class="section">
+
+        <div class="section-heading">
+          <p class="eyebrow">Final Trail Check</p>
+          <h2>Can You Think Like a Trauma-Informed Group Counselor?</h2>
+        </div>
+
+        <details>
+          <summary>1. Does trauma-informed care require clients to disclose trauma?</summary>
+          <div class="details-content">
+            <p>
+              No. Trauma-informed care does not require personal trauma disclosure.
+              In many groups, the purpose is to build safety, coping, recovery,
+              skills, and connection rather than process detailed trauma histories.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>2. Can a trauma-informed facilitator still redirect behavior?</summary>
+          <div class="details-content">
+            <p>
+              Yes. Healthy boundaries and group safety still matter. The
+              difference is in how the facilitator communicates and applies
+              those boundaries.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>3. Is silence automatically resistance?</summary>
+          <div class="details-content">
+            <p>
+              No. Silence can reflect reflection, anxiety, cultural communication
+              patterns, unfamiliarity, uncertainty, safety concerns, or simply
+              an individual's preferred pace of participation.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>4. Why does predictability matter?</summary>
+          <div class="details-content">
+            <p>
+              Clear expectations and predictable transitions can reduce
+              unnecessary uncertainty and help members understand what will happen next.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>5. What should happen if a concern exceeds the group's scope?</summary>
+          <div class="details-content">
+            <p>
+              The facilitator should use professional judgment and follow
+              organizational procedures for assessment, consultation,
+              coordination, referral, or higher-level support as appropriate.
+            </p>
+          </div>
+        </details>
+
+      </section>
+
+      <section class="completion-section" aria-labelledby="completion-heading">
+
+        <p class="eyebrow">
+          Final Trail Marker
+        </p>
+
+        <h2 id="completion-heading">
+          Complete Trail Stop 3
+        </h2>
 
         <p>
-          You have completed the core practice for Trail Stop 3 when you can explain how
-          safety, trust, choice, collaboration, empowerment, and cultural responsiveness
-          affect actual facilitator decisions.
+          You have reached the end of the
+          <strong>Trauma-Informed Group Skills Shelter.</strong>
         </p>
 
         <p>
-          <strong>Final challenge:</strong> Before you leave this stop, complete this sentence:
+          Your final step is important. Enter your first and last name below,
+          create your personalized completion badge, download it, and submit
+          the badge in the corresponding Canvas Trail Stop assignment.
         </p>
-
-        <p style="font-size:1.08rem;">
-          “If a member's behavior seems resistant, withdrawn, emotional, or difficult, a
-          trauma-informed counselor first becomes curious about __________ rather than
-          immediately assuming __________.”
-        </p>
-      </section>
-
-      <section class="instructor-note" aria-labelledby="instructor-heading">
-        <h2 id="instructor-heading">A Trail Note from Dr. Holdaway</h2>
 
         <p>
-          Trauma-informed facilitation is not about becoming afraid to challenge, teach,
-          structure, or lead. It is about doing those things without unnecessarily taking
-          away dignity, voice, choice, predictability, or safety.
+          <strong>
+            Your downloaded badge is the evidence that you completed this Trail Stop.
+          </strong>
         </p>
 
-        <p style="margin-bottom:0;">
-          Your job is not to know every detail of a member's trauma history. Your job is to
-          create conditions in which people can participate, learn, connect, and recover
-          without being pressured into experiences that repeat patterns of powerlessness.
-        </p>
+        <div class="completion-card">
+
+          <label for="student-name">
+            <strong>Enter your first and last name:</strong>
+          </label>
+
+          <input
+            id="student-name"
+            type="text"
+            placeholder="Enter your first and last name"
+            autocomplete="name">
+
+          <div class="button-row">
+
+            <button
+              id="create-certificate"
+              class="action-button"
+              type="button">
+              Create My Completion Badge
+            </button>
+
+          </div>
+
+          <p
+            id="certificate-message"
+            role="status"
+            aria-live="polite">
+          </p>
+
+        </div>
+
+        <div
+          id="certificate-preview"
+          class="certificate-preview"
+          hidden>
+
+          <p class="certificate-small">
+            Chemical Dependency Counselor Academy
+          </p>
+
+          <p style="font-size: 2.6rem; margin: 5px 0;" aria-hidden="true">
+            🌿
+          </p>
+
+          <h2>
+            Trauma-Informed Group Guide
+          </h2>
+
+          <p>
+            This certifies that
+          </p>
+
+          <p id="certificate-name" class="certificate-name"></p>
+
+          <p>
+            successfully completed
+          </p>
+
+          <h3>
+            Trail Stop 3: Trauma-Informed Group Skills Shelter
+          </h3>
+
+          <p>
+            HUSEV 28 • Group Counseling Skills Trail
+          </p>
+
+          <p>
+            Safety • Choice • Trust • Collaboration • Empowerment
+          </p>
+
+          <p>
+            Dr. Tonya Holdaway
+          </p>
+
+          <button
+            id="download-certificate"
+            class="action-button"
+            type="button">
+            Download My Completion Badge
+          </button>
+
+        </div>
+
       </section>
 
       <div class="return-area">
-        <a class="return-button" href="../index.html">Return to Counseling Skills Trail Map</a>
+
+        <a class="return-button" href="../index.html">
+          Return to Counseling Skills Trail
+        </a>
+
+        <a class="return-button" href="../../../index.html">
+          Return to Counselor Academy Preserve
+        </a>
+
       </div>
+
     </div>
+
   </main>
 
   <footer>
+
     <div class="container">
+
       <p>Chemical Dependency Counselor Academy</p>
-      <p>Trail Stop 3 · Trauma-Informed Group Skills Shelter</p>
-      <p>Dr. Tonya Holdaway</p>
-      <p>Safety • Choice • Trust • Collaboration • Empowerment</p>
+
+      <p>
+        Counseling Skills Trail • Trail Stop 3
+      </p>
+
+      <p>
+        Trauma-Informed Group Skills Shelter
+      </p>
+
+      <p>
+        Dr. Tonya Holdaway
+      </p>
+
+      <p>
+        Safety • Choice • Trust • Collaboration • Empowerment
+      </p>
+
     </div>
+
   </footer>
 
   <script>
+
     function configureTrailAudio() {
-      const audio = document.getElementById("trail-audio");
-      const playButton = document.getElementById("play-audio");
-      const pauseButton = document.getElementById("pause-audio");
-      const status = document.getElementById("audio-status");
+
+      const audio =
+        document.getElementById("trail-audio");
+
+      const playButton =
+        document.getElementById("play-audio");
+
+      const pauseButton =
+        document.getElementById("pause-audio");
+
+      const status =
+        document.getElementById("audio-status");
 
       audio.volume = 0.25;
 
-      playButton.addEventListener("click", async function() {
-        try {
-          await audio.play();
-          playButton.textContent = "River Soundscape Playing";
-          status.textContent = "The Trauma-Informed Group Skills river soundscape is playing quietly.";
-        } catch (error) {
-          console.error("Audio playback error:", error);
-          status.textContent = "Your browser could not start the optional river soundscape. You can continue without audio.";
-        }
-      });
+      playButton.addEventListener(
+        "click",
+        async function() {
 
-      pauseButton.addEventListener("click", function() {
-        audio.pause();
-        playButton.textContent = "Play River Soundscape";
-        status.textContent = "River soundscape is currently paused.";
-      });
+          try {
 
-      audio.addEventListener("pause", function() {
-        if (!audio.ended) {
-          status.textContent = "River soundscape is currently paused.";
+            await audio.play();
+
+            playButton.textContent =
+              "River Soundscape Playing";
+
+            status.textContent =
+              "The Trauma-Informed Group Skills river soundscape is playing quietly.";
+
+          } catch (error) {
+
+            console.error(
+              "Audio playback error:",
+              error
+            );
+
+            status.textContent =
+              "Your browser could not start the optional river soundscape. You can continue without audio.";
+          }
         }
-      });
+      );
+
+      pauseButton.addEventListener(
+        "click",
+        function() {
+
+          audio.pause();
+
+          playButton.textContent =
+            "Play River Soundscape";
+
+          status.textContent =
+            "River soundscape is currently paused.";
+        }
+      );
+
     }
+
 
     function configureChoices() {
-      document.querySelectorAll(".choice-button").forEach(function(button) {
-        button.addEventListener("click", function() {
-          const id = button.getAttribute("data-feedback");
-          const group = button.closest(".scenario-card");
-          group.querySelectorAll(".feedback-box").forEach(function(box) {
-            box.classList.remove("show");
+
+      const buttons =
+        document.querySelectorAll(".choice-button");
+
+      buttons.forEach(
+        function(button) {
+
+          button.addEventListener(
+            "click",
+            function() {
+
+              const panel =
+                button.closest(".choice-panel");
+
+              const feedbackBoxes =
+                panel.querySelectorAll(".feedback");
+
+              feedbackBoxes.forEach(
+                function(box) {
+                  box.classList.remove("show");
+                }
+              );
+
+              const feedbackId =
+                button.getAttribute("data-feedback");
+
+              const selectedFeedback =
+                document.getElementById(feedbackId);
+
+              if (selectedFeedback) {
+
+                selectedFeedback.classList.add("show");
+
+                selectedFeedback.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest"
+                });
+              }
+            }
+          );
+        }
+      );
+
+    }
+
+
+    function configureCompletionBadge() {
+
+      const nameInput =
+        document.getElementById("student-name");
+
+      const createButton =
+        document.getElementById("create-certificate");
+
+      const downloadButton =
+        document.getElementById("download-certificate");
+
+      const preview =
+        document.getElementById("certificate-preview");
+
+      const certificateName =
+        document.getElementById("certificate-name");
+
+      const message =
+        document.getElementById("certificate-message");
+
+      let currentStudentName = "";
+
+      createButton.addEventListener(
+        "click",
+        function() {
+
+          const studentName =
+            nameInput.value.trim();
+
+          if (!studentName) {
+
+            message.textContent =
+              "Please enter your first and last name before creating your badge.";
+
+            nameInput.focus();
+
+            return;
+          }
+
+          currentStudentName =
+            studentName;
+
+          certificateName.textContent =
+            studentName;
+
+          preview.hidden =
+            false;
+
+          message.textContent =
+            "Your completion badge is ready. Review it below and select Download My Completion Badge.";
+
+          preview.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
           });
-          const target = document.getElementById(id);
-          if (target) {
-            target.classList.add("show");
-            target.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      );
+
+      downloadButton.addEventListener(
+        "click",
+        function() {
+
+          if (!currentStudentName) {
+            return;
           }
-        });
-      });
+
+          const canvas =
+            document.createElement("canvas");
+
+          canvas.width =
+            1600;
+
+          canvas.height =
+            1100;
+
+          const ctx =
+            canvas.getContext("2d");
+
+          ctx.fillStyle =
+            "#fffdf7";
+
+          ctx.fillRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+          );
+
+          ctx.strokeStyle =
+            "#173425";
+
+          ctx.lineWidth =
+            24;
+
+          ctx.strokeRect(
+            40,
+            40,
+            canvas.width - 80,
+            canvas.height - 80
+          );
+
+          ctx.strokeStyle =
+            "#7a6120";
+
+          ctx.lineWidth =
+            8;
+
+          ctx.strokeRect(
+            72,
+            72,
+            canvas.width - 144,
+            canvas.height - 144
+          );
+
+          ctx.textAlign =
+            "center";
+
+          ctx.fillStyle =
+            "#294f3a";
+
+          ctx.font =
+            "bold 42px Georgia";
+
+          ctx.fillText(
+            "Chemical Dependency Counselor Academy",
+            800,
+            165
+          );
+
+          ctx.fillStyle =
+            "#3e684d";
+
+          ctx.font =
+            "72px Arial";
+
+          ctx.fillText(
+            "🌿",
+            800,
+            260
+          );
+
+          ctx.fillStyle =
+            "#173425";
+
+          ctx.font =
+            "bold 70px Georgia";
+
+          ctx.fillText(
+            "Trauma-Informed Group Guide",
+            800,
+            355
+          );
+
+          ctx.fillStyle =
+            "#203027";
+
+          ctx.font =
+            "34px Arial";
+
+          ctx.fillText(
+            "This certifies that",
+            800,
+            440
+          );
+
+          ctx.fillStyle =
+            "#285263";
+
+          ctx.font =
+            "bold 58px Georgia";
+
+          ctx.fillText(
+            currentStudentName,
+            800,
+            530
+          );
+
+          ctx.fillStyle =
+            "#203027";
+
+          ctx.font =
+            "34px Arial";
+
+          ctx.fillText(
+            "successfully completed",
+            800,
+            610
+          );
+
+          ctx.fillStyle =
+            "#173425";
+
+          ctx.font =
+            "bold 42px Georgia";
+
+          ctx.fillText(
+            "Trail Stop 3",
+            800,
+            690
+          );
+
+          ctx.font =
+            "bold 37px Georgia";
+
+          ctx.fillText(
+            "Trauma-Informed Group Skills Shelter",
+            800,
+            750
+          );
+
+          ctx.fillStyle =
+            "#203027";
+
+          ctx.font =
+            "29px Arial";
+
+          ctx.fillText(
+            "HUSEV 28 • Group Counseling Skills Trail",
+            800,
+            835
+          );
+
+          ctx.fillText(
+            "Dr. Tonya Holdaway",
+            800,
+            890
+          );
+
+          ctx.fillStyle =
+            "#527b69";
+
+          ctx.font =
+            "bold 27px Arial";
+
+          ctx.fillText(
+            "Safety • Choice • Trust • Collaboration • Empowerment",
+            800,
+            955
+          );
+
+          const safeName =
+            currentStudentName
+              .replace(/[^a-z0-9]/gi, "-")
+              .replace(/-+/g, "-")
+              .replace(/^-|-$/g, "")
+              .toLowerCase();
+
+          const link =
+            document.createElement("a");
+
+          link.download =
+            safeName +
+            "-trail-stop-3-trauma-informed-group-guide.png";
+
+          link.href =
+            canvas.toDataURL("image/png");
+
+          document.body.appendChild(link);
+
+          link.click();
+
+          document.body.removeChild(link);
+
+          message.textContent =
+            "Your badge has been created. Save the downloaded image and submit it to the corresponding Canvas Trail Stop assignment.";
+        }
+      );
+
     }
 
-    function configureAnswers() {
-      document.querySelectorAll(".reveal-button").forEach(function(button) {
-        button.addEventListener("click", function() {
-          const id = button.getAttribute("data-answer");
-          const answer = document.getElementById(id);
-          if (answer) {
-            answer.classList.toggle("show");
-            button.textContent = answer.classList.contains("show") ? "Hide Answer" : "Check Answer";
-          }
-        });
-      });
-    }
 
-    document.addEventListener("DOMContentLoaded", function() {
+    function initializeTrail() {
+
       configureTrailAudio();
+
       configureChoices();
-      configureAnswers();
-    });
+
+      configureCompletionBadge();
+
+    }
+
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializeTrail
+    );
+
   </script>
+
 </body>
 </html>
