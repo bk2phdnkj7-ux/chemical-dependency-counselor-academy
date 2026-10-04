@@ -2,11 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
     content="Foundations Trail for Introduction to Chemical Dependency in the Chemical Dependency Counselor Academy.">
@@ -121,8 +117,7 @@
       height: 105px;
       border-radius: 50%;
       background-color: rgba(255, 240, 177, 0.82);
-      box-shadow:
-        0 0 55px rgba(255, 235, 150, 0.48);
+      box-shadow: 0 0 55px rgba(255, 235, 150, 0.48);
       pointer-events: none;
     }
 
@@ -130,10 +125,10 @@
       position: absolute;
       height: 42px;
       border-radius: 50px;
-      background-color: rgba(255,255,255,0.76);
+      background-color: rgba(255, 255, 255, 0.76);
       box-shadow:
-        42px -13px 0 8px rgba(255,255,255,0.70),
-        78px 1px 0 2px rgba(255,255,255,0.68);
+        42px -13px 0 8px rgba(255, 255, 255, 0.70),
+        78px 1px 0 2px rgba(255, 255, 255, 0.68);
       pointer-events: none;
       animation: drift 32s ease-in-out infinite alternate;
     }
@@ -155,7 +150,6 @@
       from {
         transform: translateX(-18px);
       }
-
       to {
         transform: translateX(18px);
       }
@@ -283,7 +277,7 @@
       display: inline-block;
       margin-bottom: 22px;
       padding: 11px 17px;
-      background-color: rgba(255,253,247,0.96);
+      background-color: rgba(255, 253, 247, 0.96);
       color: var(--forest-dark);
       border: 3px solid var(--forest-dark);
       border-radius: 9px;
@@ -334,7 +328,7 @@
       max-width: 800px;
       margin: 30px auto 0;
       padding: 25px;
-      background-color: rgba(255,253,247,0.96);
+      background-color: rgba(255, 253, 247, 0.96);
       border: 3px solid var(--stone);
       border-left: 9px solid var(--forest);
       border-radius: var(--radius);
@@ -369,6 +363,15 @@
     .secondary-button {
       background-color: var(--river-dark);
       border-color: #173a47;
+    }
+
+    .trail-update {
+      margin: 20px 0 0;
+      padding: 16px 18px;
+      background-color: var(--sage-light);
+      border: 2px solid var(--forest);
+      border-left-width: 7px;
+      border-radius: 12px;
     }
 
     /* SOUND */
@@ -514,8 +517,7 @@
       transform: translateX(-50%);
       background-color: rgba(226, 209, 169, 0.62);
       border-radius: 60px;
-      box-shadow:
-        inset 0 0 0 3px rgba(133, 111, 70, 0.18);
+      box-shadow: inset 0 0 0 3px rgba(133, 111, 70, 0.18);
       pointer-events: none;
     }
 
@@ -624,6 +626,18 @@
       border-radius: 8px;
       font-size: 0.92rem;
       font-weight: bold;
+    }
+
+    .stop-status.is-open {
+      background-color: var(--sage-light);
+      color: var(--forest-dark);
+      border-color: var(--forest);
+    }
+
+    #trail-stop-4 {
+      background-color: var(--cream);
+      box-shadow: 0 0 0 3px #c6aa5e, var(--soft-shadow);
+      scroll-margin-top: 24px;
     }
 
     .open-trail-button {
@@ -736,7 +750,7 @@
       font-size: 0.95rem;
     }
 
-    /* NOTE */
+    /* INSTRUCTOR NOTE */
 
     .instructor-note {
       margin-top: 46px;
@@ -846,9 +860,7 @@
     Skip to main content
   </a>
 
-
   <header class="hero">
-
     <div class="sun" aria-hidden="true"></div>
     <div class="cloud cloud-one" aria-hidden="true"></div>
     <div class="cloud cloud-two" aria-hidden="true"></div>
@@ -859,10 +871,7 @@
 
     <div class="container hero-content">
 
-      <a
-        class="academy-link"
-        href="../../index.html">
-
+      <a class="academy-link" href="../../index.html">
         Return to Counselor Academy Preserve
       </a>
 
@@ -874,18 +883,13 @@
         Introduction to Chemical Dependency
       </p>
 
-      <h1>
-        Foundations Trail
-      </h1>
+      <h1>Foundations Trail</h1>
 
       <p class="subtitle">
         16 Trail Stops • One Counselor Development Journey
       </p>
 
-      <section
-        class="hero-card"
-        aria-labelledby="welcome-heading">
-
+      <section class="hero-card" aria-labelledby="welcome-heading">
         <h2 id="welcome-heading">
           Welcome to the Trailhead
         </h2>
@@ -910,7 +914,18 @@
           points, evidence investigations, or downloadable achievements.
         </p>
 
+        <p class="trail-update">
+          <strong>
+            Trail Stop 4 is now open: Medication Safety &amp; Recovery.
+          </strong>
+          Explore prescription and OTC medication misuse, pharmacotherapy,
+          withdrawal management, tolerance, and addiction.
+        </p>
+
         <div class="hero-actions">
+          <a class="hero-button" href="trails/week4.html">
+            Enter Trail Stop 4 →
+          </a>
 
           <a class="hero-button" href="#trail-map">
             View the 16 Trail Stops
@@ -919,20 +934,13 @@
           <a class="hero-button secondary-button" href="#soundscape">
             Play the Trail Soundscape
           </a>
-
         </div>
-
       </section>
-
     </div>
-
   </header>
 
-
   <main id="main-content">
-
     <div class="container">
-
 
       <section
         id="soundscape"
@@ -950,12 +958,10 @@
         </p>
 
         <div class="audio-controls">
-
           <button
             id="play-audio"
             class="audio-button"
             type="button">
-
             Play Nature Soundscape
           </button>
 
@@ -963,10 +969,8 @@
             id="pause-audio"
             class="audio-button"
             type="button">
-
             Pause Sound
           </button>
-
         </div>
 
         <p
@@ -974,118 +978,65 @@
           class="audio-status"
           role="status"
           aria-live="polite">
-
           Nature soundscape is currently paused.
         </p>
 
-        <audio
-          id="trail-audio"
-          loop
-          preload="metadata">
-
+        <audio id="trail-audio" loop preload="metadata">
           <source
             src="../../assets/audio/alex_jauk-calm-nature-sounds-196258.mp3"
             type="audio/mpeg">
-
         </audio>
-
       </section>
 
-
       <section aria-labelledby="pack-heading">
-
         <div class="section-heading">
-
-          <h2 id="pack-heading">
-            Pack for the Journey
-          </h2>
+          <h2 id="pack-heading">Pack for the Journey</h2>
 
           <p>
             The Foundations Trail is designed for exploration rather than
             perfection. Bring curiosity, reflection, and a willingness to
             reconsider what you think you know.
           </p>
-
         </div>
 
-
         <div class="trail-pack">
-
           <article class="pack-card">
-
-            <span class="pack-icon" aria-hidden="true">
-              🧭
-            </span>
-
-            <h3>
-              Follow the Path
-            </h3>
-
+            <span class="pack-icon" aria-hidden="true">🧭</span>
+            <h3>Follow the Path</h3>
             <p>
               Your weekly Canvas module will direct you to the appropriate
               Trail Stop.
             </p>
-
           </article>
 
-
           <article class="pack-card">
-
-            <span class="pack-icon" aria-hidden="true">
-              🎧
-            </span>
-
-            <h3>
-              Choose Your Environment
-            </h3>
-
+            <span class="pack-icon" aria-hidden="true">🎧</span>
+            <h3>Choose Your Environment</h3>
             <p>
               Optional soundscapes are available for immersion, but every
               learning experience works fully without sound.
             </p>
-
           </article>
 
-
           <article class="pack-card">
-
-            <span class="pack-icon" aria-hidden="true">
-              🎒
-            </span>
-
-            <h3>
-              Collect Evidence
-            </h3>
-
+            <span class="pack-icon" aria-hidden="true">🎒</span>
+            <h3>Collect Evidence</h3>
             <p>
               Some Trail Stops may ask you to gather evidence, analyze cases,
               or use information later in the experience.
             </p>
-
           </article>
 
-
           <article class="pack-card">
-
-            <span class="pack-icon" aria-hidden="true">
-              🏅
-            </span>
-
-            <h3>
-              Earn Achievements
-            </h3>
-
+            <span class="pack-icon" aria-hidden="true">🏅</span>
+            <h3>Earn Achievements</h3>
             <p>
               Selected Trail Stops may unlock downloadable achievements
               recognizing the concepts and professional skills you practiced.
             </p>
-
           </article>
-
         </div>
-
       </section>
-
 
       <section
         id="trail-map"
@@ -1093,7 +1044,6 @@
         aria-labelledby="trail-map-heading">
 
         <div class="map-header">
-
           <p class="eyebrow">
             Introduction to Chemical Dependency
           </p>
@@ -1103,13 +1053,13 @@
           </h2>
 
           <p>
-            The path unfolds across the semester. Future stops are visible so
-            you can see where your journey is headed, but they will open as
-            your course progresses.
+            <strong>Trail Stops 1–4 are open.</strong>
+            Begin Trail Stop 4, Medication Safety &amp; Recovery,
+            or revisit an earlier stop. Future stops remain visible
+            so you can see where your journey is headed as the
+            course progresses.
           </p>
-
         </div>
-
 
         <span class="trail-marker marker-1" aria-hidden="true"></span>
         <span class="trail-marker marker-2" aria-hidden="true"></span>
@@ -1128,24 +1078,18 @@
         <span class="trail-marker marker-15" aria-hidden="true"></span>
         <span class="trail-marker marker-16" aria-hidden="true"></span>
 
-
         <div class="trail-stops">
 
-
+          <!-- TRAIL STOP 1: OPEN -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 1</span>
 
-            <span class="stop-number">
-              Trail Stop 1
-            </span>
-
-            <h3>
-              Foundations of Addiction
-            </h3>
+            <h3>Foundations of Addiction</h3>
 
             <p>
               Begin with core terminology, the meaning of substance use
-              disorders, historical perspectives, stigma, and the role of
-              helping professionals.
+              disorders, historical perspectives, stigma, and the role
+              of helping professionals.
             </p>
 
             <a
@@ -1153,19 +1097,13 @@
               href="trails/week1.html">
               Enter Trail Stop 1 →
             </a>
-
           </article>
 
-
+          <!-- TRAIL STOP 2: OPEN -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 2</span>
 
-            <span class="stop-number">
-              Trail Stop 2
-            </span>
-
-            <h3>
-              Models of Addiction Overlook
-            </h3>
+            <h3>Models of Addiction Overlook</h3>
 
             <p>
               Compare biological, psychological, behavioral, social,
@@ -1177,19 +1115,13 @@
               href="trails/week2.html">
               Enter Trail Stop 2 →
             </a>
-
           </article>
 
-
+          <!-- TRAIL STOP 3: OPEN -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 3</span>
 
-            <span class="stop-number">
-              Trail Stop 3
-            </span>
-
-            <h3>
-              Brain and Behavior Research Station
-            </h3>
+            <h3>Brain and Behavior Research Station</h3>
 
             <p>
               Enter the neuroscience research station to explore how neurons
@@ -1211,85 +1143,74 @@
               href="trails/week3.html">
               Enter Trail Stop 3 →
             </a>
-
           </article>
 
+          <!-- TRAIL STOP 4: NOW OPEN -->
+          <article class="trail-stop" id="trail-stop-4">
+            <span class="stop-number">Trail Stop 4</span>
 
-          <article class="trail-stop">
-
-            <span class="stop-number">
-              Trail Stop 4
-            </span>
-
-            <h3>
-              Drug Classification Field Lab
-            </h3>
+            <h3>Medication Safety &amp; Recovery</h3>
 
             <p>
-              Investigate major drug classifications, patterns of action,
-              effects, risks, and the complexity of psychoactive substances.
+              Explore prescription and over-the-counter medication misuse,
+              pharmacotherapy for substance use disorders, and the goals
+              and practices of detoxification and withdrawal management.
+              Clarify tolerance, physical dependence, and addiction.
             </p>
 
-            <span class="stop-status">
-              Opening Later
+            <p>
+              Complete six field stations and the final counselor case to
+              earn your personalized
+              <strong>Medication Safety Navigator</strong>
+              badge. Optional example tours play through with one click.
+            </p>
+
+            <span class="stop-status is-open">
+              Now Open
             </span>
 
+            <div>
+              <a
+                class="open-trail-button"
+                href="trails/week4.html">
+                Enter Trail Stop 4 →
+              </a>
+            </div>
           </article>
 
-
+          <!-- TRAIL STOP 5 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 5</span>
 
-            <span class="stop-number">
-              Trail Stop 5
-            </span>
-
-            <h3>
-              Prescription and OTC Crossing
-            </h3>
+            <h3>Prescription and OTC Crossing</h3>
 
             <p>
               Explore prescription medications, over-the-counter substances,
               misuse, pharmacotherapy, and medication-related considerations.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 6 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 6</span>
 
-            <span class="stop-number">
-              Trail Stop 6
-            </span>
-
-            <h3>
-              Prevention Meadow
-            </h3>
+            <h3>Prevention Meadow</h3>
 
             <p>
               Examine prevention strategies, risk and protective factors,
               community approaches, early intervention, and prevention science.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 7 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 7</span>
 
-            <span class="stop-number">
-              Trail Stop 7
-            </span>
-
-            <h3>
-              Family Systems River Crossing
-            </h3>
+            <h3>Family Systems River Crossing</h3>
 
             <p>
               Consider how substance use affects families, relationships,
@@ -1297,44 +1218,28 @@
               experiences.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 8 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 8</span>
 
-            <span class="stop-number">
-              Trail Stop 8
-            </span>
-
-            <h3>
-              Ethics and Confidentiality Ranger Station
-            </h3>
+            <h3>Ethics and Confidentiality Ranger Station</h3>
 
             <p>
               Explore ethical helping relationships, boundaries,
               confidentiality, privacy, and professional responsibilities.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 9 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 9</span>
 
-            <span class="stop-number">
-              Trail Stop 9
-            </span>
-
-            <h3>
-              Special Populations Path
-            </h3>
+            <h3>Special Populations Path</h3>
 
             <p>
               Examine how age, culture, trauma, identity, disability,
@@ -1342,44 +1247,28 @@
               may influence substance use and helping relationships.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 10 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 10</span>
 
-            <span class="stop-number">
-              Trail Stop 10
-            </span>
-
-            <h3>
-              Mental Health and Co-Occurring Conditions Lookout
-            </h3>
+            <h3>Mental Health and Co-Occurring Conditions Lookout</h3>
 
             <p>
               Explore the intersection of substance use, mental health,
               co-occurring conditions, stigma, assessment, and coordinated care.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 11 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 11</span>
 
-            <span class="stop-number">
-              Trail Stop 11
-            </span>
-
-            <h3>
-              Screening and Diagnosis Field Station
-            </h3>
+            <h3>Screening and Diagnosis Field Station</h3>
 
             <p>
               Practice recognizing substance-related concerns,
@@ -1387,22 +1276,14 @@
               and appropriate professional roles.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 12 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 12</span>
 
-            <span class="stop-number">
-              Trail Stop 12
-            </span>
-
-            <h3>
-              Treatment Pathways Center
-            </h3>
+            <h3>Treatment Pathways Center</h3>
 
             <p>
               Explore treatment settings, levels of care, counseling
@@ -1410,22 +1291,14 @@
               and individualized treatment planning.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 13 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 13</span>
 
-            <span class="stop-number">
-              Trail Stop 13
-            </span>
-
-            <h3>
-              Recovery Pathways Garden
-            </h3>
+            <h3>Recovery Pathways Garden</h3>
 
             <p>
               Examine recovery as an individualized process involving
@@ -1433,22 +1306,14 @@
               recovery capital, and multiple pathways to change.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 14 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 14</span>
 
-            <span class="stop-number">
-              Trail Stop 14
-            </span>
-
-            <h3>
-              Community and Policy Vista
-            </h3>
+            <h3>Community and Policy Vista</h3>
 
             <p>
               Consider laws, policy, economics, public health,
@@ -1456,22 +1321,14 @@
               responses to substance use.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 15 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 15</span>
 
-            <span class="stop-number">
-              Trail Stop 15
-            </span>
-
-            <h3>
-              Helping Professional Reflection Ridge
-            </h3>
+            <h3>Helping Professional Reflection Ridge</h3>
 
             <p>
               Reflect on counselor attitudes, stigma, empathy,
@@ -1479,22 +1336,14 @@
               wellness, and professional responsibility.
             </p>
 
-            <span class="stop-status">
-              Opening Later
-            </span>
-
+            <span class="stop-status">Opening Later</span>
           </article>
 
-
+          <!-- TRAIL STOP 16 -->
           <article class="trail-stop">
+            <span class="stop-number">Trail Stop 16</span>
 
-            <span class="stop-number">
-              Trail Stop 16
-            </span>
-
-            <h3>
-              Foundations Summit
-            </h3>
+            <h3>Foundations Summit</h3>
 
             <p>
               Bring the semester together through an integrated case,
@@ -1505,22 +1354,16 @@
             <span class="stop-status">
               Summit Opening Later
             </span>
-
           </article>
 
-
         </div>
-
       </section>
-
 
       <section
         class="achievement-section"
         aria-labelledby="achievement-heading">
 
-        <h2 id="achievement-heading">
-          Trail Achievements
-        </h2>
+        <h2 id="achievement-heading">Trail Achievements</h2>
 
         <p>
           As interactive Trail Stops open, selected experiences may unlock
@@ -1528,114 +1371,79 @@
           These are designed as learning milestones rather than competitive rewards.
         </p>
 
-
         <div class="badge-grid">
 
           <article class="badge-card">
+            <span class="badge-symbol" aria-hidden="true">🌲</span>
 
-            <span class="badge-symbol" aria-hidden="true">
-              🌲
-            </span>
+            <h3>Foundations Explorer</h3>
 
-            <h3>
-              Foundations Explorer
-            </h3>
-
-            <p>
-              Begin the counselor learning journey.
-            </p>
-
+            <p>Begin the counselor learning journey.</p>
           </article>
 
-
           <article class="badge-card">
+            <span class="badge-symbol" aria-hidden="true">🧠</span>
 
-            <span class="badge-symbol" aria-hidden="true">
-              🧠
-            </span>
+            <h3>Brain and Behavior Investigator</h3>
 
-            <h3>
-              Brain and Behavior Investigator
-            </h3>
-
-            <p>
-              Apply neuroscience concepts to substance use.
-            </p>
-
+            <p>Apply neuroscience concepts to substance use.</p>
           </article>
 
+          <article class="badge-card">
+            <span class="badge-symbol" aria-hidden="true">4</span>
+
+            <h3>Medication Safety Navigator</h3>
+
+            <p>
+              Connect medication safety, treatment options, and continuing
+              care by completing Trail Stop 4.
+            </p>
+
+            <p style="margin-top: 12px;">
+              <a href="trails/week4.html">
+                Earn the Trail Stop 4 Badge
+              </a>
+            </p>
+          </article>
 
           <article class="badge-card">
+            <span class="badge-symbol" aria-hidden="true">🌿</span>
 
-            <span class="badge-symbol" aria-hidden="true">
-              🌿
-            </span>
-
-            <h3>
-              Prevention Pathfinder
-            </h3>
+            <h3>Prevention Pathfinder</h3>
 
             <p>
               Explore prevention through evidence and protective factors.
             </p>
-
           </article>
 
-
           <article class="badge-card">
+            <span class="badge-symbol" aria-hidden="true">🧭</span>
 
-            <span class="badge-symbol" aria-hidden="true">
-              🧭
-            </span>
+            <h3>Ethics Navigator</h3>
 
-            <h3>
-              Ethics Navigator
-            </h3>
-
-            <p>
-              Practice ethical and professional decision-making.
-            </p>
-
+            <p>Practice ethical and professional decision-making.</p>
           </article>
 
-
           <article class="badge-card">
+            <span class="badge-symbol" aria-hidden="true">🌉</span>
 
-            <span class="badge-symbol" aria-hidden="true">
-              🌉
-            </span>
+            <h3>Family Systems Guide</h3>
 
-            <h3>
-              Family Systems Guide
-            </h3>
-
-            <p>
-              Connect addiction concepts to family experience.
-            </p>
-
+            <p>Connect addiction concepts to family experience.</p>
           </article>
 
-
           <article class="badge-card">
+            <span class="badge-symbol" aria-hidden="true">🏔️</span>
 
-            <span class="badge-symbol" aria-hidden="true">
-              🏔️
-            </span>
-
-            <h3>
-              Foundations Trail Scholar
-            </h3>
+            <h3>Foundations Trail Scholar</h3>
 
             <p>
               Complete the full Introduction to Chemical Dependency journey.
             </p>
-
           </article>
 
         </div>
-
       </section>
-
 
       <section
         class="instructor-note"
@@ -1663,151 +1471,77 @@
           You do not have to reach the summit all at once.
           Counselor development happens one thoughtful step at a time.
         </p>
-
       </section>
 
-
       <div class="return-area">
-
-        <a
-          class="return-button"
-          href="../../index.html">
-
+        <a class="return-button" href="../../index.html">
           Return to Counselor Academy Preserve
         </a>
-
       </div>
 
     </div>
-
   </main>
 
-
   <footer>
-
     <div class="container">
-
-      <p>
-        Chemical Dependency Counselor Academy
-      </p>
-
-      <p>
-        Foundations Trail · Introduction to Chemical Dependency
-      </p>
-
-      <p>
-        Dr. Tonya Holdaway
-      </p>
-
-      <p>
-        Learning • Connection • Growth • Practice
-      </p>
-
+      <p>Chemical Dependency Counselor Academy</p>
+      <p>Foundations Trail · Introduction to Chemical Dependency</p>
+      <p>Dr. Tonya Holdaway</p>
+      <p>Learning • Connection • Growth • Practice</p>
     </div>
-
   </footer>
 
-
   <script>
-
     function configureTrailAudio() {
-
-      const audio =
-        document.getElementById(
-          "trail-audio"
-        );
-
-      const playButton =
-        document.getElementById(
-          "play-audio"
-        );
-
-      const pauseButton =
-        document.getElementById(
-          "pause-audio"
-        );
-
-      const status =
-        document.getElementById(
-          "audio-status"
-        );
+      const audio = document.getElementById("trail-audio");
+      const playButton = document.getElementById("play-audio");
+      const pauseButton = document.getElementById("pause-audio");
+      const status = document.getElementById("audio-status");
 
       audio.volume = 0.25;
 
+      playButton.addEventListener("click", async function() {
+        try {
+          await audio.play();
 
-      playButton.addEventListener(
-        "click",
-        async function() {
-
-          try {
-
-            await audio.play();
-
-            playButton.textContent =
-              "Nature Soundscape Playing";
-
-            status.textContent =
-              "The Foundations Trail soundscape is playing quietly.";
-
-          } catch (error) {
-
-            console.error(
-              "Audio playback error:",
-              error
-            );
-
-            status.textContent =
-              "Your browser could not start the optional soundscape. You can continue exploring the trail normally without audio.";
-          }
-        }
-      );
-
-
-      pauseButton.addEventListener(
-        "click",
-        function() {
-
-          audio.pause();
-
-          playButton.textContent =
-            "Play Nature Soundscape";
-
-          status.textContent =
-            "Nature soundscape is currently paused.";
-        }
-      );
-
-
-      audio.addEventListener(
-        "play",
-        function() {
+          playButton.textContent = "Nature Soundscape Playing";
 
           status.textContent =
             "The Foundations Trail soundscape is playing quietly.";
+        } catch (error) {
+          console.error("Audio playback error:", error);
+
+          status.textContent =
+            "Your browser could not start the optional soundscape. You can continue exploring the trail normally without audio.";
         }
-      );
+      });
 
+      pauseButton.addEventListener("click", function() {
+        audio.pause();
 
-      audio.addEventListener(
-        "pause",
-        function() {
+        playButton.textContent = "Play Nature Soundscape";
 
-          if (!audio.ended) {
+        status.textContent =
+          "Nature soundscape is currently paused.";
+      });
 
-            status.textContent =
-              "Nature soundscape is currently paused.";
-          }
+      audio.addEventListener("play", function() {
+        status.textContent =
+          "The Foundations Trail soundscape is playing quietly.";
+      });
+
+      audio.addEventListener("pause", function() {
+        if (!audio.ended) {
+          status.textContent =
+            "Nature soundscape is currently paused.";
         }
-      );
-
+      });
     }
-
 
     document.addEventListener(
       "DOMContentLoaded",
       configureTrailAudio
     );
-
   </script>
 
 </body>
