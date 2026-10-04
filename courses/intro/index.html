@@ -146,6 +146,232 @@
       animation-duration: 39s;
     }
 
+    .cloud-three {
+      width: 85px;
+      top: 245px;
+      left: 25%;
+      opacity: 0.62;
+      animation-duration: 46s;
+      animation-delay: -14s;
+    }
+
+    .cloud-four {
+      width: 95px;
+      top: 300px;
+      right: 28%;
+      opacity: 0.58;
+      animation-duration: 51s;
+      animation-delay: -27s;
+    }
+
+    .day-night-sky {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 17% 20%, rgba(255, 255, 255, 0.85) 0 1px, transparent 2px),
+        radial-gradient(circle at 31% 31%, rgba(255, 255, 255, 0.75) 0 1px, transparent 2px),
+        radial-gradient(circle at 71% 18%, rgba(255, 255, 255, 0.80) 0 1px, transparent 2px),
+        radial-gradient(circle at 84% 35%, rgba(255, 255, 255, 0.75) 0 1px, transparent 2px),
+        linear-gradient(to bottom, rgba(21, 38, 69, 0.66), rgba(26, 48, 65, 0.22) 68%, rgba(18, 39, 31, 0.18));
+      animation: day-night-cycle 90s ease-in-out infinite;
+    }
+
+    @keyframes day-night-cycle {
+      0%, 38%, 100% { opacity: 0; }
+      50% { opacity: 0.4; }
+      62% { opacity: 0.22; }
+    }
+
+    .bird-flock {
+      position: absolute;
+      z-index: 2;
+      top: var(--bird-top);
+      left: -14%;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      opacity: 0.68;
+      pointer-events: none;
+      animation: birds-cross var(--bird-speed) linear var(--bird-delay) infinite;
+    }
+
+    .bird-flock-one {
+      --bird-top: 24%;
+      --bird-speed: 38s;
+      --bird-delay: -10s;
+    }
+
+    .bird-flock-two {
+      --bird-top: 38%;
+      --bird-speed: 49s;
+      --bird-delay: -28s;
+      transform: scale(0.72);
+      animation-name: birds-cross-reverse;
+      opacity: 0.48;
+    }
+
+    .bird-flock-two .bird:nth-child(2) { animation-delay: -0.45s; }
+    .bird-flock-two .bird:nth-child(3) { animation-delay: -0.8s; }
+
+    .bird {
+      position: relative;
+      display: block;
+      width: 25px;
+      height: 14px;
+      animation: bird-flap 1.2s ease-in-out infinite alternate;
+    }
+
+    .bird:nth-child(2) { transform: scale(0.78); animation-delay: -0.35s; }
+    .bird:nth-child(3) { transform: scale(0.62); animation-delay: -0.7s; }
+
+    .bird::before,
+    .bird::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      width: 15px;
+      height: 8px;
+      border-top: 3px solid #365241;
+      border-radius: 50%;
+    }
+
+    .bird::before { left: 0; transform: rotate(18deg); }
+    .bird::after { right: 0; transform: rotate(-18deg); }
+
+    @keyframes birds-cross {
+      from { transform: translateX(0); }
+      to { transform: translateX(125vw); }
+    }
+
+    @keyframes birds-cross-reverse {
+      from { transform: scale(0.72) translateX(0); }
+      to { transform: scale(0.72) translateX(-125vw); }
+    }
+
+    @keyframes bird-flap {
+      from { margin-top: -2px; }
+      to { margin-top: 4px; }
+    }
+
+    .falling-leaf {
+      position: absolute;
+      z-index: 2;
+      top: -28px;
+      left: var(--leaf-left);
+      width: 15px;
+      height: 23px;
+      border-radius: 2px 90% 2px 90%;
+      background-color: var(--leaf-color);
+      opacity: 0;
+      pointer-events: none;
+      animation: leaf-fall var(--leaf-speed) linear var(--leaf-delay) infinite;
+    }
+
+    .falling-leaf::after {
+      content: "";
+      position: absolute;
+      left: 48%;
+      top: 12%;
+      width: 1px;
+      height: 78%;
+      background-color: rgba(255, 255, 255, 0.65);
+      transform: rotate(-20deg);
+    }
+
+    .leaf-one { --leaf-left: 12%; --leaf-speed: 17s; --leaf-delay: -4s; --leaf-color: #bd7743; }
+    .leaf-two { --leaf-left: 31%; --leaf-speed: 20s; --leaf-delay: -12s; --leaf-color: #788b48; }
+    .leaf-three { --leaf-left: 68%; --leaf-speed: 18s; --leaf-delay: -8s; --leaf-color: #d09a48; }
+    .leaf-four { --leaf-left: 89%; --leaf-speed: 22s; --leaf-delay: -15s; --leaf-color: #a6533a; }
+
+    @keyframes leaf-fall {
+      0% { transform: translate(0, -25px) rotate(15deg); opacity: 0; }
+      12% { opacity: 0.82; }
+      50% { transform: translate(45px, 360px) rotate(190deg); opacity: 0.82; }
+      100% { transform: translate(-28px, 760px) rotate(390deg); opacity: 0; }
+    }
+
+    .grass-patch {
+      position: absolute;
+      z-index: 3;
+      bottom: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      width: 30%;
+      height: 96px;
+      pointer-events: none;
+    }
+
+    .grass-left { left: 0; }
+    .grass-right { right: 0; }
+
+    .grass-blade {
+      display: block;
+      width: 5px;
+      height: var(--grass-height, 48px);
+      background: linear-gradient(to top, #315d40 0%, #64864b 100%);
+      border-radius: 100% 0 0 0;
+      transform-origin: bottom center;
+      animation: grass-sway var(--grass-speed, 3.8s) ease-in-out var(--grass-delay, 0s) infinite alternate;
+    }
+
+    .grass-blade:nth-child(even) {
+      width: 4px;
+      background: linear-gradient(to top, #3d6748 0%, #83924e 100%);
+    }
+
+    @keyframes grass-sway {
+      from { transform: rotate(-7deg); }
+      to { transform: rotate(9deg); }
+    }
+
+    .woodland-animal {
+      position: absolute;
+      z-index: 4;
+      bottom: 35px;
+      display: block;
+      font-size: 31px;
+      line-height: 1;
+      opacity: 0.96;
+      pointer-events: none;
+      animation: woodland-wander 58s linear infinite;
+    }
+
+    .woodland-fox { left: -7%; --animal-size: 1; }
+
+    .woodland-squirrel {
+      bottom: 28px;
+      left: -10%;
+      font-size: 25px;
+      animation-name: squirrel-wander;
+      animation-duration: 47s;
+      animation-delay: -19s;
+    }
+
+    @keyframes woodland-wander {
+      0% { transform: translateX(0); }
+      48% { transform: translateX(112vw); }
+      50% { transform: translateX(112vw) scaleX(-1); }
+      98% { transform: translateX(0) scaleX(-1); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes squirrel-wander {
+      0% { transform: translate(112vw, 0); }
+      10% { transform: translate(99vw, -9px); }
+      20% { transform: translate(86vw, 0); }
+      30% { transform: translate(73vw, -8px); }
+      40% { transform: translate(60vw, 0); }
+      50% { transform: translate(47vw, -10px); }
+      60% { transform: translate(34vw, 0); }
+      70% { transform: translate(21vw, -8px); }
+      80% { transform: translate(8vw, 0); }
+      100% { transform: translate(-12vw, -5px); }
+    }
+
     @keyframes drift {
       from {
         transform: translateX(-18px);
@@ -374,6 +600,39 @@
       border-radius: 12px;
     }
 
+    .motion-controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .motion-button {
+      padding: 10px 14px;
+      background-color: var(--white);
+      color: var(--forest-dark);
+      border: 3px solid var(--forest-dark);
+      border-radius: 9px;
+      font-weight: bold;
+    }
+
+    .motion-status {
+      margin: 0;
+      color: var(--forest-dark);
+      font-size: 0.94rem;
+    }
+
+    .motion-paused .cloud,
+    .motion-paused .falling-leaf,
+    .motion-paused .bird-flock,
+    .motion-paused .grass-blade,
+    .motion-paused .woodland-animal,
+    .motion-paused .trail-marker,
+    .motion-paused .day-night-sky {
+      animation-play-state: paused !important;
+    }
+
     /* SOUND */
 
     .sound-panel {
@@ -571,12 +830,28 @@
     }
 
     .trail-stop {
+      position: relative;
       width: calc(50% - 75px);
       padding: 21px;
       background-color: var(--white);
       border: 3px solid var(--border);
       border-radius: 17px;
       box-shadow: var(--soft-shadow);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease;
+    }
+
+    .trail-stop:focus-within {
+      z-index: 4;
+      transform: translateY(-3px) scale(1.012);
+      box-shadow: 0 14px 28px rgba(20, 54, 35, 0.20);
+    }
+
+    @media (hover: hover) {
+      .trail-stop:hover {
+        z-index: 4;
+        transform: translateY(-3px) scale(1.012);
+        box-shadow: 0 14px 28px rgba(20, 54, 35, 0.20);
+      }
     }
 
     .trail-stop:nth-child(odd) {
@@ -634,7 +909,8 @@
       border-color: var(--forest);
     }
 
-    #trail-stop-4 {
+    #trail-stop-4,
+    #trail-stop-5 {
       background-color: var(--cream);
       box-shadow: 0 0 0 3px #c6aa5e, var(--soft-shadow);
       scroll-margin-top: 24px;
@@ -683,6 +959,18 @@
       box-shadow:
         0 0 0 3px var(--gold),
         var(--soft-shadow);
+      animation: trail-marker-breathe 4.8s ease-in-out infinite;
+    }
+
+    @keyframes trail-marker-breathe {
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 3px var(--gold), var(--soft-shadow);
+      }
+      50% {
+        opacity: 0.82;
+        box-shadow: 0 0 0 3px var(--gold), 0 0 12px rgba(122, 97, 32, 0.36), var(--soft-shadow);
+      }
     }
 
     .marker-1  { top: 225px; }
@@ -799,6 +1087,48 @@
       color: var(--white);
     }
 
+    .footer-navigation {
+      max-width: 1000px;
+      margin: 0 auto 24px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    .footer-navigation h2 {
+      margin-top: 0;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-menu li {
+      margin: 0;
+    }
+
+    .footer-menu a {
+      display: block;
+      padding: 9px 13px;
+      background-color: var(--white);
+      color: var(--forest-dark);
+      border: 2px solid #d3b96c;
+      border-radius: 8px;
+      text-underline-offset: 0.18em;
+    }
+
+    .footer-menu a:focus-visible {
+      outline: 4px solid var(--white);
+      outline-offset: 4px;
+    }
+
     @media (max-width: 980px) {
       .trail-pack {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -847,8 +1177,24 @@
         scroll-behavior: auto;
       }
 
-      .cloud {
-        animation: none;
+      .cloud,
+      .falling-leaf,
+      .bird-flock,
+      .bird,
+      .grass-blade,
+      .woodland-animal,
+      .trail-marker,
+      .day-night-sky {
+        animation: none !important;
+      }
+
+      .trail-stop {
+        transition: none;
+      }
+
+      .trail-stop:hover,
+      .trail-stop:focus-within {
+        transform: none;
       }
     }
   </style>
@@ -860,14 +1206,49 @@
     Skip to main content
   </a>
 
-  <header class="hero">
+  <header class="hero" id="trailhead">
     <div class="sun" aria-hidden="true"></div>
     <div class="cloud cloud-one" aria-hidden="true"></div>
     <div class="cloud cloud-two" aria-hidden="true"></div>
+    <div class="cloud cloud-three" aria-hidden="true"></div>
+    <div class="cloud cloud-four" aria-hidden="true"></div>
     <div class="mountain-back" aria-hidden="true"></div>
     <div class="mountain-front" aria-hidden="true"></div>
     <div class="forest-line" aria-hidden="true"></div>
     <div class="hero-road" aria-hidden="true"></div>
+    <div class="day-night-sky" aria-hidden="true"></div>
+    <div class="bird-flock bird-flock-one" aria-hidden="true">
+      <span class="bird"></span><span class="bird"></span><span class="bird"></span>
+    </div>
+    <div class="bird-flock bird-flock-two" aria-hidden="true">
+      <span class="bird"></span><span class="bird"></span><span class="bird"></span>
+    </div>
+    <span class="falling-leaf leaf-one" aria-hidden="true"></span>
+    <span class="falling-leaf leaf-two" aria-hidden="true"></span>
+    <span class="falling-leaf leaf-three" aria-hidden="true"></span>
+    <span class="falling-leaf leaf-four" aria-hidden="true"></span>
+    <div class="grass-patch grass-left" aria-hidden="true">
+      <span class="grass-blade" style="--grass-height: 38px; --grass-delay: -1.2s;"></span>
+      <span class="grass-blade" style="--grass-height: 58px; --grass-delay: -2.1s;"></span>
+      <span class="grass-blade" style="--grass-height: 47px; --grass-delay: -0.8s;"></span>
+      <span class="grass-blade" style="--grass-height: 69px; --grass-delay: -2.7s;"></span>
+      <span class="grass-blade" style="--grass-height: 42px; --grass-delay: -1.6s;"></span>
+      <span class="grass-blade" style="--grass-height: 62px; --grass-delay: -0.4s;"></span>
+      <span class="grass-blade" style="--grass-height: 34px; --grass-delay: -2.4s;"></span>
+      <span class="grass-blade" style="--grass-height: 52px; --grass-delay: -1.1s;"></span>
+    </div>
+    <div class="grass-patch grass-right" aria-hidden="true">
+      <span class="grass-blade" style="--grass-height: 49px; --grass-delay: -1.8s;"></span>
+      <span class="grass-blade" style="--grass-height: 67px; --grass-delay: -0.5s;"></span>
+      <span class="grass-blade" style="--grass-height: 36px; --grass-delay: -2.5s;"></span>
+      <span class="grass-blade" style="--grass-height: 59px; --grass-delay: -1.3s;"></span>
+      <span class="grass-blade" style="--grass-height: 44px; --grass-delay: -2.8s;"></span>
+      <span class="grass-blade" style="--grass-height: 72px; --grass-delay: -0.9s;"></span>
+      <span class="grass-blade" style="--grass-height: 39px; --grass-delay: -2.2s;"></span>
+      <span class="grass-blade" style="--grass-height: 55px; --grass-delay: -1.5s;"></span>
+    </div>
+    <span class="woodland-animal woodland-fox" aria-hidden="true">🦊</span>
+    <span class="woodland-animal woodland-squirrel" aria-hidden="true">🐿️</span>
 
     <div class="container hero-content">
 
@@ -916,15 +1297,15 @@
 
         <p class="trail-update">
           <strong>
-            Trail Stop 4 is now open: Medication Safety &amp; Recovery.
+            Trail Stop 5 is now open: Ethics &amp; Confidentiality River Crossing.
           </strong>
-          Explore prescription and OTC medication misuse, pharmacotherapy,
-          withdrawal management, tolerance, and addiction.
+          Explore confidentiality, 42 CFR Part 2, informed consent,
+          professional boundaries, documentation, and ethical decision-making.
         </p>
 
         <div class="hero-actions">
-          <a class="hero-button" href="trails/week4.html">
-            Enter Trail Stop 4 →
+          <a class="hero-button" href="trails/week5.html">
+            Enter Trail Stop 5 →
           </a>
 
           <a class="hero-button" href="#trail-map">
@@ -934,6 +1315,15 @@
           <a class="hero-button secondary-button" href="#soundscape">
             Play the Trail Soundscape
           </a>
+        </div>
+
+        <div class="motion-controls" role="group" aria-label="Nature animation controls">
+          <button id="motion-toggle" class="motion-button" type="button" aria-pressed="false">
+            Pause Nature Animations
+          </button>
+          <p id="motion-status" class="motion-status" role="status" aria-live="polite">
+            Nature animations are on. Use this button to pause or resume them.
+          </p>
         </div>
       </section>
     </div>
@@ -1053,8 +1443,8 @@
           </h2>
 
           <p>
-            <strong>Trail Stops 1–4 are open.</strong>
-            Begin Trail Stop 4, Medication Safety &amp; Recovery,
+            <strong>Trail Stops 1–5 are open.</strong>
+            Begin Trail Stop 5, Ethics &amp; Confidentiality River Crossing,
             or revisit an earlier stop. Future stops remain visible
             so you can see where your journey is headed as the
             course progresses.
@@ -1178,18 +1568,32 @@
             </div>
           </article>
 
-          <!-- TRAIL STOP 5 -->
-          <article class="trail-stop">
+          <!-- TRAIL STOP 5: NOW OPEN -->
+          <article class="trail-stop" id="trail-stop-5">
             <span class="stop-number">Trail Stop 5</span>
 
-            <h3>Prescription and OTC Crossing</h3>
+            <h3>Ethics &amp; Confidentiality River Crossing</h3>
 
             <p>
-              Explore prescription medications, over-the-counter substances,
-              misuse, pharmacotherapy, and medication-related considerations.
+              Explore legal and ethical responsibilities in substance use
+              treatment, why confidentiality matters, and common limits involving
+              safety, mandated reporting, and court-related requests.
             </p>
 
-            <span class="stop-status">Opening Later</span>
+            <p>
+              Practice applying 42 CFR Part 2, informed consent, professional
+              boundaries, documentation, and scope of practice. Complete six
+              field stations and a final counselor case to earn your
+              <strong>Privacy &amp; Ethics Navigator</strong> badge.
+            </p>
+
+            <span class="stop-status is-open">Now Open</span>
+
+            <div>
+              <a class="open-trail-button" href="trails/week5.html">
+                Enter Trail Stop 5 →
+              </a>
+            </div>
           </article>
 
           <!-- TRAIL STOP 6 -->
@@ -1417,11 +1821,20 @@
           </article>
 
           <article class="badge-card">
-            <span class="badge-symbol" aria-hidden="true">🧭</span>
+            <span class="badge-symbol" aria-hidden="true">🔐</span>
 
-            <h3>Ethics Navigator</h3>
+            <h3>Privacy &amp; Ethics Navigator</h3>
 
-            <p>Practice ethical and professional decision-making.</p>
+            <p>
+              Practice confidentiality, consent, Part 2, and ethical decisions
+              at Trail Stop 5.
+            </p>
+
+            <p style="margin-top: 12px;">
+              <a href="trails/week5.html">
+                Earn the Trail Stop 5 Badge
+              </a>
+            </p>
           </article>
 
           <article class="badge-card">
@@ -1484,6 +1897,17 @@
 
   <footer>
     <div class="container">
+      <nav class="footer-navigation" aria-label="Foundations Trail navigation">
+        <h2>Trail Navigation</h2>
+        <ul class="footer-menu">
+          <li><a href="#trailhead">Back to Trailhead</a></li>
+          <li><a href="#soundscape">Trail Soundscape</a></li>
+          <li><a href="#trail-map">Trail Map</a></li>
+          <li><a href="trails/week5.html">Open Trail Stop 5</a></li>
+          <li><a href="#achievement-heading">Trail Achievements</a></li>
+          <li><a href="../../index.html">Counselor Academy Home</a></li>
+        </ul>
+      </nav>
       <p>Chemical Dependency Counselor Academy</p>
       <p>Foundations Trail · Introduction to Chemical Dependency</p>
       <p>Dr. Tonya Holdaway</p>
@@ -1538,10 +1962,42 @@
       });
     }
 
-    document.addEventListener(
-      "DOMContentLoaded",
-      configureTrailAudio
-    );
+    function configureMotionToggle() {
+      const button = document.getElementById("motion-toggle");
+      const status = document.getElementById("motion-status");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let paused = false;
+
+      function updateMotionState() {
+        document.body.classList.toggle("motion-paused", paused);
+        button.setAttribute("aria-pressed", String(paused));
+        button.textContent = paused
+          ? "Resume Nature Animations"
+          : "Pause Nature Animations";
+
+        status.textContent = reducedMotion.matches
+          ? "Your device preference reduces motion; decorative animations are disabled."
+          : paused
+            ? "Nature animations are paused."
+            : "Nature animations are on. Use this button to pause or resume them.";
+      }
+
+      button.addEventListener("click", function() {
+        paused = !paused;
+        updateMotionState();
+      });
+
+      if (reducedMotion.addEventListener) {
+        reducedMotion.addEventListener("change", updateMotionState);
+      }
+
+      updateMotionState();
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      configureTrailAudio();
+      configureMotionToggle();
+    });
   </script>
 
 </body>
